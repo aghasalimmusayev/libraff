@@ -1,0 +1,431 @@
+[
+  {
+    "name": "Kitab",
+    "altCategory": [
+      {
+        "name": "Bedii edebiyyat",
+        "elementler": [
+          "Antologiya",
+          "Bioqrafiya, avtobioqrafiya & Xatire",
+          "Detektiv",
+          "Elmi-Fantastika & Fantaziya",
+          "Felsefe",
+          "Hekayeler & Ocerkler",
+          "Kino ve Teatr",
+          "Klassik poeamalar",
+          "Klassikler",
+          "Komiks",
+          "Macera",
+          "Mifologiya",
+          "Nagillar",
+          "Poeamalar",
+          "Psixologiya",
+          "Romanlar & Novellalar",
+          "Satira",
+          "Tarix, Huquq & Siyasi",
+          "Tarixi roman",
+          "Triller, mistika & Qorxu",
+          "Tehsil, menbe & Dil"
+        ]
+      },
+      {
+        "name": "Qeyri-bədii ədəbiyyat",
+        "elementler": [
+          "Aile",
+          "Akademik",
+          "Asbazliq",
+          "Astronomiya",
+          "Bagbanliq",
+          "Bioqrafiya, avtobioqrafiya & Xatire",
+          "Biznes & Iqtisadiyyat",
+          "Detektiv",
+          "Dini",
+          "Deb",
+          "Elm",
+          "Ensiklopediyalar & Atlaslar",
+          "Ezoterike",
+          "Fealiyyetler",
+          "Felsefe",
+          "Hekayeler & Esseler",
+          "Heyvanlar",
+          "Jurnallar & Qezetler",
+          "Kino & Teatr",
+          "Klassikler",
+          "Komiks",
+          "Komputer alemi",
+          "Mifologiya",
+          "Musiqi",
+          "Poeamalar",
+          "Psixologiya",
+          "Publisistika",
+          "Qeyri-bedii",
+          "Regional maraqlar",
+          "Romanlar & Novellalar",
+          "Saglamliq, Tibb & Idman",
+          "Sitatlar & Aforizimler",
+          "Sosiologiya",
+          "Senet, arxitektura, dizayn & Fotoqrafiya",
+          "Sexsi inkisaf",
+          "Seyahet & Mekanlar",
+          "Tarix, Huquq & Siyasi",
+          "Tarixi roman",
+          "Tehsil, menbe & Dil",
+          "Xeriteler"
+        ]
+      },
+      {
+        "name": "Bədii uşaq ədəbiyyatı",
+        "elementler": [
+          "3D Kitab",
+          "Detektiv",
+          "Elmi-fantastika & Fantaziya",
+          "Hekayeler & Ocerkler",
+          "Heyvanlar",
+          "Klassik poeamalar",
+          "Klassikler",
+          "Komiks",
+          "Macera",
+          "Nagillar",
+          "Oyuncaq kitablar",
+          "Poeamalar",
+          "Romanlar & Novellalar",
+          "Satira",
+          "Sesli Kitab",
+          "Tarixi roman",
+          "Triller, mistika & Qorxu",
+          "Tehsil, menbe & Dil"
+        ]
+      },
+      {
+        "name": "Qeyri-bədii uşaq ədəbiyyatı",
+        "elementler": [
+          "3D Kitab",
+          "Aile",
+          "Asbazliq",
+          "Astronomiya",
+          "Bioqrafiya, avtobioqrafiya & Xatire",
+          "Biznes & Iqtisadiyyat",
+          "Dini",
+          "Deb",
+          "Elm",
+          "Ensiklopediyalar & Atlaslar",
+          "Fealiyyetler",
+          "Felsefe",
+          "Heyvanlar",
+          "Jurnallar & Qezetler",
+          "Kino & Teatr",
+          "Klassikler",
+          "Komiks",
+          "Komputer elmleri",
+          "Mifologiya",
+          "Musiqi",
+          "Nagillar",
+          "Oyuncaq kitablar",
+          "Psixologiya",
+          "Qeyri-bedii",
+          "Saglamliq, tibbi & Idman",
+          "Sitatlar & Aforizimler",
+          "Senet, arxitektura, dizayn & Fotoqrafiya",
+          "Sesli Kitab",
+          "Sexsi inkisaf",
+          "Seyahet & Mekanlar",
+          "Tarix, Huquq & Siyasi",
+          "Tehsil, menbe 7 Dil",
+          "Xeriteler"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bədii ədəbiyyat",
+    "elementler": [
+      "Antologiya",
+      "Bioqrafiya, avtobioqrafiya & Xatire",
+      "Detektiv",
+      "Elmi-Fantastika & Fantaziya",
+      "Felsefe",
+      "Hekayeler & Ocerkler",
+      "Kino ve Teatr",
+      "Klassik poeamalar",
+      "Klassikler",
+      "Komiks",
+      "Macera",
+      "Mifologiya",
+      "Nagillar",
+      "Poeamalar",
+      "Psixologiya",
+      "Romanlar & Novellalar",
+      "Satira",
+      "Tarix, Huquq & Siyasi",
+      "Tarixi roman",
+      "Triller, mistika & Qorxu",
+      "Tehsil, menbe & Dil"
+    ]
+  },
+  {
+    "name": "Qeyri-bədii ədəbiyyat",
+    "elementler": [
+      "Aile",
+      "Akademik",
+      "Asbazliq",
+      "Astronomiya",
+      "Bagbanliq",
+      "Bioqrafiya, avtobioqrafiya & Xatire",
+      "Biznes & Iqtisadiyyat",
+      "Detektiv",
+      "Dini",
+      "Deb",
+      "Elm",
+      "Ensiklopediyalar & Atlaslar",
+      "Ezoterike",
+      "Fealiyyetler",
+      "Felsefe",
+      "Hekayeler & Esseler",
+      "Heyvanlar",
+      "Jurnallar & Qezetler",
+      "Kino & Teatr",
+      "Klassikler",
+      "Komiks",
+      "Komputer alemi",
+      "Mifologiya",
+      "Musiqi",
+      "Poeamalar",
+      "Psixologiya",
+      "Publisistika",
+      "Qeyri-bedii",
+      "Regional maraqlar",
+      "Romanlar & Novellalar",
+      "Saglamliq, Tibb & Idman",
+      "Sitatlar & Aforizimler",
+      "Sosiologiya",
+      "Senet, arxitektura, dizayn & Fotoqrafiya",
+      "Sexsi inkisaf",
+      "Seyahet & Mekanlar",
+      "Tarix, Huquq & Siyasi",
+      "Tarixi roman",
+      "Tehsil, menbe & Dil",
+      "Xeriteler"
+    ]
+  },
+  {
+    "name": "Elektronika & aksesuar",
+    "altCategory": [
+      {
+        "name": "Canta & Camadanlar",
+        "elementler": [
+          "Bel cantasi",
+          "Biznes cantasi",
+          "Ciyin cantas",
+          "Coxfunksiyali canta",
+          "Etiket",
+          "Fotoaparat cantasi",
+          "Istirahet & Idman Cantalari",
+          "Notebook uzluk & cantalari",
+          "Plastik camadanlar",
+          "Pulqabi",
+          "Sexsi gigiyena cantasi",
+          "Tekerli camadan"
+        ]
+      },
+      {
+        "name": "Multimedia",
+        "elementler": ["CD"]
+      },
+      {
+        "name": "Reqemsal cihazlar",
+        "elementler": [
+          "Agilli saat & Fitnes beledci",
+          "Kamera & Media qurgu aletleri",
+          "Masaustu lampa"
+        ]
+      },
+      {
+        "name": "Seyahet aksesuarlari",
+        "elementler": [
+          "Boyun yastigi",
+          "Camadan qifili",
+          "Cetir",
+          "Maska",
+          "Su qabi & Saxlanclari",
+          "Seyahet corablari",
+          "Seyahet desti",
+          "Xetkes"
+        ]
+      },
+      {
+        "name": "Telefon & Komputer aksesuarlari",
+        "elementler": [
+          "Adapterler & Ceviriciler",
+          "Enerji saxlayicilari & Batareyalar",
+          "Enerju toplama cihazi & Kabeller",
+          "Fles disk & Yaddas karti",
+          "Klavyatura & Coystikler",
+          "Monopodlar & Tripodlar",
+          "Qulaqliq & Akustika",
+          "Smartfon uzlukleri",
+          "Tutucular & Cexol"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Oyuncaqlar & Oyunlar",
+    "altCategory": [
+      {
+        "name": "Idman & Aciq hava oyunlari",
+        "elementler": [
+          "Aticilar & Kopuk oyunu",
+          "Hedef",
+          "Skuter & Aksesuarlari",
+          "Tennis & Badminton"
+        ]
+      },
+      {
+        "name": "Oyredici oyun & Oyuncaqlar",
+        "elementler": [
+          "3D Model",
+          "Avtomobiller",
+          "Ilk oyuncaqlar",
+          "Insaat oyuncaqlari",
+          "Kaleydoskoplar",
+          "Kinetik qum",
+          "Mikroskop & Teleskop",
+          "Musiqili oyuncaqlar",
+          "Oyunlar & Fealiyyetler",
+          "Rubik kubu",
+          "Slaym & Yumsaq nov"
+        ]
+      },
+      {
+        "name": "Oyuncaq modelleri & Aksesuarlari",
+        "elementler": [
+          "Doldurulmus oyuncaqlar",
+          "Hereketli oyuncaqlar",
+          "Masinlar",
+          "Yumsaq oyuncaqlar"
+        ]
+      },
+      {
+        "name": "Pazllar",
+        "elementler": ["Puzzle & Aksesuarlar"]
+      },
+      {
+        "name": "Zeka & Enenevei oyunlar",
+        "elementler": [
+          "Masaustu oyunlar",
+          "Mektebeqeder oyunlar",
+          "Oyun kartlari",
+          "Zeka oyunlari"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dəftərxana",
+    "altCategory": [
+      {
+        "name": "Kagiz levazimatlari",
+        "elementler": [
+          "Aciqcalar",
+          "Eskiz defteri",
+          "Gundelik & Jurnal",
+          "Kagiz levazimatlari",
+          "Qeyd defteri",
+          "Qeyd kagizi",
+          "Resmcekme altliqlari",
+          "Teqvim",
+          "Zerfler"
+        ]
+      },
+      {
+        "name": "Mekteb & Ofis",
+        "elementler": [
+          "Delgec",
+          "Fosforlu qelemler",
+          "Halqa rezinler",
+          "Hesablayici",
+          "Kagiz tutucu",
+          "Karandas qablari",
+          "Karandas yonan",
+          "Kompas",
+          "Lovhe",
+          "Lupa",
+          "Masa desti & Aksesuar tutucu",
+          "Mekteb cantasi",
+          "Pozan",
+          "Qayci",
+          "Qida cantasi",
+          "Qlobus",
+          "Sancaq",
+          "Stepler & Ehtiyatlari",
+          "Sened qovlugu & Tutacaq",
+          "Tullanti sebetleri",
+          "Temizlik asiteleri",
+          "Universal bicaq & Ehtiyatlari",
+          "Xetkes",
+          "Yapisdirici",
+          "Yapisqan lent qurgusu & Kesici",
+          "Yapisqan lentler"
+        ]
+      },
+      {
+        "name": "Uniforma",
+        "elementler": [
+          "Godekce",
+          "Idman formasi",
+          "Koynek",
+          "Qalstuk",
+          "Qisaqol koynek",
+          "Salvar",
+          "Sviter",
+          "Etek"
+        ]
+      },
+      {
+        "name": "Yazi & Resm",
+        "elementler": [
+          "Boyalar & Boya aksesuarlari",
+          "Flomasterler",
+          "Karandas & karandas destleri",
+          "Ketan resm & Aksesuarlari",
+          "Pastel qelem",
+          "Qelem & Qelem destleri"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Hədiyyələr & Hobbi",
+    "altCategory": [
+      {
+        "name": "Hediyye kartlari"
+      },
+      {
+        "name": "Incesenet & Senetkarliq",
+        "elementler": ["3D qelem & 3D ip", "Boyama & Kreativlik"]
+      },
+      {
+        "name": "Pazllar",
+        "elementler": ["Puzzle & Aksesuarlar"]
+      },
+      {
+        "name": "Suvenir & Dekorasiya",
+        "elementler": [
+          "Acarliq",
+          "Bayraq",
+          "Dekorasiya",
+          "Foto albom & Cerciveler",
+          "Foto Yapisqan",
+          "Maqnit",
+          "Milli suvenirler",
+          "Musiqili qutu",
+          "Pinler",
+          "Qablasdirma qutulari & Qutular",
+          "Qepiklik",
+          "Yeni il bezekleri",
+          "Elfecin & Yapisqanlar"
+        ]
+      }
+    ]
+  }
+]
