@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "../CSS/libraff.css"
 // import "../CSS/libraff2.css"
-// import kategory from "../kategory.json"
 
 function Libraff() {
     const [data, setData] = useState([])
@@ -13,51 +12,51 @@ function Libraff() {
                 console.error("Xeta var: " + error)
             })
     }, [])
-    useEffect(() => {
-        // console.log(data)
-    }, [data])
+
+    const [altCatalog, setAltCatalog] = useState([])
+    function makeAlt(catName) {
+        let altData = data.find(item => item.name == catName)
+        setAltCatalog(altData)
+        setElement([])
+    }
+
+    const [element, setElement] = useState([])
+    function makeElement(elementName) {
+        let elementData = altCatalog.altCategory?.find(item => item.name == elementName)
+        setElement(elementData)
+    }
 
     return (
         <>
             <div className='katalog_menu'>
                 <div className="katalog_box">
-                    <ul className='main_kat_box'>
-                        {data.map((item, index) => {
-                            return <li key={index} className='kat_list'><a href="">{item.name}</a>
-                                {item.altCategory && (
-                                    <ul className='kat_list_inner_box'>
-                                        {item.altCategory.map((katName, subIndex) => {
-                                            return (
-                                                <li key={subIndex} className='kat_list_inner'>
-                                                    <a href="#">{katName.name}</a>
-                                                    {katName.elementler && (
-                                                        <ul className='element_box'>
-                                                            {katName.elementler.map((element, elementIndex) => {
-                                                                return (
-                                                                    <li key={elementIndex} className='elementler'>
-                                                                        <a href="#">{element}</a>
-                                                                    </li>
-                                                                )
-                                                            })}
-                                                        </ul>
-                                                    )}
-                                                </li>
-                                            )
-                                        })}
-                                    </ul>
-                                )}
-                                {!item.altCategory && item.elementler && (
-                                    <ul className='kat_list_inner_box'>
-                                        {item.elementler.map((element, elementIndex) => {
-                                            return (
-                                                <li key={elementIndex} className='kat_list_inner'>
-                                                    <a href="#">{element}</a>
-                                                </li>
-                                            )
-                                        })}
-                                    </ul>
-                                )}
+                    <ul className='main_katalog'>
+                        {data.map(item => {
+                            return <li className='kat_name' key={item.id} onMouseOver={() => makeAlt(item.name)}>
+                                <a href="#">{item.name}<i className="fa-solid fa-angle-right"></i></a>
                             </li>
+                        })}
+                    </ul>
+                    <ul className='alt_katalog'>
+                        {altCatalog.altCategory ?
+                            (altCatalog.altCategory?.map(altItem => {
+                                const icon = altItem.elementler 
+                                const arrowIcon = icon ? <i className="fa-solid fa-angle-right"></i> : ""
+                                return <li className='alt_kat_name' key={altItem.id} onMouseOver={() => makeElement(altItem.name)}>
+                                    <a href="#">{altItem.name}{arrowIcon}</a>
+                                </li>
+                            })) :
+                            (altCatalog.elementler?.map(altItem => {
+                                return <li className='alt_kat_name' key={altItem.id} onMouseOver={() => makeElement(altItem.name)}>
+                                    <a href="#">{altItem.name}</a>
+                                </li>
+                            }))
+                        }
+                    </ul>
+                    <ul className='elements'>
+                        {altCatalog.altCategory && element.elementler?.map(elementItem => {
+                            return <li className='element_name' key={elementItem.id}>
+                                <a href="">{elementItem.name}</a></li>
                         })}
                     </ul>
                 </div>

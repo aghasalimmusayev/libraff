@@ -1,0 +1,400 @@
+/* Base reset and fundamental styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Main container with modern backdrop */
+.katalog_menu {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6),
+    rgba(64, 64, 64, 0.4)
+  );
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Catalog box with enhanced visual effects */
+.katalog_box {
+  width: 90%;
+  max-width: 1200px;
+  height: 80vh;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 8px 25px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  animation: slideInScale 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Entrance animation */
+@keyframes slideInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Mobile header styling */
+.mobile-header {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.breadcrumb-home,
+.breadcrumb-back {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.breadcrumb-home:hover,
+.breadcrumb-back:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.breadcrumb-current {
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* Main content area */
+.catalog-content {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Desktop layout - three columns */
+@media (min-width: 769px) {
+  .catalog-content {
+    flex-direction: row;
+  }
+
+  .main_katalog {
+    width: 25%;
+    background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+    overflow-y: auto;
+  }
+
+  .alt_katalog {
+    width: 25%;
+    background: linear-gradient(180deg, #f1f3f4 0%, #e8eaed 100%);
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+    overflow-y: auto;
+  }
+
+  .elements {
+    width: 50%;
+    background: linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%);
+    overflow-y: auto;
+  }
+
+  .mobile-header {
+    display: none;
+  }
+
+  .mobile-view {
+    display: none;
+  }
+}
+
+/* Mobile layout - single column with navigation */
+@media (max-width: 768px) {
+  .katalog_box {
+    width: 95%;
+    height: 90vh;
+    margin: 5vh auto;
+  }
+
+  .mobile-view {
+    flex: 1;
+    overflow-y: auto;
+    background: white;
+  }
+
+  .main_katalog,
+  .alt_katalog,
+  .elements {
+    width: 100%;
+    background: white;
+    border: none;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  /* Hide desktop columns on mobile */
+  .catalog-content > .main_katalog,
+  .catalog-content > .alt_katalog,
+  .catalog-content > .elements {
+    display: none;
+  }
+}
+
+/* Shared list item styles */
+.kat_name,
+.alt_kat_name,
+.element_name {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Enhanced hover effects for desktop */
+@media (min-width: 769px) {
+  .kat_name::before,
+  .alt_kat_name::before,
+  .element_name::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(0, 123, 255, 0.1),
+      transparent
+    );
+    transition: left 0.5s ease-in-out;
+    z-index: 1;
+  }
+
+  .kat_name:hover::before {
+    left: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(0, 123, 255, 0.1),
+      transparent
+    );
+  }
+
+  .alt_kat_name:hover::before {
+    left: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(76, 175, 80, 0.15),
+      transparent
+    );
+  }
+
+  .element_name:hover::before {
+    left: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 152, 0, 0.12),
+      transparent
+    );
+  }
+}
+
+/* Link styling */
+.kat_name a,
+.alt_kat_name a,
+.element_name a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: #2c3e50;
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+/* Mobile touch-friendly sizing */
+@media (max-width: 768px) {
+  .kat_name a,
+  .alt_kat_name a,
+  .element_name a {
+    padding: 15px 20px;
+    font-size: 16px;
+    min-height: 50px; /* Touch-friendly minimum height */
+  }
+}
+
+/* Icon styling */
+.kat_name a i,
+.alt_kat_name a i {
+  font-size: 14px;
+  color: #6c757d;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Hover effects - desktop only */
+@media (min-width: 769px) {
+  .kat_name a:hover {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    color: #1565c0;
+    transform: translateX(5px);
+  }
+
+  .alt_kat_name a:hover {
+    background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+    color: #2e7d32;
+    transform: translateX(3px);
+  }
+
+  .element_name a:hover {
+    background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+    color: #e65100;
+    transform: translateX(8px);
+    border-left: 3px solid #ff9800;
+    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.2);
+  }
+
+  .kat_name a:hover i,
+  .alt_kat_name a:hover i {
+    transform: rotate(90deg) scale(1.2);
+    color: currentColor;
+  }
+}
+
+/* Active states for mobile */
+@media (max-width: 768px) {
+  .kat_name a:active,
+  .alt_kat_name a:active,
+  .element_name a:active {
+    background: rgba(0, 123, 255, 0.1);
+    transform: scale(0.98);
+  }
+}
+
+/* Enhanced scrollbar styling */
+.main_katalog::-webkit-scrollbar,
+.alt_katalog::-webkit-scrollbar,
+.elements::-webkit-scrollbar,
+.mobile-view::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main_katalog::-webkit-scrollbar-track,
+.alt_katalog::-webkit-scrollbar-track,
+.elements::-webkit-scrollbar-track,
+.mobile-view::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.main_katalog::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #4caf50, #45a049);
+  border-radius: 10px;
+}
+
+.alt_katalog::-webkit-scrollbar-thumb,
+.mobile-view::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-radius: 10px;
+}
+
+.elements::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ffecd2, #fcb69f);
+  border-radius: 10px;
+}
+
+/* Smooth scrolling for all containers */
+.main_katalog,
+.alt_katalog,
+.elements,
+.mobile-view {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
+/* Animation enhancements */
+.mobile-view > ul {
+  animation: slideInLeft 0.3s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Focus states for accessibility */
+.kat_name a:focus,
+.alt_kat_name a:focus,
+.element_name a:focus,
+.breadcrumb-home:focus,
+.breadcrumb-back:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Loading state animation */
+.catalog-content.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.catalog-content.loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
