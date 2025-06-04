@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "../CSS/kitablar.css"
 import { getData } from '../service/service'
+import { Link } from "react-router-dom"
 
 function Kitablar() {
 
@@ -12,20 +13,20 @@ function Kitablar() {
         })();
     }, [])
 
-    useEffect(()=>{
+    useEffect(() => {
         console.log(bookData);
-    },[bookData])
+    }, [bookData])
 
     return (
         <>
             <div className='kitablar'>
-                {bookData?.Kitablar?.map(item => {
+                {bookData?.map(item => {
                     return (
-                        <div className='kitab' key={item.id}>
+                        <Link to="/" className='kitab' key={item.id}>
                             <img src={item.sekil} alt="" />
                             <h2 className='kitab_adi'>{item.ad}</h2>
-                            <p className='kitab_qiymeti'>{item.qiymet}</p>
-                        </div>)
+                            <p className='kitab_qiymeti'>{item.qiymet} ₼</p>
+                        </Link>)
                 })}
             </div>
         </>

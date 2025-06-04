@@ -1,0 +1,524 @@
+{
+    "Kitablar": [
+        {
+            "id": 1,
+            "ad": "Anna Karenina",
+            "muellif": "Lev Tolstoy",
+            "qiymet": 12,
+            "sekil": "https://www.libraff.az/images/from_1c/5596928a-6e72-11ee-a51c-503eaa120fc7_1.jpg",
+            "kateqoriya": "Bedii",
+            "altKateqoriya": [
+                "roman",
+                "klassik",
+                "dramatik"
+            ],
+            "dil": [
+                "AZ",
+                "RU",
+                "EN"
+            ],
+            "stokSayi": 5,
+            "satildi": 3,
+            "baxildi": 12
+        },
+        {
+            "id": 2,
+            "ad": "Suç və Cəza",
+            "muellif": "Fyodor Dostoyevski",
+            "qiymet": 15,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71O2XIytdqL.jpg",
+            "kateqoriya": "Bedii",
+            "altKateqoriya": [
+                "psixoloji",
+                "klassik",
+                "fəlsəfi"
+            ],
+            "dil": [
+                "AZ",
+                "RU",
+                "EN"
+            ],
+            "stokSayi": 8,
+            "satildi": 5,
+            "baxildi": 23
+        },
+        {
+            "id": 3,
+            "ad": "Böyük Gatsby",
+            "muellif": "F. Scott Fitzgerald",
+            "qiymet": 10,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/81af+MCATTL.jpg",
+            "kateqoriya": "Bedii",
+            "altKateqoriya": [
+                "klassik",
+                "amerikan",
+                "romantik"
+            ],
+            "dil": [
+                "AZ",
+                "EN"
+            ],
+            "stokSayi": 12,
+            "satildi": 7,
+            "baxildi": 18
+        },
+        {
+            "id": 4,
+            "ad": "1984",
+            "muellif": "George Orwell",
+            "qiymet": 13,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71rpa1-kyvL.jpg",
+            "kateqoriya": "Fantastika",
+            "altKateqoriya": [
+                "distopiya",
+                "siyasi",
+                "elmi"
+            ],
+            "dil": [
+                "AZ",
+                "EN",
+                "RU"
+            ],
+            "stokSayi": 15,
+            "satildi": 9,
+            "baxildi": 34
+        },
+        {
+            "id": 5,
+            "ad": "Harri Potter və Fəlsəfə Daşı",
+            "muellif": "J.K. Rowling",
+            "qiymet": 18,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/81YOuOGFCJL.jpg",
+            "kateqoriya": "Fantastika",
+            "altKateqoriya": [
+                "uşaq",
+                "macəra",
+                "sehrli"
+            ],
+            "dil": [
+                "AZ",
+                "EN",
+                "RU"
+            ],
+            "stokSayi": 20,
+            "satildi": 15,
+            "baxildi": 67
+        },
+        {
+            "id": 6,
+            "ad": "Qürur və Qərəz",
+            "muellif": "Jane Austen",
+            "qiymet": 11,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71Q1tPupKjL.jpg",
+            "kateqoriya": "Bedii",
+            "altKateqoriya": [
+                "romantik",
+                "klassik",
+                "ingilis"
+            ],
+            "dil": [
+                "AZ",
+                "EN"
+            ],
+            "stokSayi": 7,
+            "satildi": 4,
+            "baxildi": 15
+        },
+        {
+            "id": 7,
+            "ad": "Şərq Ekspresində Qətl",
+            "muellif": "Agatha Christie",
+            "qiymet": 14,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/81aY1lxk+9L.jpg",
+            "kateqoriya": "Detektiv",
+            "altKateqoriya": [
+                "sirr",
+                "klassik",
+                "kriminalistika"
+            ],
+            "dil": [
+                "AZ",
+                "EN",
+                "RU"
+            ],
+            "stokSayi": 10,
+            "satildi": 6,
+            "baxildi": 28
+        },
+        {
+            "id": 8,
+            "ad": "Yüzüklərin Hökmdarı",
+            "muellif": "J.R.R. Tolkien",
+            "qiymet": 25,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71jLBXtWJWL.jpg",
+            "kateqoriya": "Fantastika",
+            "altKateqoriya": [
+                "epik",
+                "macəra",
+                "orta əsr"
+            ],
+            "dil": [
+                "AZ",
+                "EN"
+            ],
+            "stokSayi": 6,
+            "satildi": 4,
+            "baxildi": 45
+        },
+        {
+            "id": 9,
+            "ad": "Yüz İllik Tənhalıq",
+            "muellif": "Gabriel García Márquez",
+            "qiymet": 16,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/91ocU8970hL.jpg",
+            "kateqoriya": "Bedii",
+            "altKateqoriya": [
+                "maqik realizm",
+                "klassik",
+                "latin"
+            ],
+            "dil": [
+                "AZ",
+                "EN",
+                "ES"
+            ],
+            "stokSayi": 4,
+            "satildi": 2,
+            "baxildi": 11
+        },
+        {
+            "id": 10,
+            "ad": "Açlıq Oyunları",
+            "muellif": "Suzanne Collins",
+            "qiymet": 17,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71un2hI4mcL.jpg",
+            "kateqoriya": "Fantastika",
+            "altKateqoriya": [
+                "distopiya",
+                "gənc",
+                "macəra"
+            ],
+            "dil": [
+                "AZ",
+                "EN"
+            ],
+            "stokSayi": 13,
+            "satildi": 8,
+            "baxildi": 29
+        },
+        {
+            "id": 11,
+            "ad": "Da Vinçi Kodu",
+            "muellif": "Dan Brown",
+            "qiymet": 19,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/815WORuYMML.jpg",
+            "kateqoriya": "Thriller",
+            "altKateqoriya": [
+                "sirr",
+                "tarixi",
+                "gərginlik"
+            ],
+            "dil": [
+                "AZ",
+                "EN",
+                "RU"
+            ],
+            "stokSayi": 9,
+            "satildi": 6,
+            "baxildi": 22
+        },
+        {
+            "id": 12,
+            "ad": "Kiçik Şahzadə",
+            "muellif": "Antoine de Saint-Exupéry",
+            "qiymet": 8,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71O7Q5nRlKL.jpg",
+            "kateqoriya": "Uşaq",
+            "altKateqoriya": [
+                "fəlsəfi",
+                "klassik",
+                "alleqorik"
+            ],
+            "dil": [
+                "AZ",
+                "FR",
+                "EN"
+            ],
+            "stokSayi": 16,
+            "satildi": 12,
+            "baxildi": 38
+        },
+        {
+            "id": 13,
+            "ad": "Dəniz Qırğını",
+            "muellif": "Ernest Hemingway",
+            "qiymet": 12,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/81nrzFsLH8L.jpg",
+            "kateqoriya": "Bedii",
+            "altKateqoriya": [
+                "klassik",
+                "dramatik",
+                "amerikan"
+            ],
+            "dil": [
+                "AZ",
+                "EN"
+            ],
+            "stokSayi": 5,
+            "satildi": 3,
+            "baxildi": 14
+        },
+        {
+            "id": 14,
+            "ad": "Taxt Oyunları",
+            "muellif": "George R.R. Martin",
+            "qiymet": 22,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/91dSMhdIzTL.jpg",
+            "kateqoriya": "Fantastika",
+            "altKateqoriya": [
+                "epik",
+                "orta əsr",
+                "siyasi"
+            ],
+            "dil": [
+                "AZ",
+                "EN"
+            ],
+            "stokSayi": 7,
+            "satildi": 5,
+            "baxildi": 41
+        },
+        {
+            "id": 15,
+            "ad": "Sherlock Holmes Macəraları",
+            "muellif": "Arthur Conan Doyle",
+            "qiymet": 13,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/81aY8xY8rOL.jpg",
+            "kateqoriya": "Detektiv",
+            "altKateqoriya": [
+                "klassik",
+                "sirr",
+                "viktorian"
+            ],
+            "dil": [
+                "AZ",
+                "EN",
+                "RU"
+            ],
+            "stokSayi": 11,
+            "satildi": 7,
+            "baxildi": 33
+        },
+        {
+            "id": 16,
+            "ad": "Fahrenheit 451",
+            "muellif": "Ray Bradbury",
+            "qiymet": 14,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71OFqSRFDgL.jpg",
+            "kateqoriya": "Fantastika",
+            "altKateqoriya": [
+                "distopiya",
+                "elmi",
+                "siyasi"
+            ],
+            "dil": [
+                "AZ",
+                "EN"
+            ],
+            "stokSayi": 8,
+            "satildi": 4,
+            "baxildi": 19
+        },
+        {
+            "id": 17,
+            "ad": "Mən Robotam",
+            "muellif": "Isaac Asimov",
+            "qiymet": 15,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71j5d8mB5sL.jpg",
+            "kateqoriya": "Elmi Fantastika",
+            "altKateqoriya": [
+                "robot",
+                "gələcək",
+                "texnologiya"
+            ],
+            "dil": [
+                "AZ",
+                "EN",
+                "RU"
+            ],
+            "stokSayi": 6,
+            "satildi": 3,
+            "baxildi": 16
+        },
+        {
+            "id": 18,
+            "ad": "Alchemist",
+            "muellif": "Paulo Coelho",
+            "qiymet": 11,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71aFt4+OTOL.jpg",
+            "kateqoriya": "Fəlsəfi",
+            "altKateqoriya": [
+                "ruhani",
+                "macəra",
+                "müdriklik"
+            ],
+            "dil": [
+                "AZ",
+                "EN",
+                "PT"
+            ],
+            "stokSayi": 14,
+            "satildi": 9,
+            "baxildi": 27
+        },
+        {
+            "id": 19,
+            "ad": "Cənnət Qızları",
+            "muellif": "Jeffrey Eugenides",
+            "qiymet": 16,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/81mWHG9oXXL.jpg",
+            "kateqoriya": "Bedii",
+            "altKateqoriya": [
+                "drama",
+                "müasir",
+                "psixoloji"
+            ],
+            "dil": [
+                "AZ",
+                "EN"
+            ],
+            "stokSayi": 3,
+            "satildi": 1,
+            "baxildi": 8
+        },
+        {
+            "id": 20,
+            "ad": "Narnia Salnamələri",
+            "muellif": "C.S. Lewis",
+            "qiymet": 20,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/81A6j8BkKtL.jpg",
+            "kateqoriya": "Fantastika",
+            "altKateqoriya": [
+                "uşaq",
+                "sehrli",
+                "macəra"
+            ],
+            "dil": [
+                "AZ",
+                "EN"
+            ],
+            "stokSayi": 9,
+            "satildi": 6,
+            "baxildi": 24
+        }
+    ],
+    "Reyler": [
+        {
+            "id": 1,
+            "rey": [
+                "Super kitabdır",
+                "Oxumağa dəyər"
+            ]
+        },
+        {
+            "id": 2,
+            "rey": [
+                "Çox maraqlı idi",
+                "Dostoyevskinin ən yaxşı əsəri"
+            ]
+        },
+        {
+            "id": 3,
+            "rey": [
+                "Amerikan ədəbiyyatının zirvəsi",
+                "Qısa amma təsirli"
+            ]
+        },
+        {
+            "id": 4,
+            "rey": [
+                "Hələ də aktual mətn",
+                "Düşündürücü kitab"
+            ]
+        },
+        {
+            "id": 5,
+            "rey": [
+                "Uşaqlar üçün mükəmməl",
+                "Böyüklər də oxuya bilər"
+            ]
+        }
+    ],
+    "Slider": [
+        {
+            "id": 1,
+            "kitabId": 5,
+            "title": "Ən Çox Satılan Kitab",
+            "description": "Harri Potter seriyası dünyada milyonlarla oxucu tapmışdır",
+            "Image": "https://www.libraff.az/images/abt__ut2/banners/all/1313/Banner_Desktop.webp"
+        },
+        {
+            "id": 2,
+            "kitabId": 14,
+            "title": "Yeni Gələn",
+            "description": "Taxt Oyunları - epik fantastika janrının ən yaxşı nümunəsi",
+            "Image": "https://www.libraff.az/images/abt__ut2/banners/all/1313/Banner_Desktop_v2.webp"
+        },
+        {
+            "id": 3,
+            "kitabId": 1,
+            "title": "Klassik Seçim",
+            "description": "Anna Karenina - dünya ədəbiyyatının şah əsəri",
+            "Image": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        },
+        {
+            "id": 4,
+            "kitabId": 8,
+            "title": "Elm-Fantastika",
+            "description": "Dune - gələcəyin dünyasında epik macəra",
+            "Image": "https://www.libraff.az/images/abt__ut2/banners/all/1310/3-web-3840x1000_7h5s-r9.webp"
+        },
+        {
+            "id": 5,
+            "kitabId": 12,
+            "title": "Romantik Drama",
+            "description": "Qürur və Qərəz - Jane Austen-in ən məşhur əsəri",
+            "Image": "https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        },
+        {
+            "id": 6,
+            "kitabId": 3,
+            "title": "Fəlsəfi Roman",
+            "description": "Suç və Cəza - insan psixologiyasının dərin təhlili",
+            "Image": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        },
+        {
+            "id": 7,
+            "kitabId": 9,
+            "title": "Macəra Romanı",
+            "description": "Hobbit - Tolkien-in möhtəşəm fantastika dünyası",
+            "Image": "https://www.libraff.az/images/abt__ut2/banners/all/1310/01-web-3840x1000.webp"
+        },
+        {
+            "id": 8,
+            "kitabId": 6,
+            "title": "Mistik Thriller",
+            "description": "Da Vinci Kodu - tarixi sirlərin açılması",
+            "Image": "https://www.libraff.az/images/abt__ut2/banners/all/1305/Hero-banner-desktop-20_-discount.webp"
+        },
+        {
+            "id": 9,
+            "kitabId": 11,
+            "title": "Distopiya",
+            "description": "1984 - George Orwell-in gələcək haqqında xəbərdarlığı",
+            "Image": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        },
+        {
+            "id": 10,
+            "kitabId": 7,
+            "title": "Memuar",
+            "description": "Steve Jobs - texnologiya dünyasının lideri haqqında",
+            "Image": "https://www.libraff.az/images/abt__ut2/banners/all/1305/martin-iden-desktop.webp"
+        }
+    ]
+}
