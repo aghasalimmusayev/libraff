@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import "../CSS/libraff.css"
-// import "../CSS/libraff2.css"
 
 function Libraff() {
     const [data, setData] = useState([])
