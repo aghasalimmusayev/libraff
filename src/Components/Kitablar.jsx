@@ -19,15 +19,19 @@ function Kitablar() {
 
     return (
         <>
-            <div className='kitablar'>
-                {bookData?.map(item => {
-                    return (
-                        <Link to={`/details/${item.id}`} className='kitab' key={item.id}>
-                            <img src={item.sekil} alt="" />
-                            <h2 className='kitab_adi'>{item.ad}</h2>
-                            <p className='kitab_qiymeti'>{item.qiymet} ₼</p>
-                        </Link>)
-                })}
+            <div className="container">
+                <div className='kitablar'>
+                    {bookData?.map(item => {
+                        return (
+                            <Link to={`/details/${item.id}`} className='kitab' key={item.id}>
+                                <div className='kitab_img'>
+                                    <img src={item.sekil} alt="" />
+                                </div>
+                                <h2 className='kitab_adi'>{item.ad}</h2>
+                                <p className='kitab_qiymeti'>{item.qiymet} ₼</p>
+                            </Link>)
+                    })}
+                </div>
             </div>
         </>
     )

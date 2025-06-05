@@ -2,8 +2,8 @@ import React from 'react'
 
 function Footer() {
     return (
-        <div>
-            FOOTER
+        <div className='container'>
+            <h1 style={{ textAlign: "center", backgroundColor: "green" }}>FOOTER</h1>
         </div>
     )
 }

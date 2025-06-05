@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "../CSS/libraff.css"
 
-function Libraff() {
+function Katalog() {
     const [data, setData] = useState([])
     useEffect(() => {
         fetch("/kategory.json")
@@ -64,4 +64,4 @@ function Libraff() {
     )
 }
 
-export default Libraff
+export default Katalog

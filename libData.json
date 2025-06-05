@@ -18,390 +18,232 @@
                 "EN"
             ],
             "stokSayi": 5,
-            "satildi": 3,
-            "baxildi": 12
+            "satildi": 6,
+            "baxildi": 20,
+            "description": "Amerikada afroamerikan kişinin təcrübəsi və irqi zorakılığın psixoloji təsiri. Coates oğluna yazdığı məktub formatında irq məsələləri və kimlik. Müasir Amerika cəmiyyətində sistemli irqçiliyin təhlili və şəxsi təcrübələr."
         },
         {
-            "id": 2,
-            "ad": "Suç və Cəza",
-            "muellif": "Fyodor Dostoyevski",
-            "qiymet": 15,
-            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71O2XIytdqL.jpg",
-            "kateqoriya": "Bedii",
+            "id": 79,
+            "ad": "Ölüm Gətirən Qış",
+            "muellif": "Erik Larson",
+            "qiymet": 19,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/81QN1J2kSwL.jpg",
+            "kateqoriya": "Tarix",
             "altKateqoriya": [
-                "psixoloji",
-                "klassik",
-                "fəlsəfi"
+                "qeyri-fiction",
+                "true crime",
+                "chicago"
             ],
             "dil": [
                 "AZ",
-                "RU",
+                "EN"
+            ],
+            "stokSayi": 7,
+            "satildi": 4,
+            "baxildi": 16,
+            "description": "1893-cü ildə Çikaqo Dünya Sərgisi və H.H. Holmes seri qatilinin paralel hekayəsi. Larsonun tarixi hadisələri thriller kimi təqdim etməsi. Amerika Çək Dövrünün zərifliyi və qaranlıq tərəfləri arasındakı kontrastın təsviri."
+        },
+        {
+            "id": 80,
+            "ad": "Elm və Din",
+            "muellif": "Stephen Jay Gould",
+            "qiymet": 16,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71K2xFBa8BL.jpg",
+            "kateqoriya": "Elmi",
+            "altKateqoriya": [
+                "evolutsiya",
+                "fəlsəfə",
+                "din"
+            ],
+            "dil": [
+                "AZ",
                 "EN"
             ],
             "stokSayi": 8,
             "satildi": 5,
-            "baxildi": 23
+            "baxildi": 17,
+            "description": "Evolutsiya nəzəriyyəsi və din arasındakı münasibətlərin analizi. Gouldun elmi metodologiya və fəlsəfi məsələlər haqqında məqalələri. Elm və dinin fərqli sahələrdə fəaliyyət göstərməsi və münaqişəsizlik imkanı."
         },
         {
-            "id": 3,
-            "ad": "Böyük Gatsby",
-            "muellif": "F. Scott Fitzgerald",
-            "qiymet": 10,
-            "sekil": "https://images-na.ssl-images-amazon.com/images/I/81af+MCATTL.jpg",
-            "kateqoriya": "Bedii",
-            "altKateqoriya": [
-                "klassik",
-                "amerikan",
-                "romantik"
-            ],
-            "dil": [
-                "AZ",
-                "EN"
-            ],
-            "stokSayi": 12,
-            "satildi": 7,
-            "baxildi": 18
-        },
-        {
-            "id": 4,
-            "ad": "1984",
-            "muellif": "George Orwell",
-            "qiymet": 13,
-            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71rpa1-kyvL.jpg",
-            "kateqoriya": "Fantastika",
-            "altKateqoriya": [
-                "distopiya",
-                "siyasi",
-                "elmi"
-            ],
-            "dil": [
-                "AZ",
-                "EN",
-                "RU"
-            ],
-            "stokSayi": 15,
-            "satildi": 9,
-            "baxildi": 34
-        },
-        {
-            "id": 5,
-            "ad": "Harri Potter və Fəlsəfə Daşı",
-            "muellif": "J.K. Rowling",
-            "qiymet": 18,
-            "sekil": "https://images-na.ssl-images-amazon.com/images/I/81YOuOGFCJL.jpg",
-            "kateqoriya": "Fantastika",
-            "altKateqoriya": [
-                "uşaq",
-                "macəra",
-                "sehrli"
-            ],
-            "dil": [
-                "AZ",
-                "EN",
-                "RU"
-            ],
-            "stokSayi": 20,
-            "satildi": 15,
-            "baxildi": 67
-        },
-        {
-            "id": 6,
-            "ad": "Qürur və Qərəz",
-            "muellif": "Jane Austen",
+            "id": 81,
+            "ad": "Gizli Bağça",
+            "muellif": "Frances Hodgson Burnett",
             "qiymet": 11,
-            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71Q1tPupKjL.jpg",
-            "kateqoriya": "Bedii",
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/81AohsTt9yL.jpg",
+            "kateqoriya": "Uşaq",
             "altKateqoriya": [
-                "romantik",
                 "klassik",
+                "macəra",
                 "ingilis"
             ],
             "dil": [
                 "AZ",
                 "EN"
             ],
-            "stokSayi": 7,
-            "satildi": 4,
-            "baxildi": 15
+            "stokSayi": 13,
+            "satildi": 9,
+            "baxildi": 27,
+            "description": "Yetim Mary Lenoxun İngiltərədə əmisinin evində gizli bağçanı kəşf etməsi və dostlarla birlikdə onu diriltməsi. Klasik uşaq ədəbiyyatının nümunəsi. Dostluq, təbiət sevgisi və şəxsi inkişaf mövzularını işləyən şirin əsər."
         },
         {
-            "id": 7,
-            "ad": "Şərq Ekspresində Qətl",
-            "muellif": "Agatha Christie",
-            "qiymet": 14,
-            "sekil": "https://images-na.ssl-images-amazon.com/images/I/81aY1lxk+9L.jpg",
-            "kateqoriya": "Detektiv",
+            "id": 82,
+            "ad": "Təmiz Kod",
+            "muellif": "Robert Martin",
+            "qiymet": 22,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71TZfpF5qBL.jpg",
+            "kateqoriya": "Texniki",
             "altKateqoriya": [
-                "sirr",
-                "klassik",
-                "kriminalistika"
+                "proqramlaşdırma",
+                "software",
+                "professional"
             ],
             "dil": [
                 "AZ",
-                "EN",
-                "RU"
+                "EN"
             ],
-            "stokSayi": 10,
-            "satildi": 6,
-            "baxildi": 28
+            "stokSayi": 15,
+            "satildi": 11,
+            "baxildi": 33,
+            "description": "Proqram təminatının yazılmasında keyfiyyət standartları və kod təmizliyi prinsipləri. Martinın proqramçılar üçün praktik məsləhətləri və professional inkişaf. Oxuna bilən, davamlı və dəyişdirmək asan olan kod yazma metodları."
         },
         {
-            "id": 8,
-            "ad": "Yüzüklərin Hökmdarı",
-            "muellif": "J.R.R. Tolkien",
-            "qiymet": 25,
-            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71jLBXtWJWL.jpg",
-            "kateqoriya": "Fantastika",
+            "id": 83,
+            "ad": "Elm və Mədəniyyət",
+            "muellif": "C.P. Snow",
+            "qiymet": 14,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71nFkRLGj5L.jpg",
+            "kateqoriya": "Fəlsəfi",
             "altKateqoriya": [
-                "epik",
-                "macəra",
-                "orta əsr"
+                "elm",
+                "humanitar",
+                "kultür"
             ],
             "dil": [
                 "AZ",
                 "EN"
             ],
             "stokSayi": 6,
-            "satildi": 4,
-            "baxildi": 45
-        },
-        {
-            "id": 9,
-            "ad": "Yüz İllik Tənhalıq",
-            "muellif": "Gabriel García Márquez",
-            "qiymet": 16,
-            "sekil": "https://images-na.ssl-images-amazon.com/images/I/91ocU8970hL.jpg",
-            "kateqoriya": "Bedii",
-            "altKateqoriya": [
-                "maqik realizm",
-                "klassik",
-                "latin"
-            ],
-            "dil": [
-                "AZ",
-                "EN",
-                "ES"
-            ],
-            "stokSayi": 4,
-            "satildi": 2,
-            "baxildi": 11
-        },
-        {
-            "id": 10,
-            "ad": "Açlıq Oyunları",
-            "muellif": "Suzanne Collins",
-            "qiymet": 17,
-            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71un2hI4mcL.jpg",
-            "kateqoriya": "Fantastika",
-            "altKateqoriya": [
-                "distopiya",
-                "gənc",
-                "macəra"
-            ],
-            "dil": [
-                "AZ",
-                "EN"
-            ],
-            "stokSayi": 13,
-            "satildi": 8,
-            "baxildi": 29
-        },
-        {
-            "id": 11,
-            "ad": "Da Vinçi Kodu",
-            "muellif": "Dan Brown",
-            "qiymet": 19,
-            "sekil": "https://images-na.ssl-images-amazon.com/images/I/815WORuYMML.jpg",
-            "kateqoriya": "Thriller",
-            "altKateqoriya": [
-                "sirr",
-                "tarixi",
-                "gərginlik"
-            ],
-            "dil": [
-                "AZ",
-                "EN",
-                "RU"
-            ],
-            "stokSayi": 9,
-            "satildi": 6,
-            "baxildi": 22
-        },
-        {
-            "id": 12,
-            "ad": "Kiçik Şahzadə",
-            "muellif": "Antoine de Saint-Exupéry",
-            "qiymet": 8,
-            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71O7Q5nRlKL.jpg",
-            "kateqoriya": "Uşaq",
-            "altKateqoriya": [
-                "fəlsəfi",
-                "klassik",
-                "alleqorik"
-            ],
-            "dil": [
-                "AZ",
-                "FR",
-                "EN"
-            ],
-            "stokSayi": 16,
-            "satildi": 12,
-            "baxildi": 38
-        },
-        {
-            "id": 13,
-            "ad": "Dəniz Qırğını",
-            "muellif": "Ernest Hemingway",
-            "qiymet": 12,
-            "sekil": "https://images-na.ssl-images-amazon.com/images/I/81nrzFsLH8L.jpg",
-            "kateqoriya": "Bedii",
-            "altKateqoriya": [
-                "klassik",
-                "dramatik",
-                "amerikan"
-            ],
-            "dil": [
-                "AZ",
-                "EN"
-            ],
-            "stokSayi": 5,
             "satildi": 3,
-            "baxildi": 14
+            "baxildi": 12,
+            "description": "Elmi və humanitar mədəniyyət arasındakı uçurum və bu problemin cəmiyyətə təsiri. Snowun məşhur 'İki Mədəniyyət' tezisi və təhsil sisteminin tənqidi. İntelektual həyatda ixtisaslaşma və ümumiləşdirmə arasındakı tarazlıq."
         },
         {
-            "id": 14,
-            "ad": "Taxt Oyunları",
-            "muellif": "George R.R. Martin",
-            "qiymet": 22,
-            "sekil": "https://images-na.ssl-images-amazon.com/images/I/91dSMhdIzTL.jpg",
-            "kateqoriya": "Fantastika",
+            "id": 84,
+            "ad": "Rəngli Purçda",
+            "muellif": "Alice Walker",
+            "qiymet": 13,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/81FgGqeL7pL.jpg",
+            "kateqoriya": "Bedii",
             "altKateqoriya": [
-                "epik",
-                "orta əsr",
-                "siyasi"
+                "afroamerikan",
+                "qadın",
+                "sosial"
+            ],
+            "dil": [
+                "AZ",
+                "EN"
+            ],
+            "stokSayi": 10,
+            "satildi": 7,
+            "baxildi": 21,
+            "description": "Qara qadının Cənubi Amerikada yaşadığı zorakılıq və güclənmə hekayəsi. Walkerin Pulitzer mükafatlı romanı və qadın hüquqları. İrqi və gender ayrı-seçkiliyi, ailə münasibətləri və şəxsi azadlıq mövzularını işləyən güclü əsər."
+        },
+        {
+            "id": 85,
+            "ad": "Digital Minimalizm",
+            "muellif": "Cal Newport",
+            "qiymet": 15,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71A4z9M4bKL.jpg",
+            "kateqoriya": "Özünə kömək",
+            "altKateqoriya": [
+                "texnologiya",
+                "həyat tərzi",
+                "məhsuldarlıq"
+            ],
+            "dil": [
+                "AZ",
+                "EN"
+            ],
+            "stokSayi": 11,
+            "satildi": 8,
+            "baxildi": 24,
+            "description": "Rəqəmsal texnologiyaların həyatımızdakı rolunu azaltmaq və daha məqsədyönlü istifadə etmək üçün strategiyalar. Newportun sosial media və smartfonların zərərli təsirlərindən qorunma üsulları. Təknolodiyi öhdəsindən gəlmək və real həyata fokuslanmaq."
+        },
+        {
+            "id": 86,
+            "ad": "İqtisadiyyat üzrə düşüncələr",
+            "muellif": "Thomas Sowell",
+            "qiymet": 18,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71Mq8KJWf4L.jpg",
+            "kateqoriya": "İqtisadiyyat",
+            "altKateqoriya": [
+                "nəzəriyyə",
+                "sərbəst bazar",
+                "siyasət"
             ],
             "dil": [
                 "AZ",
                 "EN"
             ],
             "stokSayi": 7,
-            "satildi": 5,
-            "baxildi": 41
+            "satildi": 4,
+            "baxildi": 15,
+            "description": "İqtisadi düşüncənin fundamental prinsipləri və sərbəst bazar iqtisadiyyatının müdafiəsi. Sowellin populyar iqtisadiyyat kitabı və siyasi iqtisad nəzəriyyələri. Iqtisadi qərarların məntiqi və dövlət müdaxiləsinin nəticələri."
         },
         {
-            "id": 15,
-            "ad": "Sherlock Holmes Macəraları",
-            "muellif": "Arthur Conan Doyle",
-            "qiymet": 13,
-            "sekil": "https://images-na.ssl-images-amazon.com/images/I/81aY8xY8rOL.jpg",
-            "kateqoriya": "Detektiv",
+            "id": 87,
+            "ad": "Şübhəli kişi",
+            "muellif": "Fredrik Backman",
+            "qiymet": 16,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71L1Tz+3cEL.jpg",
+            "kateqoriya": "Bedii",
             "altKateqoriya": [
-                "klassik",
-                "sirr",
-                "viktorian"
+                "müasir",
+                "drama",
+                "humanizm"
             ],
             "dil": [
                 "AZ",
-                "EN",
-                "RU"
+                "SV",
+                "EN"
             ],
-            "stokSayi": 11,
-            "satildi": 7,
-            "baxildi": 33
+            "stokSayi": 12,
+            "satildi": 8,
+            "baxildi": 23,
+            "description": "Ove adlı qoca kişinin qonşuları və həyatla münasibəti. Backmanın insani dəyərlər və kiçik zamanlarda böyük dəyişikliklər haqqında şirin romanı. Dostluq, komşuluq və həyatın mənası axtarışı mövzularını işləyən ürəkoxuyan əsər."
         },
         {
-            "id": 16,
-            "ad": "Fahrenheit 451",
-            "muellif": "Ray Bradbury",
+            "id": 88,
+            "ad": "Gözlərimiz Günəşə yönəldə",
+            "muellif": "Chimamanda Ngozi Adichie",
             "qiymet": 14,
-            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71OFqSRFDgL.jpg",
-            "kateqoriya": "Fantastika",
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71T5yDvM9pL.jpg",
+            "kateqoriya": "Bedii",
             "altKateqoriya": [
-                "distopiya",
-                "elmi",
-                "siyasi"
+                "afrika",
+                "postkolonial",
+                "ailə"
             ],
             "dil": [
                 "AZ",
                 "EN"
             ],
             "stokSayi": 8,
-            "satildi": 4,
-            "baxildi": 19
+            "satildi": 5,
+            "baxildi": 17,
+            "description": "1960-cı illərdə Nigeriyada vətəndaş müharibəsi dövründə ailənin dağılması və siyasi qarışıqlıq. Adichienin Biafra müharibəsi və Afrika postkolonial dövrü haqqında güclü romanı. Ailə münasibətləri, siyasi şiddət və mədəni kimlik mövzuları."
         },
         {
-            "id": 17,
-            "ad": "Mən Robotam",
-            "muellif": "Isaac Asimov",
-            "qiymet": 15,
-            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71j5d8mB5sL.jpg",
-            "kateqoriya": "Elmi Fantastika",
-            "altKateqoriya": [
-                "robot",
-                "gələcək",
-                "texnologiya"
-            ],
-            "dil": [
-                "AZ",
-                "EN",
-                "RU"
-            ],
-            "stokSayi": 6,
-            "satildi": 3,
-            "baxildi": 16
-        },
-        {
-            "id": 18,
-            "ad": "Alchemist",
-            "muellif": "Paulo Coelho",
-            "qiymet": 11,
-            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71aFt4+OTOL.jpg",
-            "kateqoriya": "Fəlsəfi",
-            "altKateqoriya": [
-                "ruhani",
-                "macəra",
-                "müdriklik"
-            ],
-            "dil": [
-                "AZ",
-                "EN",
-                "PT"
-            ],
-            "stokSayi": 14,
-            "satildi": 9,
-            "baxildi": 27
-        },
-        {
-            "id": 19,
-            "ad": "Cənnət Qızları",
-            "muellif": "Jeffrey Eugenides",
-            "qiymet": 16,
-            "sekil": "https://images-na.ssl-images-amazon.com/images/I/81mWHG9oXXL.jpg",
-            "kateqoriya": "Bedii",
-            "altKateqoriya": [
-                "drama",
-                "müasir",
-                "psixoloji"
-            ],
-            "dil": [
-                "AZ",
-                "EN"
-            ],
-            "stokSayi": 3,
-            "satildi": 1,
-            "baxildi": 8
-        },
-        {
-            "id": 20,
-            "ad": "Narnia Salnamələri",
-            "muellif": "C.S. Lewis",
+            "id": 89,
+            "ad": "Anlayış və Qərəz",
+            "muellif": "Daniel Kahneman",
             "qiymet": 20,
-            "sekil": "https://images-na.ssl-images-amazon.com/images/I/81A6j8BkKtL.jpg",
-            "kateqoriya": "Fantastika",
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71T4xQcWVIL.jpg",
+            "kateqoriya": "Psixologiya",
             "altKateqoriya": [
-                "uşaq",
-                "sehrli",
-                "macəra"
+                "qərar qəbulu",
+                "bias",
+                "statistika"
             ],
             "dil": [
                 "AZ",
@@ -409,7 +251,29 @@
             ],
             "stokSayi": 9,
             "satildi": 6,
-            "baxildi": 24
+            "baxildi": 19,
+            "description": "İnsan ağlının sistematik qərəzləri və statistik düşüncənin çətinlikləri. Kahnemanın kognativ qərəzlər və ehtimallar haqqında araşdırmaları. İntuisiya ilə məntiq arasındakı fərq və düzgün qərar qəbulu metodları."
+        },
+        {
+            "id": 90,
+            "ad": "Son nəfər",
+            "muellif": "Cormac McCarthy",
+            "qiymet": 17,
+            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71aG+xDKSYL.jpg",
+            "kateqoriya": "Bedii",
+            "altKateqoriya": [
+                "post-apokaliptik",
+                "drama",
+                "amerikan"
+            ],
+            "dil": [
+                "AZ",
+                "EN"
+            ],
+            "stokSayi": 6,
+            "satildi": 4,
+            "baxildi": 14,
+            "description": "Ata və oğlunun post-apokaliptik dünyada həyat mübarizəsi və insanlığın son günləri. McCarthynın Pulitzer mükafatlı əsəri və sivilizasiyanın çöküşü. Sevgi, ümid və insani dəyərlərin ən çətin şəraitdə dözümü haqqında güclü roman."
         }
     ],
     "Reyler": [
