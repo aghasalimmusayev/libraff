@@ -1,0 +1,14 @@
+.kitab_details{
+    display: flex;
+    gap: 20px;
+}
+.kitab_details img{
+    width: 400px;
+    height: 600px;
+    object-fit: cover;
+}
+.kitab_info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

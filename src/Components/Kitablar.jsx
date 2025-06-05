@@ -22,7 +22,7 @@ function Kitablar() {
             <div className='kitablar'>
                 {bookData?.map(item => {
                     return (
-                        <Link to="/" className='kitab' key={item.id}>
+                        <Link to={`/details/${item.id}`} className='kitab' key={item.id}>
                             <img src={item.sekil} alt="" />
                             <h2 className='kitab_adi'>{item.ad}</h2>
                             <p className='kitab_qiymeti'>{item.qiymet} ₼</p>

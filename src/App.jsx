@@ -1,13 +1,11 @@
-import { useState } from 'react'
 import './App.css'
 import Libraf from "./Components/Libraff.jsx"
-import Kitablar from './Components/Kitablar.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from "./layout/Layout.jsx"
 import Main from "./Components/Main.jsx"
 import Admin from "./Components/Admin.jsx"
+import Details from "./Components/Details.jsx"
 function App() {
-
 
   return (
 
@@ -16,7 +14,8 @@ function App() {
 
         <Route path='/' element={<Layout />} >
           <Route index element={<Main />} />
-          <Route path='Katalog' element={<Libraf />} />
+          <Route path='/katalog' element={<Libraf />} />
+          <Route path='/details/:id' element={<Details />} />
         </Route>
 
         <Route path='/admin' element={<Admin />} />
