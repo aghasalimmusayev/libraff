@@ -2,8 +2,11 @@ import React, { useState } from 'react'
 import { Link } from "react-router-dom"
 import Logo from "../assets/img/logo_libraff.png"
 import "../CSS/nav.css"
+import { useAllContext } from '../../Context/MyContext'
 
 function Nav() {
+
+    const { setSearchText } = useAllContext()
 
     return (
         <div className='nav_bg'>
@@ -16,7 +19,7 @@ function Nav() {
                             <Link to={'/endirimler'}>Endirimler</Link>
                         </div>
                         <div className="search_inp">
-                            <input type="text"  placeholder='Kitabinizi tapin...'/>
+                            <input type="text" onChange={(e) => setSearchText(e.target.value)} placeholder='Kitabinizi tapin...' />
                         </div>
                     </div>
                 </div>
