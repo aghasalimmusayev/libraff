@@ -1,19 +1,43 @@
 .kitablar {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .kitab {
-    border: 1px solid #eee;
-    border-radius: 15px;
-    box-shadow: 1px 1px 10px #c7c6c6;
+  width: 290px;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px #c7c6c6;
+  overflow: hidden;
 }
-
-.kitab_img img {
+.kitab_adi {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+.kitab_info {
+  padding: 20px;
+}
+.kitab_img {
+  position: relative;
+  border-radius: 15px;
+  .fav_icon{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  img {
     width: 300px;
-    height: 500px;
+    height: 400px;
     object-fit: cover;
-    border-radius: 15px;
+  }
+}
+.pag_btns{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
 }

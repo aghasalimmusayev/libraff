@@ -11,7 +11,13 @@ function Nav() {
                 <div className="container">
                     <div className="nav_content">
                         <Link to='/' className='logo'><img src={Logo} alt="" /></Link>
-                        {/* <button className='katalog_btn' onClick={handleKatalog}>Katalog</button> */}
+                        <div className="links">
+                            <Link to={'/muellifler'}>Muellifler</Link>
+                            <Link to={'/endirimler'}>Endirimler</Link>
+                        </div>
+                        <div className="search_inp">
+                            <input type="text"  placeholder='Kitabinizi tapin...'/>
+                        </div>
                     </div>
                 </div>
             </nav>

@@ -1,3 +1,31 @@
+.nav_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.links{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    a{
+        font: 500 1.2rem "Roboto",sans-serif;
+        color: #333;
+        border-bottom: 2px solid transparent;
+        transition: .3s;
+    }
+    a:hover{border-color: #333;}
+}
+.search_inp input:focus{
+    border: 1px solid red;
+}
+.search_inp input{
+    font: 500 1rem "Roboto",sans-serif;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+}
+
 .nav_bg{
     position: fixed;
     z-index: 100;

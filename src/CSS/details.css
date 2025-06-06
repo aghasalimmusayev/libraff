@@ -1,23 +1,200 @@
-.kitab_details{
-    display: flex;
-    gap: 20px;
+* {
+    font-family: 'Roboto', sans-serif;
 }
-.kitab_info{
+.details_box {
+    background: #f8f9fa;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.kitab_details {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
 }
-.kitab_detail_img{
+.kitab_detail_img {
     position: relative;
-    .fav_icon{
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        cursor: pointer;
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    align-self: center;
+}
+.kitab_detail_img img {
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.fav_icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    padding: 8px;
+    backdrop-filter: blur(10px);
+}
+.kitab_info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+.kitab_ad {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.muellif {
+    width: fit-content;
+    font-size: 1.1rem;
+    color: #34495e;
+    font-weight: 500;
+    border-bottom: 2px solid #ecf0f1;
+}
+.muellif span {
+    color: #7f8c8d;
+    font-weight: 600;
+}
+.kitab_qiymet {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #e74c3c;
+    background: linear-gradient(135deg, #f7a7a7, #f51e06);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+}
+
+.kitab_kateqoriya {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    background: #ecf0f1;
+    padding: 10px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.kitab_kateqoriya span {
+    color: #7f8c8d;
+    font-weight: 600;
+}
+
+.staok_sayi {
+    font-size: 1.1rem;
+    color: #27ae60;
+    font-weight: 600;
+    background: rgba(39, 174, 96, 0.1);
+    padding: 8px 12px;
+    border-radius: 6px;
+    border-left: 4px solid #27ae60;
+}
+
+.staok_sayi span {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.satildi {
+    font-size: 1rem;
+    color: #8e44ad;
+    background: rgba(142, 68, 173, 0.1);
+    padding: 8px 12px;
+    border-radius: 6px;
+    border-left: 4px solid #8e44ad;
+}
+
+.satildi span {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.baxildi {
+    font-size: 1rem;
+    color: #3498db;
+    background: rgba(52, 152, 219, 0.1);
+    padding: 8px 12px;
+    border-radius: 6px;
+    border-left: 4px solid #3498db;
+}
+
+.baxildi span {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.tesvir {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #2c3e50;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tesvir span {
+    font-weight: 600;
+    color: #34495e;
+    display: block;
+    font-size: 1.1rem;
+}
+
+@media (min-width: 768px) {
+    .details_box {
+        margin: 20px 0;
     }
-    img{
-        width: 400px;
-        height: 600px;
-        object-fit: cover;
-    }    
+    
+    .kitab_details {
+        flex-direction: row;
+        gap: 30px;
+        padding: 30px;
+    }
+    
+    .kitab_detail_img {
+        align-self: flex-start;
+    }
+    
+    .kitab_detail_img img {
+        width: 350px;
+        height: 500px;
+    }
+    
+    .kitab_ad {
+        font-size: 2.2rem;
+        text-align: left;
+    }
+    
+    .kitab_qiymet {
+        font-size: 2rem;
+        text-align: left;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .kitab_detail_img img {
+        width: 280px;
+        height: 400px;
+    }
+    
+    .kitab_ad {
+        font-size: 1.8rem;
+    }
 }

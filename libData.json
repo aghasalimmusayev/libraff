@@ -18,8 +18,8 @@
                 "EN"
             ],
             "stokSayi": 5,
-            "satildi": 6,
-            "baxildi": 20,
+            "satildi": 0,
+            "baxildi": 0,
             "description": "Amerikada afroamerikan kişinin təcrübəsi və irqi zorakılığın psixoloji təsiri. Coates oğluna yazdığı məktub formatında irq məsələləri və kimlik. Müasir Amerika cəmiyyətində sistemli irqçiliyin təhlili və şəxsi təcrübələr."
         },
         {
@@ -48,7 +48,7 @@
             "ad": "Elm və Din",
             "muellif": "Stephen Jay Gould",
             "qiymet": 16,
-            "sekil": "https://images-na.ssl-images-amazon.com/images/I/71K2xFBa8BL.jpg",
+            "sekil": "",
             "kateqoriya": "Elmi",
             "altKateqoriya": [
                 "evolutsiya",
