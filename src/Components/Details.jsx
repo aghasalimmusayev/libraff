@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { getKitabByID } from '../service/service'
-// import { GoHeartFill } from "react-icons/go";
 import { GoHeart } from "react-icons/go";
+import { GoHeartFill } from "react-icons/go";
 import "../CSS/details.css"
+import { useAllContext } from '../../Context/MyContext';
 
 function Details() {
 
     const { id } = useParams()
     const [kitab, setKitab] = useState(null)
+    const { wishLits, handleWish } = useAllContext()
+    const wishVar = kitab && wishLits.some(ktb => kitab.id === ktb.id)
 
     useEffect(() => {
         (async () => {
@@ -17,15 +20,21 @@ function Details() {
         })()
     }, [id])
 
+    useEffect(() => {
+        document.title = 'Kitab haqqinda | Libraff'
+    }, [])
+
     return (
         <div className="container">
             <div className='details_box'>
                 {kitab && (
                     <div className='kitab_details'>
                         <div className="kitab_detail_img">
-                            <img src={kitab.sekil} alt={kitab.title} />
-                            <GoHeart style={{ fontSize: "30px", color: "red" }} className='fav_icon' />
-                            {/* <GoHeartFill /> */}
+                            <img src={kitab.sekil} alt={kitab.Title} />
+                            {wishVar
+                                ? <GoHeartFill className='fav_icon' onClick={() => handleWish(kitab)} />
+                                : <GoHeart className='fav_icon' onClick={() => handleWish(kitab)} />
+                            }
                         </div>
                         <div className="kitab_info">
                             <h2 className='kitab_ad'>{kitab.Title}</h2>

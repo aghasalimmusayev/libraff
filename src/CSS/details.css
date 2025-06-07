@@ -37,10 +37,8 @@
     top: 15px;
     right: 15px;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 50%;
-    padding: 8px;
-    backdrop-filter: blur(10px);
+    color: red;
+    font-size: 30px;
 }
 .kitab_info {
     display: flex;
@@ -61,6 +59,7 @@
     font-size: 1.1rem;
     color: #34495e;
     font-weight: 500;
+    padding-bottom: 5px;
     border-bottom: 2px solid #ecf0f1;
 }
 .muellif span {

@@ -5,7 +5,6 @@
   flex-wrap: wrap;
   gap: 15px;
 }
-
 .kitab {
   width: 290px;
   border: 1px solid #eee;
@@ -19,16 +18,17 @@
   text-overflow: ellipsis;
   width: 100%;
 }
-.kitab_info {
-  padding: 20px;
-}
+.kitab_info {padding: 20px;}
 .kitab_img {
   position: relative;
   border-radius: 15px;
   .fav_icon{
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
+    color: red;
+    font-size: 30px;
+    cursor: pointer;
   }
   img {
     width: 300px;

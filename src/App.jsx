@@ -7,6 +7,8 @@ import Details from "./Components/Details.jsx"
 import Muellifler from './Components/Muellifler.jsx';
 import Endirimler from './Components/Endirimler.jsx';
 import { MyContext } from '../Context/MyContext.jsx';
+import MuellifKitablar from './Components/Child Components/MuellifKitablar.jsx';
+import WishList from './Components/WishList.jsx';
 
 function App() {
 
@@ -20,6 +22,8 @@ function App() {
             <Route path='/details/:id' element={<Details />} />
             <Route path='/muellifler' element={<Muellifler />} />
             <Route path='/endirimler' element={<Endirimler />} />
+            <Route path='/muellifler/muellifKitablari/:muellif' element={<MuellifKitablar />} />
+            <Route path='/wishlist' element={<WishList />} />
           </Route>
 
           <Route path='/admin' element={<Admin />} />

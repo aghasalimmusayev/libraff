@@ -1,11 +1,37 @@
 .container {
-    width: 90%;
-    margin: auto;
+  width: 90%;
+  margin: auto;
 }
-main{
-    padding-top: 80px;
+main {
+  padding-top: 80px;
+}
+.more_btn {
+  text-align: center;
+  margin: 20px 0;
 }
 
-@media(min-width:768px) {
-    .container{max-width: 1400px;}
+.more_btn button {
+  background: linear-gradient(
+    135deg,
+    #ff4d4d,
+    #cc0000
+  ); /* Qırmızı tonlu gradient */
+  color: white;
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.more_btn button:hover {
+  opacity: 0.85;
+  color: #000;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 1400px;
+  }
 }
