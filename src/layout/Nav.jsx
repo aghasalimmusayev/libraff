@@ -21,6 +21,15 @@ function Nav() {
                 <div className="nav_content">
                     <Link to='/' className='logo'><img src={Logo} alt="" /></Link>
                     <div className={`links ${navHandle ? 'open' : ''}`}>
+                        <div className='cart_fav'>
+                            <Link className='wish_box' to="/wishlist">Secilmisler
+                                <GoHeart className='whislist' />
+                                {wishLits.length > 0 && <span className='wish_count'>{wishLits.length}</span>}
+                            </Link>
+                            <Link to='/'>Sebet
+                                <IoBagHandleOutline style={{ fontSize: "25px" }} />
+                            </Link>
+                        </div>
                         <Link to={'/muellifler'}>Muellifler</Link>
                         <Link to={'/endirimler'}>Endirimler</Link>
                     </div>

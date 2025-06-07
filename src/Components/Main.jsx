@@ -3,6 +3,7 @@ import Kitablar from "./Kitablar"
 import HeaderSlider from './HeaderSlider'
 import Katalog from "./Katalog.jsx"
 import Loader from "./Loader.jsx"
+// import NewKatalog from './NewKatalog.jsx'
 import { useAllContext } from '../../Context/MyContext.jsx'
 
 function Main() {
@@ -12,12 +13,13 @@ function Main() {
     return (
         bookData ? (
             <>
+                {/* <NewKatalog /> */}
                 <HeaderSlider />
                 <Kitablar />
                 <Katalog />
             </>
         ) : (
-            <div style={{ textAlign: "center", margin:"50px 0" }}>
+            <div style={{ textAlign: "center", margin: "50px 0" }}>
                 <Loader />
             </div>
         )

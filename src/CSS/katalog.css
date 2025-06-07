@@ -1,0 +1,15 @@
+.kitab_siyahisi{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-height: 600px;
+    overflow-y: scroll;
+}
+.kitab_siyahisi li{
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+.kitab_siyahisi a{
+    color: #333;
+}

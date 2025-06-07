@@ -1,3 +1,9 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
 .container {
   width: 90%;
   margin: auto;
@@ -15,7 +21,7 @@ main {
     135deg,
     #ff4d4d,
     #cc0000
-  ); /* Qırmızı tonlu gradient */
+  );
   color: white;
   padding: 10px 25px;
   font-size: 16px;
