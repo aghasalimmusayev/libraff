@@ -1,13 +1,56 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useAllContext } from '../../Context/MyContext'
 import { Link } from 'react-router-dom'
-import '../CSS/katalog.css'
+import '../CSS/newKatalog.css'
 
 function NewKatalog() {
 
     const { bookData } = useAllContext()
-    function showBooks(Kitablar) {
-        console.log(bookData);
+    const [books, setBooks] = useState([])
+    const [muellif, setMuellif] = useState([])
+    const [discountBook, setDiscountBook] = useState([])
+    const [kategory, setKategory] = useState([])
+    const [mellifBooks, setMuellifBooks] = useState([])
+    const [katBooks, setKatBooks] = useState([])
+
+    function showBooks() {
+        setBooks(bookData);
+        setMuellif([])
+        setDiscountBook([])
+        setKatBooks([])
+        setMuellifBooks([])
+    }
+    function showDiscount() {
+        setDiscountBook(bookData.filter(item => item.DiscountedPrice < item.OriginalPrice))
+        setBooks([])
+        setMuellif([])
+        setKategory([])
+        setKatBooks([])
+        setMuellifBooks([])
+    }
+    function showAuthor() {
+        setMuellif([...new Set(bookData.map(item => item.Müəllif).filter(mlf => mlf !== ""))])
+        setBooks([])
+        setDiscountBook([])
+        setKategory([])
+        setKatBooks([])
+        setMuellifBooks([])
+    }
+    function showKategory() {
+        setKategory([...new Set(bookData.map(item => item.CategoryName).filter(cat => cat !== ""))])
+        setBooks([])
+        setMuellif([])
+        setDiscountBook([])
+        setKatBooks([])
+        setMuellifBooks([])
+    }
+    function mllfBookShow(muellif) {
+        setMuellifBooks(bookData.filter(item => item.Müəllif == muellif))
+        setKatBooks([])
+    }
+    function katBookShow(kateg) {
+        setKatBooks(bookData.filter(item => item.CategoryName === kateg))
+        setMuellifBooks([])
     }
 
     return (
@@ -15,16 +58,45 @@ function NewKatalog() {
             <div className='katalog_menu'>
                 <div className="katalog_box">
                     <ul className='first_list'>
-                        <li onMouseOver={() => { showBooks(Kitablar) }}>Kitablar</li>
-                        <li>Muellifler</li>
-                        <li>Endirimli kitablar</li>
+                        <li onMouseOver={() => { showBooks() }}>Kitablar</li>
+                        <li onMouseOver={() => { showDiscount() }}>Endirimli kitablar</li>
+                        <li onMouseOver={() => { showAuthor() }}>Muellifler</li>
+                        <li onMouseOver={() => { showKategory() }}>Kateqoiyalar</li>
                     </ul>
-                    <ul className='second_list'>
-                        {
-                            bookData?.map(kitab => {
-                                return <li key={kitab.id}><Link to='/'>{kitab.Title}</Link></li>
-                            })
-                        }
+                    <ul className='second_list' style={{ display: books.length > 0 ? 'flex' : 'none' }}>
+                        {books?.map(kitab => {
+                            return <li key={kitab.id}><Link to='/'>{kitab.Title}</Link></li>
+                        })}
+                    </ul>
+
+                    <ul className='second_list' style={{ display: discountBook.length > 0 ? 'flex' : 'none' }}>
+                        {discountBook?.map(book => {
+                            return <li key={book.id}><Link to='/'>{book.Title}</Link></li>
+                        })}
+                    </ul>
+
+                    <ul className='second_list' style={{ display: muellif.length > 0 ? 'flex' : 'none' }}>
+                        {muellif?.map((mllf, index) => {
+                            return <li key={index}><Link to='/' onMouseOver={() => { mllfBookShow(mllf) }}>{mllf}</Link></li>
+                        })}
+                    </ul>
+
+                    <ul className='second_list' style={{ display: kategory.length > 0 ? 'flex' : 'none' }}>
+                        {kategory?.map((cat, index) => {
+                            return <li key={index}><Link to='/' onMouseOver={() => { katBookShow(cat) }}>{cat}</Link></li>
+                        })}
+                    </ul>
+
+                    <ul className='third_list' style={{ display: mellifBooks.length > 0 ? 'flex' : 'none' }}>
+                        {mellifBooks?.map(ktb => {
+                            return <li key={ktb.id}><Link to='/'>{ktb.Title}</Link></li>
+                        })}
+                    </ul>
+
+                    <ul className='third_list' style={{ display: katBooks.length > 0 ? 'flex' : 'none' }}>
+                        {katBooks?.map(ktb => {
+                            return <li key={ktb.id}><Link to='/'>{ktb.Title}</Link></li>
+                        })}
                     </ul>
                 </div>
             </div>

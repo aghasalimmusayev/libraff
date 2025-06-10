@@ -41,6 +41,22 @@ main {
   align-items: center;
   height: 80vh;
 }
+.clear_btn{
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid red;
+  border-radius: 20px;
+  background-color: #eee;
+  padding: 10px 20px;
+  font: 600 1rem "Roboto", sans-serif;
+  color: #000;
+  cursor: pointer;
+  transition: .3s;
+}
+.clear_btn:hover{background-color: #fff;}
+
 @media (min-width: 768px) {
   .container {
     max-width: 1400px;

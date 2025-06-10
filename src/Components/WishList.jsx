@@ -3,6 +3,7 @@ import { useAllContext } from '../../Context/MyContext'
 import { Link } from 'react-router-dom'
 import { GoHeart } from "react-icons/go";
 import { GoHeartFill } from "react-icons/go";
+import { AiOutlineClear } from "react-icons/ai";
 
 function WishList() {
 
@@ -10,7 +11,7 @@ function WishList() {
     function wishClear() {
         setWishList([])
     }
-    
+
     useEffect(() => {
         document.title = 'Secilmisler | Libraff'
     }, [])
@@ -42,9 +43,10 @@ function WishList() {
                     })}
                 </div>
                 {wishLits.length > 0 &&
-                    <div className="clear_btn">
-                        <button onClick={wishClear}>Siyahini sifirla</button>
-                    </div>
+                    <button className="clear_btn" onClick={wishClear}>
+                        <AiOutlineClear />
+                        <span>Siyahini sifirla</span>
+                    </button>
                 }
             </div>
         </div>

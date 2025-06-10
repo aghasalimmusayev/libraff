@@ -5,6 +5,7 @@ import Katalog from "./Katalog.jsx"
 import Loader from "./Loader.jsx"
 // import NewKatalog from './NewKatalog.jsx'
 import { useAllContext } from '../../Context/MyContext.jsx'
+import NewKatalog from './NewKatalog.jsx'
 
 function Main() {
 
@@ -13,10 +14,10 @@ function Main() {
     return (
         bookData.length > 0 ? (
             <>
-                {/* <NewKatalog /> */}
-                <HeaderSlider />
-                <Kitablar />
-                <Katalog />
+                <NewKatalog />
+                {/* <HeaderSlider /> */}
+                {/* <Kitablar /> */}
+                {/* <Katalog /> */}
             </>
         ) : (
             <div className='loader'>
