@@ -37,6 +37,8 @@ nav{
 }
 .nav_content{padding: 15px 0; }
 .logo img{width: 120px;}
+.katalog_btn:hover{background-color: rgba(255, 0, 0, 0.527);}
+.katalog_btn{display: none;}
 .links{
     position: absolute;
     top: 100%;
@@ -105,6 +107,17 @@ nav{
 @media(min-width:768px){
     .menu_toggle{display: none;}
     .logo img{width: 150px;}
+    .katalog_btn{
+        display: block;
+        padding: 10px 25px;
+        border: none;
+        border-radius: 20px;
+        background-color: red;
+        font: 500 1.2rem "Roboto",sans-serif;
+        color: #eee;
+        cursor: pointer;
+        transition: .3s;
+    }
     .links{
         display: flex;
         position: static;

@@ -1,17 +1,19 @@
 import React, { useState } from 'react'
 import { useAllContext } from '../../Context/MyContext'
 import { Link } from 'react-router-dom'
+import { FaXmark } from "react-icons/fa6";
 import '../CSS/newKatalog.css'
 
 function NewKatalog() {
 
-    const { bookData } = useAllContext()
+    const { bookData, closeKat } = useAllContext()
     const [books, setBooks] = useState([])
     const [muellif, setMuellif] = useState([])
     const [discountBook, setDiscountBook] = useState([])
     const [kategory, setKategory] = useState([])
     const [mellifBooks, setMuellifBooks] = useState([])
     const [katBooks, setKatBooks] = useState([])
+
 
     function showBooks() {
         setBooks(bookData);
@@ -57,6 +59,9 @@ function NewKatalog() {
         <>
             <div className='katalog_menu'>
                 <div className="katalog_box">
+                    <div className="close_kat">
+                        <FaXmark style={{fontSize:"28px", cursor:"pointer"}} onClick={closeKat}/>
+                    </div>
                     <ul className='first_list'>
                         <li onMouseOver={() => { showBooks() }}>Kitablar</li>
                         <li onMouseOver={() => { showDiscount() }}>Endirimli kitablar</li>

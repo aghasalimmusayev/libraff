@@ -5,6 +5,7 @@ const AllContext = createContext()
 
 export function MyContext({ children }) {
 
+    const [katalog, setKatalog] = useState(false)
     const [bookData, setBookData] = useState([])
     const [filteredKitab, setFilteredKitab] = useState([])
     const [searchText, setSearchText] = useState('')
@@ -17,7 +18,7 @@ export function MyContext({ children }) {
             return []
         }
     })
-    
+
     useEffect(() => {
         (async () => {
             const data = await getData()
@@ -49,6 +50,15 @@ export function MyContext({ children }) {
         localStorage.setItem("wishList", JSON.stringify(wishLits))
     }, [wishLits])
 
+    function closeKat() {
+        setKatalog(false)
+    }
+    function openKat(){
+        setKatalog(true)
+    }
+
+
+
     return (
         <AllContext.Provider value={{
             filteredKitab,
@@ -57,7 +67,10 @@ export function MyContext({ children }) {
             bookData,
             wishLits,
             setWishList,
-            handleWish
+            handleWish,
+            katalog,
+            closeKat,
+            openKat
         }}>
             {children}
         </AllContext.Provider>

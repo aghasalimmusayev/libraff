@@ -5,7 +5,7 @@
   list-style: none;
   text-decoration: none;
 }
-.katalog_menu {
+/* .katalog_menu {
   font-family: Arial, sans-serif;
   border: 1px solid #ddd;
   position: relative;
@@ -20,7 +20,7 @@
   background-color: #fff;
   overflow: hidden;
   display: flex;
-}
+} */
 /**<---KATEGORY--->*/
 .main_katalog{width: 33.33%;}
 .kat_name, .element_name {border-bottom: 1px solid #eee;}

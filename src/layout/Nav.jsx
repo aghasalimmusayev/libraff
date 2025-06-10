@@ -8,7 +8,7 @@ import { IoBagHandleOutline } from "react-icons/io5";
 
 function Nav() {
 
-    const { setSearchText, wishLits } = useAllContext()
+    const { setSearchText, wishLits, openKat } = useAllContext()
     const [navHandle, setNavhandle] = useState(false)
 
     function handleMenu() {
@@ -23,6 +23,7 @@ function Nav() {
             <nav>
                 <div className="nav_content">
                     <Link to='/' className='logo'><img src={Logo} alt="" /></Link>
+                    <button className='katalog_btn' onClick={openKat}>Katalog</button>
                     <div className={`links ${navHandle ? 'open' : ''}`}>
                         <div className='cart_fav'>
                             <Link className='wish_box' to="/wishlist" onClick={closeLinks}>Secilmisler
