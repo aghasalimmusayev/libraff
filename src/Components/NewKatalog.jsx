@@ -57,10 +57,10 @@ function NewKatalog() {
 
     return (
         <>
-            <div className='katalog_menu'>
-                <div className="katalog_box">
+            <div className='katalog_menu' onClick={closeKat}>
+                <div className="katalog_box" onClick={(e) => e.stopPropagation()}>
                     <div className="close_kat">
-                        <FaXmark style={{fontSize:"28px", cursor:"pointer"}} onClick={closeKat}/>
+                        <FaXmark style={{ fontSize: "28px", cursor: "pointer" }} onClick={closeKat} />
                     </div>
                     <ul className='first_list'>
                         <li onMouseOver={() => { showBooks() }}>Kitablar</li>
@@ -70,37 +70,32 @@ function NewKatalog() {
                     </ul>
                     <ul className='second_list' style={{ display: books.length > 0 ? 'flex' : 'none' }}>
                         {books?.map(kitab => {
-                            return <li key={kitab.id}><Link to='/'>{kitab.Title}</Link></li>
+                            return <li key={kitab.id}><Link to={`/details/${kitab.id}`} target='_blank'>{kitab.Title}</Link></li>
                         })}
                     </ul>
-
                     <ul className='second_list' style={{ display: discountBook.length > 0 ? 'flex' : 'none' }}>
                         {discountBook?.map(book => {
-                            return <li key={book.id}><Link to='/'>{book.Title}</Link></li>
+                            return <li key={book.id}><Link to={`/details/${book.id}`} target='_blank'>{book.Title}</Link></li>
                         })}
                     </ul>
-
                     <ul className='second_list' style={{ display: muellif.length > 0 ? 'flex' : 'none' }}>
                         {muellif?.map((mllf, index) => {
                             return <li key={index}><Link to='/' onMouseOver={() => { mllfBookShow(mllf) }}>{mllf}</Link></li>
                         })}
                     </ul>
-
                     <ul className='second_list' style={{ display: kategory.length > 0 ? 'flex' : 'none' }}>
                         {kategory?.map((cat, index) => {
                             return <li key={index}><Link to='/' onMouseOver={() => { katBookShow(cat) }}>{cat}</Link></li>
                         })}
                     </ul>
-
                     <ul className='third_list' style={{ display: mellifBooks.length > 0 ? 'flex' : 'none' }}>
                         {mellifBooks?.map(ktb => {
-                            return <li key={ktb.id}><Link to='/'>{ktb.Title}</Link></li>
+                            return <li key={ktb.id}><Link to={`/details/${ktb.id}`} target='_blank'>{ktb.Title}</Link></li>
                         })}
                     </ul>
-
                     <ul className='third_list' style={{ display: katBooks.length > 0 ? 'flex' : 'none' }}>
                         {katBooks?.map(ktb => {
-                            return <li key={ktb.id}><Link to='/'>{ktb.Title}</Link></li>
+                            return <li key={ktb.id}><Link to={`/details/${ktb.id}`} target='_blank'>{ktb.Title}</Link></li>
                         })}
                     </ul>
                 </div>
