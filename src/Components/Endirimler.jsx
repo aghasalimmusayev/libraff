@@ -39,9 +39,9 @@ function Endirimler() {
                             </div>
                         )
                     })}
-                <div className="more_btn" style={{ textAlign: "center" }}>
-                    <button onClick={showMore}>Load More</button>
-                </div>
+            </div>
+            <div className="more_btn" style={{ textAlign: "center" }}>
+                <button onClick={showMore}>Load More</button>
             </div>
         </div>
     )

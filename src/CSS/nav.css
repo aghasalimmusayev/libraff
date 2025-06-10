@@ -73,16 +73,18 @@ nav{
     flex-direction: column;
     gap: 15px;
     a{
+        display: block;
+        width: 100%;
         display: flex;
-        justify-content: center;
         align-items: center;
-        width: fit-content;
         gap: 10px;
     }
 }
+.whislist:hover{color: red;}
 .whislist{
     font-size: 25px;
     color: #333;
+    transition: .3s;
 }
 .wish_box{position: relative;}
 .wish_count{

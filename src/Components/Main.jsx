@@ -11,7 +11,7 @@ function Main() {
     const { bookData } = useAllContext()
 
     return (
-        bookData ? (
+        bookData.length > 0 ? (
             <>
                 {/* <NewKatalog /> */}
                 <HeaderSlider />
@@ -19,7 +19,7 @@ function Main() {
                 <Katalog />
             </>
         ) : (
-            <div style={{ textAlign: "center", margin: "50px 0" }}>
+            <div className='loader'>
                 <Loader />
             </div>
         )

@@ -9,7 +9,7 @@ const Loader = () => {
           <div className="top" />
           <div className="bottom" />
         </div>
-        <div className="title">getting files ready...</div>
+        <div className="title">Getting files ready...</div>
       </div>
     </StyledWrapper>
   );
@@ -29,21 +29,21 @@ const StyledWrapper = styled.div`
 
   .folder .top {
     background-color: #FF8F56;
-    width: 60px;
-    height: 12px;
-    border-top-right-radius: 10px;
+    width: 100px;
+    height: 20px;
+    border-top-right-radius: 20px;
   }
 
   .folder .bottom {
     background-color: #FFCE63;
-    width: 100px;
-    height: 70px;
+    width: 200px;
+    height: 130px;
     box-shadow: 5px 5px 0 0 #283149;
-    border-top-right-radius: 8px;
+    border-top-right-radius: 20px;
   }
 
   .container .title {
-    font-size: .9em;
+    font-size: 1.5em;
     color: #283149;
     text-align: center;
     margin-top: 15px;

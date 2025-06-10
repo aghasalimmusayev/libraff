@@ -14,6 +14,9 @@ function Nav() {
     function handleMenu() {
         setNavhandle(!navHandle)
     }
+    function closeLinks(){
+        setNavhandle(false)
+    }
 
     return (
         <div className='nav_bg'>
@@ -22,7 +25,7 @@ function Nav() {
                     <Link to='/' className='logo'><img src={Logo} alt="" /></Link>
                     <div className={`links ${navHandle ? 'open' : ''}`}>
                         <div className='cart_fav'>
-                            <Link className='wish_box' to="/wishlist">Secilmisler
+                            <Link className='wish_box' to="/wishlist" onClick={closeLinks}>Secilmisler
                                 <GoHeart className='whislist' />
                                 {wishLits.length > 0 && <span className='wish_count'>{wishLits.length}</span>}
                             </Link>
@@ -30,8 +33,8 @@ function Nav() {
                                 <IoBagHandleOutline style={{ fontSize: "25px" }} />
                             </Link>
                         </div>
-                        <Link to={'/muellifler'}>Muellifler</Link>
-                        <Link to={'/endirimler'}>Endirimler</Link>
+                        <Link to={'/muellifler'} onClick={closeLinks}>Muellifler</Link>
+                        <Link to={'/endirimler'} onClick={closeLinks}>Endirimler</Link>
                     </div>
                     <div className="search_inp">
                         <input type="text" onChange={(e) => setSearchText(e.target.value)} placeholder='Kitabinizi tapin...' />
