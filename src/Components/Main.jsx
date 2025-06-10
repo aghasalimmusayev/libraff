@@ -14,10 +14,10 @@ function Main() {
     return (
         bookData.length > 0 ? (
             <>
-                <NewKatalog />
-                {/* <HeaderSlider /> */}
-                {/* <Kitablar /> */}
-                {/* <Katalog /> */}
+                {/* <NewKatalog /> */}
+                <HeaderSlider />
+                <Kitablar />
+                <Katalog />
             </>
         ) : (
             <div className='loader'>
