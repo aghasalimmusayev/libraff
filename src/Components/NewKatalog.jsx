@@ -80,12 +80,18 @@ function NewKatalog() {
                     </ul>
                     <ul className='second_list' style={{ display: muellif.length > 0 ? 'flex' : 'none' }}>
                         {muellif?.map((mllf, index) => {
-                            return <li key={index}><Link to={`/muellifler/muellifKitablari/${mllf}`} onMouseOver={() => { mllfBookShow(mllf) }}>{mllf}</Link></li>
+                            return <li key={index}><Link
+                                to={`/muellifler/muellifKitablari/${mllf}`}
+                                onMouseOver={() => { mllfBookShow(mllf) }}
+                                onClick={closeKat}>{mllf}</Link></li>
                         })}
                     </ul>
                     <ul className='second_list' style={{ display: kategory.length > 0 ? 'flex' : 'none' }}>
                         {kategory?.map((cat, index) => {
-                            return <li key={index}><Link to='/kateqoriyalar' onMouseOver={() => { katBookShow(cat) }}>{cat}</Link></li>
+                            return <li key={index}><Link
+                                to='/kateqoriyalar'
+                                onMouseOver={() => { katBookShow(cat) }}
+                                onClick={closeKat}>{cat}</Link></li>
                         })}
                     </ul>
                     <ul className='third_list' style={{ display: mellifBooks.length > 0 ? 'flex' : 'none' }}>

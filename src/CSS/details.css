@@ -134,7 +134,9 @@
     font-weight: 600;
     color: #2c3e50;
 }
-
+.add_btn{
+    max-width: 200px;
+}
 .tesvir {
     font-size: 1rem;
     line-height: 1.7;

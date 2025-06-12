@@ -11,6 +11,7 @@ import MuellifKitablar from './Components/Child Components/MuellifKitablar.jsx';
 import WishList from './Components/WishList.jsx';
 import Sebet from './Components/Sebet.jsx'
 import Category from './Components/Category.jsx'
+import Error from './Components/Error.jsx';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
             <Route path='/kateqoriyalar' element={<Category />} />
           </Route>
 
+          <Route path='*' element={<Error />} />
           <Route path='/admin' element={<Admin />} />
 
         </Routes>

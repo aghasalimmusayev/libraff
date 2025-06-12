@@ -5,13 +5,15 @@ import { GoHeart } from "react-icons/go";
 import { GoHeartFill } from "react-icons/go";
 import "../CSS/details.css"
 import { useAllContext } from '../../Context/MyContext';
+import { SlBasket } from "react-icons/sl";
 
 function Details() {
 
     const { id } = useParams()
     const [kitab, setKitab] = useState(null)
-    const { wishLits, handleWish } = useAllContext()
+    const { wishLits, handleWish, sebet, addToCart } = useAllContext()
     const wishVar = kitab && wishLits.some(ktb => kitab.id === ktb.id)
+    const sebetdeVar = sebet.some(ktb => kitab.id == ktb.id)
 
     useEffect(() => {
         (async () => {
@@ -44,6 +46,12 @@ function Details() {
                             <p className='staok_sayi'><span>Stokda var: </span> {kitab.stokSayi} eded</p>
                             <p className='satildi'><span>Satildi:</span> {kitab.satildi}</p>
                             <p className='baxildi'><span>Baxildi:</span> {kitab.baxildi}</p>
+                            <div className="add_btn">
+                                <button onClick={() => addToCart(kitab.id)} className='add_to_cart'>
+                                    <SlBasket className='cart_icon' />
+                                    <span>{sebetdeVar ? "Elave edildi" : "Sebete elave et"}</span>
+                                </button>
+                            </div>
                             <p className='tesvir'><span>Tesvir:</span> {kitab.Description}</p>
                         </div>
                     </div>

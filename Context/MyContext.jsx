@@ -5,6 +5,7 @@ const AllContext = createContext()
 
 export function MyContext({ children }) {
 
+    const [xeta, setXeta] = useState(null)
     const [katalog, setKatalog] = useState(false)
     const [bookData, setBookData] = useState([])
     const [filteredKitab, setFilteredKitab] = useState([])
@@ -22,12 +23,18 @@ export function MyContext({ children }) {
 
     useEffect(() => {
         (async () => {
+            try{
             const data = await getData()
             const unicData = data.filter(
                 (kitab, index, selfData) =>
                     index === selfData.findIndex(ktb => ktb.Title === kitab.Title)
             )
             setBookData(unicData)
+            }
+            catch(err){
+                console.log("Xeta var: " + err)
+                setXeta(err)
+            }
         })();
     }, [])
 
