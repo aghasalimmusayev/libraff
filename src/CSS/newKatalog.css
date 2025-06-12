@@ -34,7 +34,6 @@
 .first_list li {
     padding: 10px 15px;
     color: white;
-    cursor: pointer;
     border-bottom: 1px solid #495057;
     transition: background-color 0.3s;
 }

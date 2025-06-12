@@ -14,7 +14,7 @@ function Nav() {
     function handleMenu() {
         setNavhandle(!navHandle)
     }
-    function closeLinks(){
+    function closeLinks() {
         setNavhandle(false)
     }
 
@@ -36,6 +36,7 @@ function Nav() {
                         </div>
                         <Link to={'/muellifler'} onClick={closeLinks}>Muellifler</Link>
                         <Link to={'/endirimler'} onClick={closeLinks}>Endirimler</Link>
+                        <Link to={'/kateqoriyalar'} onClick={closeLinks}>Kateqoriyalar</Link>
                     </div>
                     <div className="search_inp">
                         <input type="text" onChange={(e) => setSearchText(e.target.value)} placeholder='Kitabinizi tapin...' />
@@ -45,7 +46,9 @@ function Nav() {
                             <GoHeart className='whislist' />
                             {wishLits.length > 0 && <span className='wish_count'>{wishLits.length}</span>}
                         </Link>
-                        <IoBagHandleOutline style={{ fontSize: "25px" }} />
+                        <Link to='/sebet'>
+                            <IoBagHandleOutline className='sebet' style={{ fontSize: "25px" }} />
+                        </Link>
                     </div>
                     <div className={`menu_toggle ${navHandle ? "click" : ""}`} onClick={handleMenu}>
                         <div className="bar1"></div>

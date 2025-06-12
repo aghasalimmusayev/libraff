@@ -36,6 +36,26 @@
     object-fit: cover;
   }
 }
+.add_to_cart:hover{border-color: #07ad07;}
+.add_to_cart:focus{background-color: #07ad07;}
+.add_to_cart{
+  border: 1px solid #19ec19;
+  border-radius: 20px;
+  background-color: #19ec19;
+  outline: none;
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: .3s;
+  font: 550 1rem "Roboto", sans-serif;
+  .cart_icon{
+    font-size: 20px;
+  }
+}
 .pag_btns{
   display: flex;
   justify-content: center;

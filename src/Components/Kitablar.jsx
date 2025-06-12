@@ -5,11 +5,11 @@ import { GoHeart } from "react-icons/go";
 import { GoHeartFill } from "react-icons/go";
 import { Pagination } from 'antd';
 import { useAllContext } from '../../Context/MyContext';
-
+import { SlBasket } from "react-icons/sl";
 
 function Kitablar() {
 
-    const { filteredKitab, wishLits, handleWish } = useAllContext()
+    const { filteredKitab, wishLits, handleWish, addToCart } = useAllContext()
 
     const [currentPage, setCurrentPage] = useState(1)
     const [pageSize] = useState(8)
@@ -24,7 +24,7 @@ function Kitablar() {
     useEffect(() => {
         document.title = 'Kitablar | Libraff'
     }, [])
-
+    
     return (
         <>
             <div className="container">
@@ -45,6 +45,10 @@ function Kitablar() {
                                 <div className="kitab_info">
                                     <h2 className='kitab_adi'>{item.Title}</h2>
                                     <p className='kitab_qiymeti'>{item.OriginalPrice} ₼</p>
+                                    <button onClick={() => addToCart(item.id)} className='add_to_cart'>
+                                        <SlBasket className='cart_icon' />
+                                        <span>Sebete elave et</span>
+                                    </button>
                                 </div>
                             </div>
                         )

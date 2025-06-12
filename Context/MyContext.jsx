@@ -9,6 +9,7 @@ export function MyContext({ children }) {
     const [bookData, setBookData] = useState([])
     const [filteredKitab, setFilteredKitab] = useState([])
     const [searchText, setSearchText] = useState('')
+    const [sebet, setSebet] = useState([])
     const [wishLits, setWishList] = useState(() => {
         try {
             const savedWishList = localStorage.getItem('wishList')
@@ -53,11 +54,13 @@ export function MyContext({ children }) {
     function closeKat() {
         setKatalog(false)
     }
-    function openKat(){
+    function openKat() {
         setKatalog(true)
     }
-
-
+    function addToCart(id) {
+        const alKitab = bookData.find(item => item.id === id)
+        setSebet(prev => [...prev, alKitab])
+    }
 
     return (
         <AllContext.Provider value={{
@@ -70,7 +73,9 @@ export function MyContext({ children }) {
             handleWish,
             katalog,
             closeKat,
-            openKat
+            openKat,
+            addToCart,
+            sebet
         }}>
             {children}
         </AllContext.Provider>

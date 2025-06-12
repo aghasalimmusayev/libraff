@@ -82,12 +82,12 @@ nav{
         gap: 10px;
     }
 }
-.whislist:hover{color: red;}
 .whislist{
     font-size: 25px;
     color: #333;
     transition: .3s;
 }
+.whislist:hover{color: red;}
 .wish_box{position: relative;}
 .wish_count{
     position: absolute;
@@ -103,6 +103,12 @@ nav{
     color: #fff;
     font: 400 0.8rem "arial";
 }
+.sebet{
+    font-size: 25px;
+    color: #333;
+    transition: .3s;
+}
+.sebet:hover{color: red;}
 
 @media(min-width:768px){
     .menu_toggle{display: none;}

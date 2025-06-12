@@ -9,6 +9,8 @@ import Endirimler from './Components/Endirimler.jsx';
 import { MyContext } from '../Context/MyContext.jsx';
 import MuellifKitablar from './Components/Child Components/MuellifKitablar.jsx';
 import WishList from './Components/WishList.jsx';
+import Sebet from './Components/Sebet.jsx'
+import Category from './Components/Category.jsx'
 
 function App() {
 
@@ -24,6 +26,8 @@ function App() {
             <Route path='/endirimler' element={<Endirimler />} />
             <Route path='/muellifler/muellifKitablari/:muellif' element={<MuellifKitablar />} />
             <Route path='/wishlist' element={<WishList />} />
+            <Route path='/sebet' element={<Sebet />} />
+            <Route path='/kateqoriyalar' element={<Category />} />
           </Route>
 
           <Route path='/admin' element={<Admin />} />
