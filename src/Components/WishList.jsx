@@ -18,7 +18,7 @@ function WishList() {
 
     return (
         <div className='container'>
-            <h1 style={{ margin: "30px 0" }}>Beyenilmis kitablar</h1>
+            <h2 style={{ margin: "30px 0" }}>Beyenilmis kitablar</h2>
             <div className='wishlist_box'>
                 <div className='kitablar'>
                     {wishLits?.map(item => {

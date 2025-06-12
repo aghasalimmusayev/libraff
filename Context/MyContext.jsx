@@ -59,7 +59,29 @@ export function MyContext({ children }) {
     }
     function addToCart(id) {
         const alKitab = bookData.find(item => item.id === id)
-        setSebet(prev => [...prev, alKitab])
+        const sebetdeVar = sebet.find(item => alKitab.id == item.id)
+        if (!sebetdeVar) setSebet(prev => [...prev, { ...alKitab, "count": 1 }])
+        else setSebet(prev =>
+            prev.map(item =>
+                item.id === id ? { ...item, count: item.count + 1 } : item
+            )
+        );
+    }
+    function countArtir(id) {
+        setSebet(prev =>
+            prev.map(item =>
+                item.id === id ? { ...item, count: item.count + 1 } : item
+            )
+        );
+    }
+    function countAzalt(id) {
+        setSebet(prev =>
+            prev.map(item =>
+                item.id === id && item.count > 1
+                    ? { ...item, count: item.count - 1 }
+                    : item
+            )
+        );
     }
 
     return (
@@ -75,7 +97,9 @@ export function MyContext({ children }) {
             closeKat,
             openKat,
             addToCart,
-            sebet
+            sebet,
+            countArtir,
+            countAzalt
         }}>
             {children}
         </AllContext.Provider>

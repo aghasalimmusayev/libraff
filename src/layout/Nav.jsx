@@ -8,7 +8,7 @@ import { IoBagHandleOutline } from "react-icons/io5";
 
 function Nav() {
 
-    const { setSearchText, wishLits, openKat } = useAllContext()
+    const { setSearchText, wishLits, openKat, sebet } = useAllContext()
     const [navHandle, setNavhandle] = useState(false)
 
     function handleMenu() {
@@ -46,8 +46,9 @@ function Nav() {
                             <GoHeart className='whislist' />
                             {wishLits.length > 0 && <span className='wish_count'>{wishLits.length}</span>}
                         </Link>
-                        <Link to='/sebet'>
+                        <Link to='/sebet' className='sebet_icon_box'>
                             <IoBagHandleOutline className='sebet' style={{ fontSize: "25px" }} />
+                            {sebet.length > 0 && <span className='sebet_count'>{sebet.length}</span>}
                         </Link>
                     </div>
                     <div className={`menu_toggle ${navHandle ? "click" : ""}`} onClick={handleMenu}>

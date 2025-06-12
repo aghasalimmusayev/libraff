@@ -88,8 +88,8 @@ nav{
     transition: .3s;
 }
 .whislist:hover{color: red;}
-.wish_box{position: relative;}
-.wish_count{
+.wish_box, .sebet_icon_box{position: relative;}
+.wish_count, .sebet_count{
     position: absolute;
     top: -6px;
     right: -10px;
