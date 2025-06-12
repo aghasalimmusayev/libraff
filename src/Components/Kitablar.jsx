@@ -9,8 +9,7 @@ import { SlBasket } from "react-icons/sl";
 
 function Kitablar() {
 
-    const { filteredKitab, wishLits, handleWish, addToCart } = useAllContext()
-
+    const { filteredKitab, wishLits, handleWish, addToCart, sebet } = useAllContext()
     const [currentPage, setCurrentPage] = useState(1)
     const [pageSize] = useState(8)
     const startIndex = (currentPage - 1) * pageSize  // başlanğıc index
@@ -24,13 +23,14 @@ function Kitablar() {
     useEffect(() => {
         document.title = 'Kitablar | Libraff'
     }, [])
-    
+
     return (
         <>
             <div className="container">
                 <div className='kitablar'>
                     {currentBooks.map(item => {
                         const wishVar = wishLits.some(ktb => item.id === ktb.id)
+                        const sebetdeVar = sebet.some(ktb => ktb.id == item.id)
                         return (
                             <div className='kitab' key={item.id}>
                                 <div className='kitab_img'>
@@ -47,7 +47,7 @@ function Kitablar() {
                                     <p className='kitab_qiymeti'>{item.OriginalPrice} ₼</p>
                                     <button onClick={() => addToCart(item.id)} className='add_to_cart'>
                                         <SlBasket className='cart_icon' />
-                                        <span>Sebete elave et</span>
+                                        <span>{sebetdeVar ? "Elave edildi" : "Sebete elave et"}</span>
                                     </button>
                                 </div>
                             </div>
