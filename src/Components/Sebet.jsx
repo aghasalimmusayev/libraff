@@ -1,11 +1,15 @@
 import React from 'react'
 import { useAllContext } from '../../Context/MyContext'
 import { Link } from 'react-router-dom'
+import { AiOutlineClear } from "react-icons/ai";
 import '../CSS/sebet.css'
 function Sebet() {
 
-    const { sebet, countArtir, countAzalt } = useAllContext()
+    const { sebet, countArtir, countAzalt, setSebet } = useAllContext()
     const total = sebet?.reduce((cem, item) => cem + (item.OriginalPrice * item.count), 0)
+    function sebetClear() {
+        setSebet([])
+    }
 
     return (
         <div className='container'>
@@ -34,9 +38,15 @@ function Sebet() {
                                 </div>
                             )
                         }))
-                        : <p>Hec bir mehsul elave edilmeyib!</p>}
+                        : <p className='empty_info'>Hec bir mehsul elave edilmeyib!</p>}
                 </div>
-                {sebet.length > 0 && (<div className='total'>Total: <span>{total.toFixed(1)} ₼</span></div>)}
+                <hr />
+                {sebet.length > 0 && (<div className='total'>Cem mebleg: <span>{total.toFixed(1)} ₼</span></div>)}
+                {sebet.length > 0 &&
+                    <button className="clear_btn" onClick={sebetClear}>
+                        <AiOutlineClear />
+                        <span>Siyahini sifirla</span>
+                    </button>}
             </div>
         </div>
     )

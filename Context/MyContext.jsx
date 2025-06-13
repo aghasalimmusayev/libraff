@@ -107,6 +107,7 @@ export function MyContext({ children }) {
             openKat,
             addToCart,
             sebet,
+            setSebet,
             countArtir,
             countAzalt,
         }}>
