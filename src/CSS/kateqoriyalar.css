@@ -47,3 +47,111 @@
         transition: .3s;
     }
 }
+.filter_heading {
+    margin: 15px;
+    font: 600 1.1rem "Roboto",sans-serif;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 8px;
+}
+.dil_kitab_sayi {
+    font: 400 0.9rem "Roboto",sans-serif;
+    color: #007bff;
+    background-color: #e3f2fd;
+    padding: 4px 8px;
+    border-radius: 12px;
+    margin-left: 10px;
+    border: 1px solid #90caf9;
+}
+.diller li {margin: 5px 0;}
+.diller label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font: 500 1rem "Roboto", sans-serif;
+    color: #333;
+    padding: 5px 10px;
+    border-left: 3px solid transparent;
+    border-radius: 5px;
+    transition: .3s;
+}
+.diller label:hover {
+    background-color: #eee;
+    color: red;
+}
+.diller label:has(input[type="checkbox"]:checked) {
+    border-color: red;
+    color: #00a2ff;
+    background-color: #f5f5f5;
+}
+.diller input[type="checkbox"] {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    accent-color: #00a2ff;
+    cursor: pointer;
+}
+.price_range {
+  width: 250px;
+  padding: 15px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-radius: 20px;
+}
+.range_values {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.range_values span {
+  font: 500 0.9rem "Roboto", sans-serif;
+  color: #333;
+  background-color: #e3f2fd;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: 1px solid #90caf9;
+}
+.dual_range {
+  position: relative;
+  height: 20px;
+}
+.dual_range input[type="range"] {
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background: transparent;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  pointer-events: none;
+}
+.dual_range input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #00a2ff;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: all;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.dual_range input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: #00a2ff;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  pointer-events: all;
+}
+.dual_range::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  height: 6px;
+  background: #00a2ff;
+  border-radius: 3px;
+  left: calc(minPrice / absoluteMax * 100%);
+  right: calc(100 - (maxPrice / absoluteMax * 100));
+}
