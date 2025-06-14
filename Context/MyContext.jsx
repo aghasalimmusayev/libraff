@@ -43,10 +43,10 @@ export function MyContext({ children }) {
     useEffect(() => {
         if (searchText) {
             const foundBook = bookData.filter(kitab => kitab.Title.toLowerCase().includes(searchText.toLowerCase()))
-            setFilteredKitab(foundBook)
+            setCatFilteredBook(foundBook)
         }
         else {
-            setFilteredKitab(bookData)
+            setCatFilteredBook(bookData)
         }
     }, [searchText, bookData])
 

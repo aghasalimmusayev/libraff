@@ -5,10 +5,10 @@
 .kateqoriyalar{
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 250px;
     height: 70vh;
     overflow-y: scroll;
-    padding: 20px;
+    padding: 15px;
     margin: 20px 0;
     border: 1px solid #eee;
     border-radius: 20px;
@@ -21,8 +21,29 @@
         padding: 5px 10px;
         border-left: 3px solid transparent;
         border-radius: 5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         transition: .3s;
     }
     a:hover{background-color: #eee; color: red;}
     a.active{border-color: red; color: #00a2ff;}
+}
+.diller{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    a{
+        display: block;
+        font: 500 1rem "Roboto",sans-serif;
+        color: #333;
+        padding: 5px 10px;
+        border-left: 3px solid transparent;
+        border-radius: 5px;
+        transition: .3s;
+    }
 }

@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import "../CSS/kitablar.css"
+import "../../CSS/kitablar.css"
 import { Link, useParams } from "react-router-dom"
 import { GoHeart } from "react-icons/go";
 import { GoHeartFill } from "react-icons/go";
 import { Pagination } from 'antd';
-import { useAllContext } from '../../Context/MyContext';
+import { useAllContext } from '../../../Context/MyContext';
 import { SlBasket } from "react-icons/sl";
 
 function Kitablar({ selectedCategory }) {
 
-    const { catFilteredBook, filteredKitab, wishLits, handleWish, addToCart, sebet } = useAllContext()
+    const { catFilteredBook, wishLits, handleWish, addToCart, sebet } = useAllContext()
     const [currentPage, setCurrentPage] = useState(1)
-    const [pageSize] = useState(8)
+    const [pageSize] = useState(12)
     const startIndex = (currentPage - 1) * pageSize  // başlanğıc index
     const endIndex = startIndex + pageSize           // son index  
     const currentBooks = catFilteredBook.slice(startIndex, endIndex)

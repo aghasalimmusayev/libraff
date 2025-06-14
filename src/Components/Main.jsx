@@ -1,9 +1,8 @@
 import React from 'react'
-import Kitablar from "./Kitablar"
 import HeaderSlider from './HeaderSlider'
 import Loader from "./Loader.jsx"
 import { useAllContext } from '../../Context/MyContext.jsx'
-
+import Category from "./Category.jsx"
 function Main() {
 
     const { bookData } = useAllContext()
@@ -12,7 +11,7 @@ function Main() {
         bookData.length > 0 ? (
             <>
                 <HeaderSlider />
-                <Kitablar />
+                <Category />
             </>
         ) : (
             <div className='loader'>
