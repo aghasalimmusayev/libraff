@@ -29,6 +29,7 @@ function App() {
             <Route path='/wishlist' element={<WishList />} />
             <Route path='/sebet' element={<Sebet />} />
             <Route path='/kateqoriyalar' element={<Category />} />
+            <Route path='/kateqoriyalar/:kateqoriya' element={<Category />} />
           </Route>
 
           <Route path='*' element={<Error />} />

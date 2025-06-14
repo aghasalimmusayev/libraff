@@ -1,28 +1,33 @@
 import React, { useEffect, useState } from 'react'
 import "../CSS/kitablar.css"
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import { GoHeart } from "react-icons/go";
 import { GoHeartFill } from "react-icons/go";
 import { Pagination } from 'antd';
 import { useAllContext } from '../../Context/MyContext';
 import { SlBasket } from "react-icons/sl";
 
-function Kitablar() {
+function Kitablar({ selectedCategory }) {
 
-    const { filteredKitab, wishLits, handleWish, addToCart, sebet } = useAllContext()
+    const { catFilteredBook, filteredKitab, wishLits, handleWish, addToCart, sebet } = useAllContext()
     const [currentPage, setCurrentPage] = useState(1)
     const [pageSize] = useState(8)
     const startIndex = (currentPage - 1) * pageSize  // başlanğıc index
     const endIndex = startIndex + pageSize           // son index  
-    const currentBooks = filteredKitab.slice(startIndex, endIndex) // indiki səhifənin kitabları
+    const currentBooks = catFilteredBook.slice(startIndex, endIndex)
     const handlePageChange = (page) => {
         setCurrentPage(page) // yeni səhifə nömrəsini state-ə yazir
         window.scrollTo({ top: 0, behavior: 'smooth' })
     }
+    useEffect(() => {
+        setCurrentPage(1)
+    }, [selectedCategory])
 
     useEffect(() => {
-        document.title = 'Kitablar | Libraff'
-    }, [])
+        document.title = selectedCategory
+            ? `${selectedCategory} Kitabları | Libraff`
+            : 'Kitablar | Libraff'
+    }, [selectedCategory])
 
     return (
         <>
@@ -57,7 +62,7 @@ function Kitablar() {
                 <div className="pag_btns">
                     <Pagination
                         current={currentPage}
-                        total={filteredKitab.length}
+                        total={catFilteredBook.length}
                         pageSize={pageSize}               // səhifə ölçüsü (8)
                         onChange={handlePageChange}       // klik edəndə çağırılan funksiya
                         showSizeChanger={false}           // səhifə ölçüsü dəyişmə düyməsi gizli
