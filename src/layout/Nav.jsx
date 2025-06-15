@@ -34,9 +34,9 @@ function Nav() {
                                 <IoBagHandleOutline style={{ fontSize: "25px" }} />
                             </Link>
                         </div>
-                        <Link to={'/muellifler'} onClick={closeLinks}>Muellifler</Link>
+                        {/* <Link to={'/muellifler'} onClick={closeLinks}>Muellifler</Link>
                         <Link to={'/endirimler'} onClick={closeLinks}>Endirimler</Link>
-                        <Link to={'/kateqoriyalar'} onClick={closeLinks}>Kateqoriyalar</Link>
+                        <Link to={'/kateqoriyalar'} onClick={closeLinks}>Kateqoriyalar</Link> */}
                     </div>
                     <div className="search_inp">
                         <input type="text" onChange={(e) => setSearchText(e.target.value)} placeholder='Kitabinizi tapin...' />

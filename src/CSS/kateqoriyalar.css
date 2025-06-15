@@ -54,7 +54,7 @@
     border-bottom: 2px solid #007bff;
     padding-bottom: 8px;
 }
-.dil_kitab_sayi {
+.dil_kitab_sayi, .qiymet_kitab_sayi {
     font: 400 0.9rem "Roboto",sans-serif;
     color: #007bff;
     background-color: #e3f2fd;

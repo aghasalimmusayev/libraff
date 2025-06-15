@@ -50,7 +50,6 @@ function Kitablar({ selectedCategory }) {
                                 <div className="kitab_info">
                                     <h2 className='kitab_adi'>{item.Title}</h2>
                                     <p className='kitab_qiymeti'>{item.OriginalPrice} ₼</p>
-                                    <div>{item.Dil}</div>
                                     <button onClick={() => addToCart(item.id)} className='add_to_cart'>
                                         <SlBasket className='cart_icon' />
                                         <span>{sebetdeVar ? "Elave edildi" : "Sebete elave et"}</span>

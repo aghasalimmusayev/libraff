@@ -16,9 +16,31 @@ function Category() {
         .flatMap(dil => dil.split('/'))
         .map(dil => dil.trim()))]
     const [minPrice, setMinPrice] = useState(0)
-    const [maxPrice, setMaxPrice] = useState(130)
-    const valueMin = 0
-    const valueMax = 130
+    const [maxPrice, setMaxPrice] = useState(0)
+    const [maxQiymet, setMaxQiymet] = useState(0)
+    const [originalMax, setOriginalMax] = useState(0)
+
+    useEffect(() => {
+        if (bookData.length > 0) {
+            const qiymetlist = bookData
+                .filter(book => book.OriginalPrice !== null && book.OriginalPrice !== undefined)
+                .map(item => parseFloat(item.OriginalPrice))
+                .filter(price => !isNaN(price))
+            const max = Math.floor(Math.max(...qiymetlist)) + 1
+            setMaxPrice(max)
+            setMinPrice(0)
+            setMaxQiymet(max)
+            setOriginalMax(max)
+        }
+    }, [bookData])
+    const handleMinV = (e) => {
+        const value = parseInt(e.target.value)
+        setMinPrice(Math.min(value, maxPrice))
+    }
+    const handleMaxV = (e) => {
+        const value = parseInt(e.target.value)
+        setMaxPrice(Math.max(value, minPrice))
+    }
 
     const dilSecimi = (language) => {
         if (dil.includes(language)) {
@@ -27,14 +49,7 @@ function Category() {
             setDil([...dil, language])
         }
     }
-    const handleMinV = (e) => {
-        const value = parseInt(e.target.value)
-        if (value <= maxPrice) setMinPrice(value)
-    }
-    const handleMaxV = (e) => {
-        const value = parseInt(e.target.value)
-        if (value >= minPrice) setMaxPrice(value)
-    }
+
     useEffect(() => {
         let filteredBooks = bookData
         if (kateqoriya && kateqoriya !== 'butun') {
@@ -46,8 +61,12 @@ function Category() {
                 return dil.some(selectedLang => bookLanguages.includes(selectedLang))
             })
         }
+        filteredBooks = filteredBooks.filter(book => {
+            const qiymet = parseFloat(book.OriginalPrice)
+            return qiymet >= minPrice && qiymet <= maxPrice
+        })
         setCatFilteredBook(filteredBooks)
-    }, [kateqoriya, dil, bookData, setCatFilteredBook])
+    }, [kateqoriya, dil, bookData, setCatFilteredBook, minPrice, maxPrice])
 
     return (
         <div className='container'>
@@ -82,7 +101,9 @@ function Category() {
                                 </li>)
                         })}
                     </ul>
-                    <h3 className='filter_heading'>Qiymət Aralığı</h3>
+                    <h3 className='filter_heading'>Qiymət
+                        {(minPrice > 0 || maxPrice < originalMax) && <span className='qiymet_kitab_sayi'>{catFilteredBook.length} kitab tapildi</span>}
+                    </h3>
                     <div className="price_range">
                         <div className="range_box">
                             <div className="range_values">
@@ -92,16 +113,16 @@ function Category() {
                             <div className="dual_range">
                                 <input
                                     type="range"
-                                    min={valueMin}
-                                    max={valueMax}
+                                    min={0}
+                                    max={maxQiymet}
                                     value={minPrice}
                                     onChange={handleMinV}
                                     className="range_min"
                                 />
                                 <input
                                     type="range"
-                                    min={valueMin}
-                                    max={valueMax}
+                                    min={0}
+                                    max={maxQiymet}
                                     value={maxPrice}
                                     onChange={handleMaxV}
                                     className="range_max"
