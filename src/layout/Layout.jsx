@@ -3,7 +3,7 @@ import Nav from "./Nav"
 import Footer from "./Footer"
 import { Outlet } from "react-router-dom"
 import { useAllContext } from '../../Context/MyContext'
-import NewKatalog from '../Components/NewKatalog'
+import Katalog from '../Components/Katalog'
 
 function Layout() {
 
@@ -12,7 +12,7 @@ function Layout() {
     return (
         <div>
             <Nav />
-            {katalog && <NewKatalog />}
+            {katalog && <Katalog />}
             <main>
                 <Outlet />
             </main>

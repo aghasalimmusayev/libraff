@@ -1,61 +1,107 @@
-import React, { useEffect, useState } from 'react'
-import "../CSS/libraff.css"
+import React, { useState } from 'react'
+import { useAllContext } from '../../Context/MyContext'
+import { Link } from 'react-router-dom'
+import { FaXmark } from "react-icons/fa6";
+import '../CSS/katalog.css'
 
 function Katalog() {
-    const [data, setData] = useState([])
-    useEffect(() => {
-        fetch("/kategory.json")
-            .then(response => response.json())
-            .then(data => setData(data))
-            .catch(error => {
-                console.error("Xeta var: " + error)
-            })
-    }, [])
 
-    const [altCatalog, setAltCatalog] = useState([])
-    function makeAlt(catName) {
-        let altData = data.find(item => item.name == catName)
-        setAltCatalog(altData)
-        setElement([])
+    const { bookData, closeKat } = useAllContext()
+    const [books, setBooks] = useState([])
+    const [muellif, setMuellif] = useState([])
+    const [discountBook, setDiscountBook] = useState([])
+    const [kategory, setKategory] = useState([])
+    const [mellifBooks, setMuellifBooks] = useState([])
+    const [katBooks, setKatBooks] = useState([])
+
+
+    function showBooks() {
+        setBooks(bookData);
+        setMuellif([])
+        setDiscountBook([])
+        setKatBooks([])
+        setMuellifBooks([])
     }
-
-    const [element, setElement] = useState([])
-    function makeElement(elementName) {
-        let elementData = altCatalog.altCategory?.find(item => item.name == elementName)
-        setElement(elementData)
+    function showDiscount() {
+        setDiscountBook(bookData.filter(item => item.DiscountedPrice < item.OriginalPrice))
+        setBooks([])
+        setMuellif([])
+        setKategory([])
+        setKatBooks([])
+        setMuellifBooks([])
+    }
+    function showAuthor() {
+        setMuellif([...new Set(bookData.map(item => item.Müəllif).filter(mlf => mlf !== ""))])
+        setBooks([])
+        setDiscountBook([])
+        setKategory([])
+        setKatBooks([])
+        setMuellifBooks([])
+    }
+    function showKategory() {
+        setKategory([...new Set(bookData.map(item => item.CategoryName).filter(cat => cat !== ""))])
+        setBooks([])
+        setMuellif([])
+        setDiscountBook([])
+        setKatBooks([])
+        setMuellifBooks([])
+    }
+    function mllfBookShow(muellif) {
+        setMuellifBooks(bookData.filter(item => item.Müəllif == muellif))
+        setKatBooks([])
+    }
+    function katBookShow(kateg) {
+        setKatBooks(bookData.filter(item => item.CategoryName === kateg))
+        setMuellifBooks([])
     }
 
     return (
         <>
-            <div className='katalog_menu'>
-                <div className="katalog_box">
-                    <ul className='main_katalog'>
-                        {data.map(item => {
-                            return <li className='kat_name' key={item.id} onMouseOver={() => makeAlt(item.name)}>
-                                <a href="#">{item.name}<i className="fa-solid fa-angle-right"></i></a>
-                            </li>
+            <div className='katalog_menu' onClick={closeKat}>
+                <div className="katalog_box" onClick={(e) => e.stopPropagation()}>
+                    <div className="close_kat">
+                        <FaXmark style={{ fontSize: "28px", cursor: "pointer" }} onClick={closeKat} />
+                    </div>
+                    <ul className='first_list'>
+                        <li onMouseOver={() => { showBooks() }}>Kitablar</li>
+                        <li onMouseOver={() => { showDiscount() }}>Endirimli kitablar</li>
+                        <li onMouseOver={() => { showAuthor() }}>Muellifler</li>
+                        <li onMouseOver={() => { showKategory() }}>Kateqoiyalar</li>
+                    </ul>
+                    <ul className='second_list' style={{ display: books.length > 0 ? 'flex' : 'none' }}>
+                        {books?.map(kitab => {
+                            return <li key={kitab.id}><Link to={`/details/${kitab.id}`} target='_blank'>{kitab.Title}</Link></li>
                         })}
                     </ul>
-                    <ul className='alt_katalog'>
-                        {altCatalog.altCategory ?
-                            (altCatalog.altCategory?.map(altItem => {
-                                const icon = altItem.elementler 
-                                const arrowIcon = icon ? <i className="fa-solid fa-angle-right"></i> : ""
-                                return <li className='alt_kat_name' key={altItem.id} onMouseOver={() => makeElement(altItem.name)}>
-                                    <a href="#">{altItem.name}{arrowIcon}</a>
-                                </li>
-                            })) :
-                            (altCatalog.elementler?.map(altItem => {
-                                return <li className='alt_kat_name' key={altItem.id} onMouseOver={() => makeElement(altItem.name)}>
-                                    <a href="#">{altItem.name}</a>
-                                </li>
-                            }))
-                        }
+                    <ul className='second_list' style={{ display: discountBook.length > 0 ? 'flex' : 'none' }}>
+                        {discountBook?.map(book => {
+                            return <li key={book.id}><Link to={`/details/${book.id}`} target='_blank'>{book.Title}</Link></li>
+                        })}
                     </ul>
-                    <ul className='elements'>
-                        {altCatalog.altCategory && element.elementler?.map(elementItem => {
-                            return <li className='element_name' key={elementItem.id}>
-                                <a href="">{elementItem.name}</a></li>
+                    <ul className='second_list' style={{ display: muellif.length > 0 ? 'flex' : 'none' }}>
+                        {muellif?.map((mllf, index) => {
+                            return <li key={index}><Link
+                                to={`/muellifler/muellifKitablari/${mllf}`}
+                                onMouseOver={() => { mllfBookShow(mllf) }}
+                                onClick={closeKat}>{mllf}</Link></li>
+                        })}
+                    </ul>
+                    <ul className='second_list' style={{ display: kategory.length > 0 ? 'flex' : 'none' }}>
+                        {kategory?.map((cat, index) => {
+                            return <li key={index}><Link
+                                to='/kateqoriyalar'
+                                onMouseOver={() => { katBookShow(cat) }}
+                                onClick={closeKat}>{cat}</Link></li>
+                        })}
+                    </ul>
+                    <ul className='third_list' style={{ display: mellifBooks.length > 0 ? 'flex' : 'none' }}>
+                        {mellifBooks?.map(ktb => {
+                            return <li key={ktb.id}><Link to={`/details/${ktb.id}`} target='_blank'>{ktb.Title}</Link></li>
+                        })}
+                    </ul>
+                    <ul className='third_list' style={{ display: katBooks.length > 0 ? 'flex' : 'none' }}>
+                        {katBooks?.map(ktb => {
+                            return <li key={ktb.id}><Link to={`/details/${ktb.id}`} target='_blank'>{ktb.Title}</Link></li>
                         })}
                     </ul>
                 </div>

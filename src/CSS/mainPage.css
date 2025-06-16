@@ -2,16 +2,19 @@
     padding: 50px 0;
     display: flex;
 }
+.category_filter, .price_filter, .lang_filter{
+  padding: 15px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  width: 250px;
+}
 .kateqoriyalar{
     display: flex;
     flex-direction: column;
     width: 250px;
     height: 70vh;
     overflow-y: scroll;
-    padding: 15px;
-    margin: 20px 0;
-    border: 1px solid #eee;
-    border-radius: 20px;
     scrollbar-width: thin;
     scrollbar-color: #c1c1c1 #f1f1f1;
     a{
@@ -33,10 +36,9 @@
     display: flex;
     flex-direction: column;
     width: 250px;
-    padding: 15px;
-    margin: 20px 0;
-    border: 1px solid #eee;
-    border-radius: 20px;
+    height: 0;
+    overflow: hidden;
+    transition: .3s;
     a{
         display: block;
         font: 500 1rem "Roboto",sans-serif;
@@ -48,12 +50,14 @@
     }
 }
 .filter_heading {
-    margin: 15px;
+    position: relative;
+    margin: 10px;
     font: 600 1.1rem "Roboto",sans-serif;
     color: #333;
     border-bottom: 2px solid #007bff;
     padding-bottom: 8px;
 }
+.price_filter .filter_heading, .lang_filter .filter_heading{cursor: pointer;}
 .dil_kitab_sayi, .qiymet_kitab_sayi {
     font: 400 0.9rem "Roboto",sans-serif;
     color: #007bff;
@@ -63,7 +67,6 @@
     margin-left: 10px;
     border: 1px solid #90caf9;
 }
-.diller li {margin: 5px 0;}
 .diller label {
     display: flex;
     align-items: center;
@@ -91,12 +94,11 @@
     accent-color: #00a2ff;
     cursor: pointer;
 }
-.price_range {
-  width: 250px;
-  padding: 15px;
-  margin: 20px 0;
-  border: 1px solid #eee;
-  border-radius: 20px;
+.price_range{
+  padding: 0 10px;
+  height: 0;
+  overflow: hidden;
+  transition: .3s;
 }
 .range_values {
   display: flex;
@@ -154,4 +156,10 @@
   border-radius: 3px;
   left: calc(minPrice / absoluteMax * 100%);
   right: calc(100 - (maxPrice / absoluteMax * 100));
+}
+.price_open, .lang_open{
+  position: absolute;
+  right: 0;
+  top: -3px;
+  font: 500 1.5rem arial;
 }

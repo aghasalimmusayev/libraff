@@ -5,10 +5,8 @@ const AllContext = createContext()
 
 export function MyContext({ children }) {
 
-    const [xeta, setXeta] = useState(null)
     const [katalog, setKatalog] = useState(false)
     const [bookData, setBookData] = useState([])
-    const [filteredKitab, setFilteredKitab] = useState([])
     const [catFilteredBook, setCatFilteredBook] = useState([])
     const [searchText, setSearchText] = useState('')
     const [sebet, setSebet] = useState([])
@@ -35,7 +33,6 @@ export function MyContext({ children }) {
             }
             catch (err) {
                 console.log("Xeta var: " + err)
-                setXeta(err)
             }
         })();
     }, [])
@@ -45,9 +42,7 @@ export function MyContext({ children }) {
             const foundBook = bookData.filter(kitab => kitab.Title.toLowerCase().includes(searchText.toLowerCase()))
             setCatFilteredBook(foundBook)
         }
-        else {
-            setCatFilteredBook(bookData)
-        }
+        else setCatFilteredBook(bookData)
     }, [searchText, bookData])
 
     function handleWish(kitab) {
@@ -65,6 +60,7 @@ export function MyContext({ children }) {
     }
     function openKat() {
         setKatalog(true)
+        windo.scroll({ top: 0, behavior: "smooth" })
     }
     function addToCart(id) {
         const alKitab = bookData.find(item => item.id === id)
@@ -97,7 +93,6 @@ export function MyContext({ children }) {
 
     return (
         <AllContext.Provider value={{
-            filteredKitab,
             searchText,
             setSearchText,
             bookData,

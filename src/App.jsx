@@ -10,7 +10,7 @@ import { MyContext } from '../Context/MyContext.jsx';
 import MuellifKitablar from './Components/Child Components/MuellifKitablar.jsx';
 import WishList from './Components/WishList.jsx';
 import Sebet from './Components/Sebet.jsx'
-import Category from './Components/Category.jsx'
+import MainPage from './Components/MainPage.jsx'
 import Error from './Components/Error.jsx';
 
 function App() {
@@ -28,8 +28,8 @@ function App() {
             <Route path='/muellifler/muellifKitablari/:muellif' element={<MuellifKitablar />} />
             <Route path='/wishlist' element={<WishList />} />
             <Route path='/sebet' element={<Sebet />} />
-            <Route path='/kateqoriyalar' element={<Category />} />
-            <Route path='/kateqoriyalar/:kateqoriya' element={<Category />} />
+            <Route path='/kateqoriyalar' element={<MainPage />} />
+            <Route path='/kateqoriyalar/:kateqoriya' element={<MainPage />} />
           </Route>
 
           <Route path='*' element={<Error />} />
