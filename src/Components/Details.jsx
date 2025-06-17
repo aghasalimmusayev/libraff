@@ -43,6 +43,7 @@ function Details() {
                             <h4 className='muellif'><span>Muellif: </span> {kitab.Müəllif}</h4>
                             <p className='kitab_qiymet'>{kitab.OriginalPrice} azn</p>
                             <p className='kitab_kateqoriya'><span>Kateqoriya: </span>{kitab.CategoryName}</p>
+                            <p className='kiatb_dil'><span>Dil: </span> {kitab.Dil}</p>
                             <p className='staok_sayi'><span>Stokda var: </span> {kitab.stokSayi} eded</p>
                             <p className='satildi'><span>Satildi:</span> {kitab.satildi}</p>
                             <p className='baxildi'><span>Baxildi:</span> {kitab.baxildi}</p>

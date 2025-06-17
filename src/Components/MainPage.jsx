@@ -91,11 +91,11 @@ function Category() {
         const categ = catRef.current
         if (catOpen) {
             categ.style.height = "0"
-            categ.style.overflowY = "scroll"
+            categ.style.overflow = "hidden"
         }
         else {
             categ.style.height = "70vh"
-            categ.style.overflow = "hidden"
+            categ.style.overflowY = "scroll"
         }
         setCatOpen(!catOpen)
     }

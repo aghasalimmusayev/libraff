@@ -12,12 +12,14 @@ import WishList from './Components/WishList.jsx';
 import Sebet from './Components/Sebet.jsx'
 import MainPage from './Components/MainPage.jsx'
 import Error from './Components/Error.jsx';
+import Scroll from './Components/Scroll.jsx'
 
 function App() {
 
   return (
     <MyContext>
       <BrowserRouter>
+        <Scroll />
         <Routes>
 
           <Route path='/' element={<Layout />} >
