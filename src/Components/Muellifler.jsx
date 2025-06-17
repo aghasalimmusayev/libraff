@@ -8,7 +8,6 @@ function Muellifler() {
     const { bookData } = useAllContext()
     const muellifler = [...new Set(bookData?.map(item => item.Müəllif).filter(ad => ad && ad.trim() !== ""))]
     const siyahi = [...new Set(muellifler.map(ad => ad?.[0]))].sort()
-    console.log(siyahi);
     
     useEffect(() => {
         document.title = 'Muellifler | Libraff'
@@ -16,7 +15,7 @@ function Muellifler() {
 
     return (
         <div className='container'>
-            <h1>Muellifler</h1>
+            <h1 className='section_head'>Muellifler</h1>
             <div className='mudericat'>
                 {siyahi.map(basHerf => {
                     return (

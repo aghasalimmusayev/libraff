@@ -31,10 +31,14 @@
     border-radius: 8px 0 0 8px;
 }
 .first_list li {
-    padding: 10px 15px;
     color: white;
     border-bottom: 1px solid #495057;
     transition: background-color 0.3s;
+}
+.first_list a{
+    display: block;
+    padding: 10px 15px;
+    width: 100%;
 }
 .first_list li:hover {background-color: #495057;}
 .first_list li:last-child {border-bottom: none;}

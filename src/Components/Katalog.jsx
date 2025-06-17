@@ -63,10 +63,10 @@ function Katalog() {
                         <FaXmark style={{ fontSize: "28px", cursor: "pointer" }} onClick={closeKat} />
                     </div>
                     <ul className='first_list'>
-                        <li onMouseOver={() => { showBooks() }}>Kitablar</li>
-                        <li onMouseOver={() => { showDiscount() }}>Endirimli kitablar</li>
-                        <li onMouseOver={() => { showAuthor() }}>Muellifler</li>
-                        <li onMouseOver={() => { showKategory() }}>Kateqoiyalar</li>
+                        <li onMouseOver={() => { showBooks() }}><Link to={'/mainPage'} onClick={closeKat}>Kitablar</Link></li>
+                        <li onMouseOver={() => { showDiscount() }}><Link to={'/endirimler'} onClick={closeKat}>Endirimler</Link></li>
+                        <li onMouseOver={() => { showAuthor() }}><Link to={'/muellifler'} onClick={closeKat}>Muellifler</Link></li>
+                        <li onMouseOver={() => { showKategory() }}><Link to={'/kateqoriyalar'} onClick={closeKat}>Kateqoriyalar</Link></li>
                     </ul>
                     <ul className='second_list' style={{ display: books.length > 0 ? 'flex' : 'none' }}>
                         {books?.map(kitab => {

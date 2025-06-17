@@ -18,7 +18,7 @@ function Endirimler() {
 
     return (
         <div className='container'>
-            <h1 style={{ marginTop: "20px" }}>Endirimli kitablar</h1>
+            <h1 className='section_head'>Endirimli kitablar</h1>
             <div className='kitablar'>
                 {endirimli
                     .slice(0, count)

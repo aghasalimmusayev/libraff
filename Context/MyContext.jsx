@@ -37,13 +37,16 @@ export function MyContext({ children }) {
         })();
     }, [])
 
-    useEffect(() => {
-        if (searchText) {
-            const foundBook = bookData.filter(kitab => kitab.Title.toLowerCase().includes(searchText.toLowerCase()))
+    function kitabTap() {
+        if (searchText.trim()) {
+            const foundBook = bookData
+                .filter(kitab => kitab.Title.toLowerCase().replace(/\s+/g, '')
+                    .includes(searchText.toLowerCase().replace(/\s+/g, '')))
             setCatFilteredBook(foundBook)
+            setSearchText('')
         }
         else setCatFilteredBook(bookData)
-    }, [searchText, bookData])
+    }
 
     function handleWish(kitab) {
         const wishVar = wishLits.some(item => item.id === kitab.id)
@@ -60,7 +63,7 @@ export function MyContext({ children }) {
     }
     function openKat() {
         setKatalog(true)
-        windo.scroll({ top: 0, behavior: "smooth" })
+        window.scroll({ top: 0, behavior: "smooth" })
     }
     function addToCart(id) {
         const alKitab = bookData.find(item => item.id === id)
@@ -108,7 +111,8 @@ export function MyContext({ children }) {
             countArtir,
             countAzalt,
             catFilteredBook,
-            setCatFilteredBook
+            setCatFilteredBook,
+            kitabTap
         }}>
             {children}
         </AllContext.Provider>

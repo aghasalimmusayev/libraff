@@ -8,7 +8,7 @@ import { IoBagHandleOutline } from "react-icons/io5";
 
 function Nav() {
 
-    const { setSearchText, wishLits, openKat, sebet } = useAllContext()
+    const { setSearchText, wishLits, openKat, sebet, kitabTap, searchText } = useAllContext()
     const [navHandle, setNavhandle] = useState(false)
 
     function handleMenu() {
@@ -16,6 +16,11 @@ function Nav() {
     }
     function closeLinks() {
         setNavhandle(false)
+    }
+    function searchBook(e) {
+        if (e.key === 'Enter') {
+            kitabTap()
+        }
     }
 
     return (
@@ -34,9 +39,17 @@ function Nav() {
                                 <IoBagHandleOutline style={{ fontSize: "25px" }} />
                             </Link>
                         </div>
+                        <Link to={'/muellifler'} onClick={closeLinks}>Muellifler</Link>
+                        <Link to={'/endirimler'} onClick={closeLinks}>Endirimler</Link>
+                        <Link to={'/kateqoriyalar'} onClick={closeLinks}>Kateqoriyalar</Link>
                     </div>
                     <div className="search_inp">
-                        <input type="text" onClick={(e) => setSearchText(e.target.value)} placeholder='Kitabinizi tapin...' />
+                        <input
+                            type="text"
+                            value={searchText}
+                            onChange={(e) => setSearchText(e.target.value)}
+                            onKeyDown={searchBook}
+                            placeholder='Kitabinizi tapin...' />
                     </div>
                     <div className='right_links'>
                         <Link className='wish_box' to="/wishlist">

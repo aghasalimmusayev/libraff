@@ -28,6 +28,7 @@ function App() {
             <Route path='/muellifler/muellifKitablari/:muellif' element={<MuellifKitablar />} />
             <Route path='/wishlist' element={<WishList />} />
             <Route path='/sebet' element={<Sebet />} />
+            <Route path='/mainPage' element={<MainPage />} />
             <Route path='/kateqoriyalar' element={<MainPage />} />
             <Route path='/kateqoriyalar/:kateqoriya' element={<MainPage />} />
           </Route>

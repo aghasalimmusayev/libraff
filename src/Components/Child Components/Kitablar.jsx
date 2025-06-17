@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "../../CSS/kitablar.css"
-import { Link, useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { GoHeart } from "react-icons/go";
 import { GoHeartFill } from "react-icons/go";
 import { Pagination } from 'antd';
