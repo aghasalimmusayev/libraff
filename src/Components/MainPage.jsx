@@ -7,7 +7,7 @@ import Kitablar from './Child Components/Kitablar'
 function Category() {
 
     const { kateqoriya } = useParams()
-    const { bookData, setCatFilteredBook, catFilteredBook } = useAllContext()
+    const { bookData, setCatFilteredBook, catFilteredBook, axtaris } = useAllContext()
     const [dil, setDil] = useState([])
     const categories = ([...new Set(bookData.map(item => item.CategoryName).filter(cat => cat !== ""))])
     const languages = [...new Set(bookData
@@ -50,21 +50,23 @@ function Category() {
     }
 
     useEffect(() => {
-        let filteredBooks = bookData
-        if (kateqoriya && kateqoriya !== 'butun') {
-            filteredBooks = filteredBooks.filter(book => book.CategoryName === kateqoriya)
-        }
-        if (dil.length > 0) {
+        if (!axtaris) {
+            let filteredBooks = bookData
+            if (kateqoriya && kateqoriya !== 'butun') {
+                filteredBooks = filteredBooks.filter(book => book.CategoryName === kateqoriya)
+            }
+            if (dil.length > 0) {
+                filteredBooks = filteredBooks.filter(book => {
+                    const bookLanguages = book.Dil.split('/').map(lang => lang.trim())
+                    return dil.some(selectedLang => bookLanguages.includes(selectedLang))
+                })
+            }
             filteredBooks = filteredBooks.filter(book => {
-                const bookLanguages = book.Dil.split('/').map(lang => lang.trim())
-                return dil.some(selectedLang => bookLanguages.includes(selectedLang))
+                const qiymet = parseFloat(book.OriginalPrice)
+                return qiymet >= minPrice && qiymet <= maxPrice
             })
+            setCatFilteredBook(filteredBooks)
         }
-        filteredBooks = filteredBooks.filter(book => {
-            const qiymet = parseFloat(book.OriginalPrice)
-            return qiymet >= minPrice && qiymet <= maxPrice
-        })
-        setCatFilteredBook(filteredBooks)
     }, [kateqoriya, dil, bookData, setCatFilteredBook, minPrice, maxPrice])
 
     const [priceOpen, setPriceOpen] = useState(false)
@@ -77,11 +79,25 @@ function Category() {
     }
     const [langOpen, setLangOpen] = useState(false)
     const langRef = useRef(null)
-    function langHandle(){
+    function langHandle() {
         const lang = langRef.current
-        if(langOpen) lang.style.height = "0"
+        if (langOpen) lang.style.height = "0"
         else lang.style.height = lang.scrollHeight + "px"
         setLangOpen(!langOpen)
+    }
+    const [catOpen, setCatOpen] = useState(false)
+    const catRef = useRef(null)
+    function catHandle() {
+        const categ = catRef.current
+        if (catOpen) {
+            categ.style.height = "0"
+            categ.style.overflowY = "scroll"
+        }
+        else {
+            categ.style.height = "70vh"
+            categ.style.overflow = "hidden"
+        }
+        setCatOpen(!catOpen)
     }
 
     return (
@@ -89,8 +105,10 @@ function Category() {
             <div className="category_context">
                 <div className='filter_box'>
                     <div className="category_filter">
-                        <h3 className='filter_heading'>Kategoriyalar</h3>
-                        <ul className='kateqoriyalar'>
+                        <h3 className='filter_heading' onClick={catHandle}>Kategoriyalar
+                            <span className='cat_open'>+</span>
+                        </h3>
+                        <ul className='kateqoriyalar' ref={catRef}>
                             <li><NavLink
                                 to={`/kateqoriyalar`}
                                 end

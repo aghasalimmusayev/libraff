@@ -9,6 +9,7 @@ export function MyContext({ children }) {
     const [bookData, setBookData] = useState([])
     const [catFilteredBook, setCatFilteredBook] = useState([])
     const [searchText, setSearchText] = useState('')
+    const [axtaris, setAxtaris] = useState(false)
     const [sebet, setSebet] = useState([])
     const [wishLits, setWishList] = useState(() => {
         try {
@@ -44,8 +45,12 @@ export function MyContext({ children }) {
                     .includes(searchText.toLowerCase().replace(/\s+/g, '')))
             setCatFilteredBook(foundBook)
             setSearchText('')
+            setAxtaris(true)
         }
-        else setCatFilteredBook(bookData)
+        else {
+            setCatFilteredBook(bookData)
+            setAxtaris(true)
+        }
     }
 
     function handleWish(kitab) {
@@ -112,7 +117,8 @@ export function MyContext({ children }) {
             countAzalt,
             catFilteredBook,
             setCatFilteredBook,
-            kitabTap
+            kitabTap,
+            axtaris
         }}>
             {children}
         </AllContext.Provider>

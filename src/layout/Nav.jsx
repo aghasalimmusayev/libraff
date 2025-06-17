@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import Logo from "../assets/img/logo_libraff.png"
 import "../CSS/nav.css"
 import { useAllContext } from '../../Context/MyContext'
@@ -10,6 +10,7 @@ function Nav() {
 
     const { setSearchText, wishLits, openKat, sebet, kitabTap, searchText } = useAllContext()
     const [navHandle, setNavhandle] = useState(false)
+    const navigate = useNavigate()
 
     function handleMenu() {
         setNavhandle(!navHandle)
@@ -19,6 +20,7 @@ function Nav() {
     }
     function searchBook(e) {
         if (e.key === 'Enter') {
+            navigate('/mainPage')
             kitabTap()
         }
     }
