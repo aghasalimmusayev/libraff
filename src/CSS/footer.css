@@ -1,0 +1,16 @@
+.footer_bg{
+    padding: 30px 0;
+    background-color: #eee;
+}
+.footer_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span{
+        cursor: pointer;
+        background-color: #c3c1c1;
+        padding: 10px;
+        border-radius: 20px;
+        font: 600 0.9rem "Roboto",sans-serif;
+    }
+}
