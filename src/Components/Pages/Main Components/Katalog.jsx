@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { useAllContext } from '../../Context/MyContext'
+import { useAllContext } from '../../../Context/MyContext'
 import { Link } from 'react-router-dom'
 import { FaXmark } from "react-icons/fa6";
-import '../CSS/katalog.css'
+import '../../../CSS/katalog.css'
 
 function Katalog() {
 

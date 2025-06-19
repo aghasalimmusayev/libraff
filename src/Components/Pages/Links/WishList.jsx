@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useAllContext } from '../../Context/MyContext'
+import { useAllContext } from '../../../Context/MyContext'
 import { Link } from 'react-router-dom'
 import { GoHeart } from "react-icons/go";
 import { GoHeartFill } from "react-icons/go";

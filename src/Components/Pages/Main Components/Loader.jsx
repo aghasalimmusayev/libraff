@@ -9,7 +9,7 @@ const Loader = () => {
           <div className="top" />
           <div className="bottom" />
         </div>
-        <div className="title">Getting files ready...</div>
+        <div className="title">Getting books ready...</div>
       </div>
     </StyledWrapper>
   );

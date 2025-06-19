@@ -1,8 +1,8 @@
 import React from 'react'
-import { useAllContext } from '../../Context/MyContext'
+import { useAllContext } from '../../../Context/MyContext'
 import { Link } from 'react-router-dom'
 import { AiOutlineClear } from "react-icons/ai";
-import '../CSS/sebet.css'
+import '../../../CSS/sebet.css'
 function Sebet() {
 
     const { sebet, countArtir, countAzalt, setSebet } = useAllContext()

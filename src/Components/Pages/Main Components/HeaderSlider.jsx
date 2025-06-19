@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { getSlides } from '../service/service'
+import { getSlides } from '../../../service/service'
 import 'swiper/css';
-import '../CSS/headerSlider.css';
+import '../../../CSS/headerSlider.css';
 import { Autoplay } from 'swiper/modules';
 
 function HeaderSlider() {

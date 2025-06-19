@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import { useAllContext } from '../../../Context/MyContext';
 import { useParams } from 'react-router-dom'
-import { getKitabByID } from '../service/service'
+import { getKitabByID } from '../../../service/service'
 import { GoHeart } from "react-icons/go";
 import { GoHeartFill } from "react-icons/go";
-import "../CSS/details.css"
-import { useAllContext } from '../../Context/MyContext';
 import { SlBasket } from "react-icons/sl";
+import "../../../CSS/details.css"
 
 function Details() {
 

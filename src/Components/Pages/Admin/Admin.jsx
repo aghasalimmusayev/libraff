@@ -1,11 +1,13 @@
 import React from 'react';
 import { SlPencil, SlTrash, SlPlus } from "react-icons/sl";
-import { useAllContext } from '../../Context/MyContext';
-import '../CSS/admin.css';
+import { useAllContext } from '../../../Context/MyContext';
+import '../../../CSS/admin.css';
 
 function Admin() {
 
     const { bookData } = useAllContext()
+    const stokSayi = bookData?.reduce((acc, book) => acc + book.stokSayi, 0)
+    const satis = bookData?.reduce((acc, book) => acc + book.satildi, 0)
 
     return (
         <div className="admin-container">
@@ -25,11 +27,11 @@ function Admin() {
                 </div>
                 <div className="main_info_heading">
                     <h3>Ümumi Stok</h3>
-                    <p className="main_result green">318</p>
+                    <p className="main_result green">{stokSayi}</p>
                 </div>
                 <div className="main_info_heading">
                     <h3>Satılan</h3>
-                    <p className="main_result purple">156</p>
+                    <p className="main_result purple">{satis}</p>
                 </div>
             </div>
 

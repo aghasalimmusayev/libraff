@@ -1,8 +1,8 @@
 import React from 'react'
-import HeaderSlider from './HeaderSlider'
-import Loader from "./Loader.jsx"
-import { useAllContext } from '../../Context/MyContext.jsx'
-import MainPage from "./MainPage.jsx"
+import HeaderSlider from './Pages/Main Components/HeaderSlider.jsx'
+import Loader from "./Pages/Main Components/Loader.jsx"
+import { useAllContext } from '../Context/MyContext.jsx'
+import MainPage from "./Pages/Main Components/MainPage.jsx"
 function Main() {
 
     const { bookData } = useAllContext()

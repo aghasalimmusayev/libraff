@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from "react-router-dom"
 import Logo from "../assets/img/logo_libraff.png"
 import "../CSS/nav.css"
-import { useAllContext } from '../../Context/MyContext'
+import { useAllContext } from '../Context/MyContext'
 import { GoHeart } from "react-icons/go";
 import { IoBagHandleOutline } from "react-icons/io5";
 

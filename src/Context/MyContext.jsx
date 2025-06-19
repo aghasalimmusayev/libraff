@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
-import { getData } from '../src/service/service'
+import { getData } from '../service/service'
 
 const AllContext = createContext()
 

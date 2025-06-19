@@ -2,15 +2,15 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from "./layout/Layout.jsx"
 import Main from "./Components/Main.jsx"
-import Admin from "./Components/Admin.jsx"
-import Details from "./Components/Details.jsx"
-import Muellifler from './Components/Muellifler.jsx';
-import Endirimler from './Components/Endirimler.jsx';
-import { MyContext } from '../Context/MyContext.jsx';
+import Admin from "./Components/Pages/Admin/Admin.jsx"
+import Details from "./Components/Pages/Links/Details.jsx"
+import Muellifler from './Components/Pages/Links/Muellifler.jsx';
+import Endirimler from './Components/Pages/Links/Endirimler.jsx';
+import { MyContext } from './Context/MyContext.jsx';
 import MuellifKitablar from './Components/Child Components/MuellifKitablar.jsx';
-import WishList from './Components/WishList.jsx';
-import Sebet from './Components/Sebet.jsx'
-import MainPage from './Components/MainPage.jsx'
+import WishList from './Components/Pages/Links/WishList.jsx';
+import Sebet from './Components/Pages/Links/Sebet.jsx'
+import MainPage from './Components/Pages/Main Components/MainPage.jsx'
 import Error from './Components/Error.jsx';
 import Scroll from './Components/Scroll.jsx'
 

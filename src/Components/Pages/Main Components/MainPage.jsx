@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { useAllContext } from '../../Context/MyContext'
+import { useAllContext } from '../../../Context/MyContext'
 import { Link, NavLink, useParams } from 'react-router-dom'
-import '../CSS/mainPage.css'
-import Kitablar from './Child Components/Kitablar'
+import '../../../CSS/mainPage.css'
+import Kitablar from '../../Child Components/Kitablar'
 
 function Category() {
 

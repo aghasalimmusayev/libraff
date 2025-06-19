@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
-import { useAllContext } from '../../Context/MyContext'
+import { useAllContext } from '../../../Context/MyContext'
 import { Link } from "react-router-dom"
-import '../CSS/muellifler.css'
+import '../../../CSS/muellifler.css'
 
 function Muellifler() {
 
