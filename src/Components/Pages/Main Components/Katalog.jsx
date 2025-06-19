@@ -89,7 +89,7 @@ function Katalog() {
                     <ul className='second_list' style={{ display: kategory.length > 0 ? 'flex' : 'none' }}>
                         {kategory?.map((cat, index) => {
                             return <li key={index}><Link
-                                to='/kateqoriyalar'
+                                to={`/kateqoriyalar/${cat}`}
                                 onMouseOver={() => { katBookShow(cat) }}
                                 onClick={closeKat}>{cat}</Link></li>
                         })}

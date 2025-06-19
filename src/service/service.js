@@ -1,10 +1,8 @@
-import axios from "axios";
-
-const BASE_URL = import.meta.env.VITE_BASE_URL;
+import axiosInstance from "./Instance";
 
 async function getData() {
   try {
-    const res = await axios.get(`${BASE_URL}/Kitablar`);
+    const res = await axiosInstance.get("/Kitablar");
     return res.data;
   } catch (error) {
     console.log("KitablarData-da xeta: " + error);
@@ -13,7 +11,7 @@ async function getData() {
 
 async function getSlides() {
   try {
-    const sld = await axios.get(`${BASE_URL}/Slider`);
+    const sld = await axiosInstance.get("/Slider");
     return sld.data;
   } catch (error) {
     console.log("Slider-de xeta: " + error);
@@ -22,11 +20,29 @@ async function getSlides() {
 
 async function getKitabByID(id) {
   try {
-    const book = await axios.get(`${BASE_URL}/Kitablar/${id}`);
-    return book.data
+    const book = await axiosInstance.get(`/Kitablar/${id}`);
+    return book.data;
   } catch (error) {
     console.log("KitabID-de xeta: " + error);
   }
 }
 
-export { getData, getSlides, getKitabByID };
+async function delBooks(id) {
+  try {
+    const delBook = await axiosInstance.delete(`Kitablar/${id}`);
+    return delBook.data;
+  } catch (error) {
+    console.log("Silinmede xeta bas verdi: " + error);
+  }
+}
+
+async function editBooks(id) {
+  try {
+    const editBook = await axiosInstance.put(`Kitablar/${id}`);
+    return editBook.data;
+  } catch (error) {
+    console.log("Edit-de XETA bas verdi- " + error);
+  }
+}
+
+export { getData, getSlides, getKitabByID, delBooks, editBooks };

@@ -25,7 +25,7 @@ export function MyContext({ children }) {
         (async () => {
             try {
                 const data = await getData()
-                const unicData = data.filter(
+                const unicData = data?.filter(
                     (kitab, index, selfData) =>
                         index === selfData.findIndex(ktb => ktb.Title === kitab.Title)
                 )
@@ -104,6 +104,7 @@ export function MyContext({ children }) {
             searchText,
             setSearchText,
             bookData,
+            setBookData,
             wishLits,
             setWishList,
             handleWish,
