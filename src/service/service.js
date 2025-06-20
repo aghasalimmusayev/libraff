@@ -23,7 +23,7 @@ async function getKitabByID(id) {
     const book = await axiosInstance.get(`/Kitablar/${id}`);
     return book.data;
   } catch (error) {
-    console.log("KitabID-de xeta: " + error);
+    console.error("KitabID-de xeta: " + error);
   }
 }
 
@@ -32,17 +32,26 @@ async function delBooks(id) {
     const delBook = await axiosInstance.delete(`Kitablar/${id}`);
     return delBook.data;
   } catch (error) {
-    console.log("Silinmede xeta bas verdi: " + error);
+    console.error("Silinmede xeta bas verdi: " + error);
   }
 }
 
 async function editBooks(id) {
   try {
-    const editBook = await axiosInstance.put(`Kitablar/${id}`);
+    const editBook = await axiosInstance.patch(`Kitablar/${id}`);
     return editBook.data;
   } catch (error) {
-    console.log("Edit-de XETA bas verdi- " + error);
+    console.error("Edit-de XETA bas verdi- " + error);
   }
 }
 
-export { getData, getSlides, getKitabByID, delBooks, editBooks };
+async function postNewBook(newBook) {
+  try {
+    const res = await axiosInstance.post("/Kitablar", newBook);
+    return res;
+  } catch (error) {
+    console.error("Kitab yaradilmadi" + error);
+  }
+}
+
+export { getData, getSlides, getKitabByID, postNewBook, delBooks, editBooks };

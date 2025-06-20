@@ -1,72 +1,54 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './adminCSS/modal.css';
+import { postNewBook } from '../../../service/service';
 import { useAllContext } from '../../../Context/MyContext';
-import CrudNotify, { showError, showUpdateSuccess } from '../../Child Components/CrudNotify';
-import { editBooks } from '../../../service/service';
+import { showAddSuccess, showError } from '../../Child Components/CrudNotify';
+import { nanoid } from 'nanoid';
 
-function EditModal({ editClose, bookId, setBookId }) {
+//! POST EDENDEN SONRA error(Received NaN for the `children` attribute. If this is expected, cast the value to a string.)
+//! POST EDENDEN SONRA sehifenin sonuna elave edilir, amma deyerler bos gorunur, refresh-den sonra gorunur
 
-  const { bookData, setBookData } = useAllContext()
-  const selectedBook = bookData.find(item => item.id == bookId)
+function AddModal({ AddClose }) {
+  const { setBookData } = useAllContext()
   const [formData, setFormData] = useState({
+    id: nanoid(),
     Title: "",
-    Müəllif: "",
     OriginalPrice: 0,
     DiscountPrice: 0,
-    Dil: "",
+    sekil: "",
     CategoryName: "",
+    Dil: "",
+    Müəllif: "",
     stokSayi: 0,
     satildi: 0,
     baxildi: 0,
-    sekil: "",
     description: ""
   });
-
-  useEffect(() => {
-    if (selectedBook) {
-      setFormData({
-        Title: selectedBook.Title || "",
-        Müəllif: selectedBook.Müəllif || "",
-        OriginalPrice: selectedBook.OriginalPrice || 0,
-        DiscountPrice: selectedBook.DiscountPrice || 0,
-        Dil: selectedBook.Dil || "",
-        CategoryName: selectedBook.CategoryName || "",
-        stokSayi: selectedBook.stokSayi || 0,
-        satildi: selectedBook.satildi || 0,
-        baxildi: selectedBook.baxildi || 0,
-        sekil: selectedBook.sekil || "",
-        description: selectedBook.description
-      });
-    }
-  }, [selectedBook]);
-
-  async function editThisBook(e) {
+  const handleChange = (e) => {
+    const { name, value, type } = e.target;
+    const finalValue = type === 'number' ? Number(value) || 0 : value;
+    setFormData((prev) => ({ ...prev, [name]: finalValue }));
+  };
+  async function postBook(e) {
     e.preventDefault()
     try {
-      await editBooks(bookId, formData)
-      setBookData(bookData.map(book => book.id === bookId ? { ...book, ...formData } : book))
-      showUpdateSuccess()
-      setBookId(null)
-      editClose()
+      const res = await postNewBook(formData)
+      setBookData(prev => [...prev, res])
+      showAddSuccess()
+      AddClose()
     }
-    catch {
-      console.log("Kitab edit edilmədi: " + error);
-      showError('Kitab edit edilərkən xəta baş verdi')
+    catch (err) {
+      console.error(err.message);
+      showError("UGURSUZ...!")
     }
   }
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
   return (
-    <div className="modal-overlay" onClick={editClose}>
+    <div className="modal-overlay" onClick={AddClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <h2 className="modal-title">Kitabı Redaktə Et</h2>
+        <h2 className="modal-title">Kitab elave Et</h2>
 
-        <form onSubmit={editThisBook}>
+        <form onSubmit={postBook}>
           <div className="modal-body">
             <div className="modal-fields">
               <label>
@@ -108,8 +90,8 @@ function EditModal({ editClose, bookId, setBookId }) {
             </div>
           </div>
           <div className="modal-actions">
-            <button className="save-btn" type='submit'>Yadda saxla</button>
-            <button className="cancel-btn" type='button' onClick={editClose}>Ləğv et</button>
+            <button className="save-btn" type='submit'>Gonder</button>
+            <button className="cancel-btn" type='button' onClick={AddClose}>Ləğv et</button>
           </div>
         </form>
       </div>
@@ -117,4 +99,4 @@ function EditModal({ editClose, bookId, setBookId }) {
   );
 }
 
-export default EditModal;
+export default AddModal;

@@ -8,7 +8,7 @@ function Main() {
     const { bookData } = useAllContext()
 
     return (
-        bookData.length > 0 ? (
+        bookData?.length > 0 ? (
             <>
                 <HeaderSlider />
                 <MainPage />
