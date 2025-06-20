@@ -25,16 +25,16 @@ function EditModal({ editClose, bookId, setBookId }) {
   useEffect(() => {
     if (selectedBook) {
       setFormData({
-        Title: selectedBook.Title || "",
-        Müəllif: selectedBook.Müəllif || "",
-        OriginalPrice: selectedBook.OriginalPrice || 0,
-        DiscountPrice: selectedBook.DiscountPrice || 0,
-        Dil: selectedBook.Dil || "",
-        CategoryName: selectedBook.CategoryName || "",
-        stokSayi: selectedBook.stokSayi || 0,
-        satildi: selectedBook.satildi || 0,
-        baxildi: selectedBook.baxildi || 0,
-        sekil: selectedBook.sekil || "",
+        Title: selectedBook.Title,
+        Müəllif: selectedBook.Müəllif,
+        OriginalPrice: selectedBook.OriginalPrice,
+        DiscountPrice: selectedBook.DiscountPrice,
+        Dil: selectedBook.Dil,
+        CategoryName: selectedBook.CategoryName,
+        stokSayi: selectedBook.stokSayi,
+        satildi: selectedBook.satildi,
+        baxildi: selectedBook.baxildi,
+        sekil: selectedBook.sekil,
         description: selectedBook.description
       });
     }

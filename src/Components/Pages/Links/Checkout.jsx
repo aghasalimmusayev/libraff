@@ -1,0 +1,94 @@
+import React from 'react'
+import { useAllContext } from '../../../Context/MyContext'
+import '../../../CSS/checkout.css'
+import { Link } from 'react-router-dom'
+import { FaRegTrashCan } from "react-icons/fa6";
+
+function Checkout() {
+
+    const { sebet, setSebet } = useAllContext()
+    const oredersPrice = sebet.reduce((acc, book) => (book.OriginalPrice * book.count) + acc, 0).toFixed(2)
+    const endirim = sebet.reduce((acc, book) => ((book.OriginalPrice - book.DiscountedPrice) * book.count) + acc, 0).toFixed(2)
+    const cemMebleg = (oredersPrice - endirim).toFixed(2)
+    function removeBook(id) {
+        setSebet(sebet.filter(item => item.id !== id))
+    }
+
+    return (
+        <div className='container'>
+            <div className='checkout_box'>
+                <h2 className='section_head'>Sifarişi təsdiqləmək</h2>
+                <div className='checkout_content'>
+                    <div className='shipping_info'>
+                        <div className='personal_info'>
+                            <label htmlFor="">Şəxsi məlumat</label>
+                            <div className='personal_info_inp'>
+                                <input type="text" placeholder='Ad, Soyad' />
+                                <input type="number" placeholder='Telefon' />
+                                <input type="email" placeholder='E-poct' />
+                            </div>
+                        </div>
+                        <div className="delivery_info">
+                            <label htmlFor="">Çatdırılma detalları</label>
+                            <div className="delivery_info_inp">
+                                <select name="" id="">
+                                    <option hidden value="Secim">Seher secin</option>
+                                    <option value="Baki">Baki</option>
+                                    <option value="Sumqayit">Sumqayit</option>
+                                    <option value="Rayonlar">Rayonlar</option>
+                                </select>
+                                <input type="text" placeholder='Poct indeksi' />
+                                <input type="text" placeholder='Unvan' />
+                            </div>
+                        </div>
+                    </div>
+                    <div className='order_info'>
+                        <div className="order_cost">
+                            <h3>Sifarişiniz</h3>
+                            <div className="const">
+                                <div><span>Məhsul sayı:	</span>{sebet?.length} eded</div>
+                                <div><span>Məbləğ: </span>{oredersPrice} ₼</div>
+                                <div><span>Endirim </span>{endirim} ₼</div>
+                                <div><span>Sifarişin Cəmi</span>{cemMebleg} ₼</div>
+                                <button>Sifarişi təsdiq et <span>{cemMebleg} ₼</span></button>
+                            </div>
+                        </div>
+                        <div className="selected_orders">
+                            <h5>Məhsullar</h5>
+                            {sebet?.map(item => {
+                                return (
+                                    <div className='order' key={item.id}>
+                                        <div className='order_img'>
+                                            <Link to={`/details/${item.id}`} target='_blank'>
+                                                <img src={item.sekil} alt={item.Title} />
+                                            </Link>
+                                        </div>
+                                        <div className="order_info">
+                                            <h2 className='order_adi'>{item.Title}</h2>
+                                            <p className='order_qiymeti'
+                                                style={item.DiscountedPrice < item.OriginalPrice
+                                                    ? { textDecoration: 'line-through', color: 'gray' }
+                                                    : {}}>
+                                                {item.OriginalPrice} ₼</p>
+                                            {item.DiscountedPrice < item.OriginalPrice && <p className='order_qiymeti'>{item.DiscountedPrice} ₼</p>}
+                                            <p className='order_say'>{item.count} <span>eded</span></p>
+                                            <p className='cem_qiymet'>Cem:
+                                                <span>
+                                                    {((item.OriginalPrice > item.DiscountedPrice ? item.DiscountedPrice : item.OriginalPrice) * item.count).toFixed(1)} ₼
+                                                </span></p>
+                                            <button className='remove_btn' onClick={() => removeBook(item.id)}>
+                                                <FaRegTrashCan />
+                                                <span>Sil</span>
+                                            </button>
+                                        </div>
+                                    </div>)
+                            })}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Checkout

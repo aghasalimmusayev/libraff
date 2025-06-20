@@ -74,11 +74,25 @@
 .cem_qiymet {
   font: 500 0.9rem "Roboto", sans-serif;
   color: #6c757d;
-  margin-top: 8px;
+  margin-top: 5px;
 }
 .cem_qiymet span {
   color: #27ae60;
   font-weight: 600;
+}
+.remove_btn{
+  font: 500 0.8rem "Roboto", sans-serif;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 3px 8px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
 }
 .total {
   font: 600 1.2rem "Roboto", sans-serif;
@@ -87,9 +101,9 @@
   justify-content: end;
   align-items: center;
   margin: 20px 0;
-  padding: 15px;
-  background-color: #f8f9fa;
-  border-radius: 6px;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 10px;
 }
 .total span {
   margin-left: 10px;
@@ -97,20 +111,42 @@
   font-weight: 700;
   font-size: 1.3rem;
 }
+.sebet_btns{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
 .clear_btn {
   display: flex;
   align-items: center;
   gap: 8px;
+  background-color: #fff;
+  color: black;
+  border: 2px solid #dc3545;
+  padding: 8px;
+  margin: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  font: 600 0.8rem "Roboto", sans-serif;
+  transition: background-color 0.2s ease;
+}
+.clear_btn:hover {background-color: #dc3545; color: #fff;}
+.checkout{
   background-color: #dc3545;
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
+  padding: 8px 15px;
+  border: 2px solid #dc3545;
+  border-radius: 20px;
   cursor: pointer;
-  font: 500 0.9rem "Roboto", sans-serif;
-  transition: background-color 0.2s ease;
+  font: 600 0.9rem "Roboto", sans-serif;
+  transition: background-color 0.3s ease;
 }
-.clear_btn:hover {background-color: #c82333;}
+.checkout:hover {background-color: #eee; color: black;}
 .empty_info {
   display: flex;
   justify-content: center;
@@ -132,6 +168,23 @@
   .mehsul_say span {
     font: 500 0.9rem "Roboto", sans-serif;
     width: 35px;
+  }
+  .sebet_btns{
+    border-radius: 20px;
+    padding: 20px;
+  }
+  .cem_qiymet {margin-top: 10px;}
+  .remove_btn{
+    padding: 4px 10px;
+    margin-top: 10px;
+  }
+  .clear_btn{
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  .checkout{
+    padding: 10px 15px;
+    font-size: 1rem;
   }
   .total {font-size: 1.3rem;}
   .total span {font-size: 1.4rem;}

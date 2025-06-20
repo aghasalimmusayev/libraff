@@ -41,7 +41,10 @@ function Details() {
                         <div className="kitab_info">
                             <h2 className='kitab_ad'>{kitab.Title}</h2>
                             <h4 className='muellif'><span>Muellif: </span> {kitab.Müəllif}</h4>
-                            <p className='kitab_qiymet'>{kitab.OriginalPrice} azn</p>
+                            <p className="kitab_qiymet"
+                                style={kitab.DiscountedPrice < kitab.OriginalPrice ? { textDecoration: 'line-through', color: 'gray' } : {}}>
+                                {kitab.OriginalPrice} azn</p>
+                            {kitab.DiscountedPrice < kitab.OriginalPrice && <p className='kitab_qiymet'>{kitab.DiscountedPrice} azn</p>}
                             <p className='kitab_kateqoriya'><span>Kateqoriya: </span>{kitab.CategoryName}</p>
                             <p className='kiatb_dil'><span>Dil: </span> {kitab.Dil}</p>
                             <p className='staok_sayi'><span>Stokda var: </span> {kitab.stokSayi} eded</p>

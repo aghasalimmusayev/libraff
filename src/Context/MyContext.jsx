@@ -74,13 +74,13 @@ export function MyContext({ children }) {
         const alKitab = bookData.find(item => item.id === id)
         const sebetdeVar = sebet.find(item => alKitab.id == item.id)
         if (!sebetdeVar) setSebet(prev => [...prev, { ...alKitab, "count": 1 }])
-        else {
-            setSebet(prev =>
-                prev.map(item =>
-                    item.id === id ? { ...item, count: item.count + 1 } : item
-                )
-            );
-        }
+        // else {
+        //     setSebet(prev =>
+        //         prev.map(item =>
+        //             item.id === id ? { ...item, count: item.count + 1 } : item
+        //         )
+        //     );
+        // }
     }
     function countArtir(id) {
         setSebet(prev =>

@@ -5,7 +5,6 @@ import { useAllContext } from '../../../Context/MyContext';
 import { showAddSuccess, showError } from '../../Child Components/CrudNotify';
 import { nanoid } from 'nanoid';
 
-//! POST EDENDEN SONRA error(Received NaN for the `children` attribute. If this is expected, cast the value to a string.)
 //! POST EDENDEN SONRA sehifenin sonuna elave edilir, amma deyerler bos gorunur, refresh-den sonra gorunur
 
 function AddModal({ AddClose }) {
@@ -91,7 +90,7 @@ function AddModal({ AddClose }) {
           </div>
           <div className="modal-actions">
             <button className="save-btn" type='submit'>Gonder</button>
-            <button className="cancel-btn" type='button' onClick={AddClose}>Ləğv et</button>
+            <button className="cancel-btn" type='button' onClick={AddClose}>Bağla</button>
           </div>
         </form>
       </div>

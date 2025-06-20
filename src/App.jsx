@@ -13,6 +13,7 @@ import Sebet from './Components/Pages/Links/Sebet.jsx'
 import MainPage from './Components/Pages/Main Components/MainPage.jsx'
 import Error from './Components/Error.jsx';
 import Scroll from './Components/Scroll.jsx'
+import Checkout from './Components/Pages/Links/Checkout.jsx';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
             <Route path='/mainPage' element={<MainPage />} />
             <Route path='/kateqoriyalar' element={<MainPage />} />
             <Route path='/kateqoriyalar/:kateqoriya' element={<MainPage />} />
+            <Route path='/Checkout' element={<Checkout />} />
           </Route>
 
           <Route path='*' element={<Error />} />
