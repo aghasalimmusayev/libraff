@@ -62,6 +62,7 @@
 .order_info {width: 100%;}
 .order_cost {
     width: 100%;
+    max-width: 500px;
     background: #f8f9fa;
     border-radius: 8px;
     padding: 20px;
@@ -175,7 +176,7 @@
     margin: 0;
 }
 .order_say span {color: #999;}
-.cem_qiymet {
+.order_info .cem_qiymet {
     font-size: 14px;
     font-weight: 500;
     margin: 0;
@@ -204,6 +205,14 @@
 .remove_btn:hover {
     background: #dc2626;
     color: white;
+}
+.payment_info{
+    font: 600 1.1rem "Roboto",sans-serif;
+    padding: 10px;
+    margin: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
 }
 @media(min-width: 768px) {
     .checkout_content {

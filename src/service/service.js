@@ -54,4 +54,22 @@ async function postNewBook(newBook) {
   }
 }
 
-export { getData, getSlides, getKitabByID, postNewBook, delBooks, editBooks };
+async function sellBooks(id, updateData) {
+  try {
+    const editBook = await axiosInstance.patch(`Kitablar/${id}`, updateData);
+    return editBook.data;
+  } catch (error) {
+    console.error("Edit-de XETA bas verdi- " + error);
+    throw error;
+  }
+}
+
+export {
+  getData,
+  getSlides,
+  getKitabByID,
+  postNewBook,
+  delBooks,
+  editBooks,
+  sellBooks,
+};
