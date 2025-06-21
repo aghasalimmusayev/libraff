@@ -60,6 +60,15 @@ nav{
     a:hover{border-color: #333;}
 }
 .links.open{display: flex;}
+.search_inp{
+    position: relative;
+    .search_icon{
+        position: absolute;
+        top: 55%;
+        right: 10px;
+        transform: translateY(-50%);
+    }
+}
 .search_inp input:focus{border: 1px solid red;}
 .search_inp input{
     font: 500 0.9rem "Roboto",sans-serif;

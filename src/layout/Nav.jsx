@@ -5,6 +5,7 @@ import "../CSS/nav.css"
 import { useAllContext } from '../Context/MyContext'
 import { GoHeart } from "react-icons/go";
 import { IoBagHandleOutline } from "react-icons/io5";
+import { IoSearch } from "react-icons/io5";
 
 function Nav() {
 
@@ -23,6 +24,10 @@ function Nav() {
             navigate('/mainPage')
             kitabTap()
         }
+    }
+    function axtar() {
+        navigate('/mainPage')
+        kitabTap()
     }
 
     return (
@@ -52,6 +57,9 @@ function Nav() {
                             onChange={(e) => setSearchText(e.target.value)}
                             onKeyDown={searchBook}
                             placeholder='Kitabinizi tapin...' />
+                        <div className="search_icon">
+                            <IoSearch onClick={axtar} style={{ fontSize: "18px", cursor: "pointer" }} />
+                        </div>
                     </div>
                     <div className='right_links'>
                         <Link className='wish_box' to="/wishlist">
