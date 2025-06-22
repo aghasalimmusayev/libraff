@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useAllContext } from '../../../Context/MyContext'
 import { Link } from 'react-router-dom'
 import { FaXmark } from "react-icons/fa6";
-import '../../../CSS/katalog.css'
+import './Main CSS/katalog.css'
 
 function Katalog() {
 
@@ -68,7 +68,7 @@ function Katalog() {
                         <li onMouseOver={() => { showAuthor() }}><Link to={'/muellifler'} onClick={closeKat}>Muellifler</Link></li>
                         <li onMouseOver={() => { showKategory() }}><Link to={'/kateqoriyalar'} onClick={closeKat}>Kateqoriyalar</Link></li>
                     </ul>
-                    <ul className='second_list' style={{ display: books.length > 0 ? 'flex' : 'none' }}>
+                    <ul className='second_list' style={{ display: books?.length > 0 ? 'flex' : 'none' }}>
                         {books?.map(kitab => {
                             return <li key={kitab.id}><Link to={`/details/${kitab.id}`} target='_blank'>{kitab.Title}</Link></li>
                         })}

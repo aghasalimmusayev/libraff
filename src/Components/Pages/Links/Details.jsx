@@ -5,7 +5,7 @@ import { getKitabByID } from '../../../service/service'
 import { GoHeart } from "react-icons/go";
 import { GoHeartFill } from "react-icons/go";
 import { SlBasket } from "react-icons/sl";
-import "../../../CSS/details.css"
+import "./Links CSS/details.css"
 
 function Details() {
 

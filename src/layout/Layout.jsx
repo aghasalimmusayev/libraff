@@ -1,6 +1,6 @@
 import React from 'react'
-import Nav from "./Nav"
-import Footer from "./Footer"
+import Nav from "../Components/Pages/Main Components/Nav"
+import Footer from "../Components/Pages/Main Components/Footer"
 import { Outlet } from "react-router-dom"
 import { useAllContext } from '../Context/MyContext'
 import Katalog from '../Components/Pages/Main Components/Katalog'

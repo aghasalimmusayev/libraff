@@ -1,17 +1,19 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from "react-router-dom"
-import Logo from "../assets/img/logo_libraff.png"
-import "../CSS/nav.css"
-import { useAllContext } from '../Context/MyContext'
+import Logo from "../../../assets/img/logo_libraff.png"
+import "./Main CSS/nav.css"
+import { useAllContext } from '../../../Context/MyContext'
 import { GoHeart } from "react-icons/go";
 import { IoBagHandleOutline } from "react-icons/io5";
 import { IoSearch } from "react-icons/io5";
+import { FaRegUserCircle } from "react-icons/fa";
 
 function Nav() {
 
     const { setSearchText, wishLits, openKat, sebet, kitabTap, searchText } = useAllContext()
     const [navHandle, setNavhandle] = useState(false)
     const navigate = useNavigate()
+    const [authBox, setAuthBox] = useState(false)
 
     function handleMenu() {
         setNavhandle(!navHandle)
@@ -28,6 +30,9 @@ function Nav() {
     function axtar() {
         navigate('/mainPage')
         kitabTap()
+    }
+    function authHandle() {
+        setAuthBox(!authBox)
     }
 
     return (
@@ -60,6 +65,16 @@ function Nav() {
                         <div className="search_icon">
                             <IoSearch onClick={axtar} style={{ fontSize: "18px", cursor: "pointer" }} />
                         </div>
+                    </div>
+                    <div className="auth_path">
+                        <button className='auth_btn' onClick={authHandle}>
+                            <FaRegUserCircle style={{ color: "red", fontSize: "18px" }} />
+                            <span>Hesabim</span>
+                        </button>
+                        {authBox && <div className="auth_links">
+                            <Link to={'/authentication/login'}>Daxil ol</Link>
+                            <Link to={'/authentication/signUp'}>Qeydiyyatdan kec</Link>
+                        </div>}
                     </div>
                     <div className='right_links'>
                         <Link className='wish_box' to="/wishlist">

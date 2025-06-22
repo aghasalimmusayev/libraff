@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useAllContext } from '../../../Context/MyContext'
-import '../../../CSS/checkout.css'
+import './Links CSS/checkout.css'
 import { Link } from 'react-router-dom'
 import { FaRegTrashCan } from "react-icons/fa6";
 import { sellBooks } from '../../../service/service';

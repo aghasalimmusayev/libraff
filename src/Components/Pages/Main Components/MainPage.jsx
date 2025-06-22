@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useAllContext } from '../../../Context/MyContext'
 import { Link, NavLink, useParams } from 'react-router-dom'
-import '../../../CSS/mainPage.css'
+import './Main CSS/mainPage.css'
 import Kitablar from '../../Child Components/Kitablar'
 
 function Category() {
@@ -9,7 +9,7 @@ function Category() {
     const { kateqoriya } = useParams()
     const { bookData, setCatFilteredBook, catFilteredBook, axtaris } = useAllContext()
     const [dil, setDil] = useState([])
-    const categories = ([...new Set(bookData.map(item => item.CategoryName).filter(cat => cat !== ""))])
+    const categories = ([...new Set(bookData?.map(item => item.CategoryName).filter(cat => cat !== ""))])
     const languages = [...new Set(bookData
         .map(item => item.Dil)
         .filter(dil => dil !== "")
@@ -85,7 +85,7 @@ function Category() {
         else lang.style.height = lang.scrollHeight + "px"
         setLangOpen(!langOpen)
     }
-    const [catOpen, setCatOpen] = useState(false)
+    const [catOpen, setCatOpen] = useState(true)
     const catRef = useRef(null)
     function catHandle() {
         const categ = catRef.current

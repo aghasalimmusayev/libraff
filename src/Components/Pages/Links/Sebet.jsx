@@ -2,7 +2,7 @@ import React from 'react'
 import { useAllContext } from '../../../Context/MyContext'
 import { Link } from 'react-router-dom'
 import { AiOutlineClear } from "react-icons/ai";
-import '../../../CSS/sebet.css'
+import './Links CSS/sebet.css'
 import { FaRegTrashCan } from "react-icons/fa6";
 
 function Sebet() {
@@ -21,7 +21,7 @@ function Sebet() {
 
     return (
         <div className='container'>
-            <h2 style={{ margin: "30px 0" }}>Sebetdeki mehsullar</h2>
+            <h2 className='section_head' style={{ margin: "30px 0" }}>Sebetdeki mehsullar</h2>
             <div className="sebet_box">
                 <div className='sebetdekiler'>
                     {sebet.length > 0 ?

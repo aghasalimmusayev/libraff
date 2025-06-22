@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import "../../CSS/kitablar.css"
+import "./kitablar.css"
 import { Link } from "react-router-dom"
 import { GoHeart } from "react-icons/go";
 import { GoHeartFill } from "react-icons/go";

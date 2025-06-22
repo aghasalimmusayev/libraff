@@ -1,5 +1,5 @@
 import React from 'react'
-import '../CSS/footer.css'
+import './Main CSS/footer.css'
 
 function Footer() {
     function goTop() {
