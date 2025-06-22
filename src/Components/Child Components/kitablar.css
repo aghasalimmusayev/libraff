@@ -24,6 +24,9 @@
   font: 500 1rem "Roboto",sans-serif;
   color: #333;
 }
+.kitab_stoku{
+  color: #333;
+}
 .kitab_info {padding: 15px;}
 .kitab_img {
   position: relative;
@@ -44,6 +47,11 @@
 }
 .add_to_cart:hover{border-color: #07ad07;}
 .add_to_cart:focus{border-color: #07ad07;}
+.add_to_cart:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #ccc;
+}
 .add_to_cart{
   border: 2px solid #19ec19;
   border-radius: 20px;

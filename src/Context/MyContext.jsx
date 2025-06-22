@@ -70,34 +70,6 @@ export function MyContext({ children }) {
         setKatalog(true)
         window.scroll({ top: 0, behavior: "smooth" })
     }
-    function addToCart(id) {
-        const alKitab = bookData.find(item => item.id === id)
-        const sebetdeVar = sebet.find(item => alKitab.id == item.id)
-        if (!sebetdeVar) setSebet(prev => [...prev, { ...alKitab, "count": 1 }])
-        // else {
-        //     setSebet(prev =>
-        //         prev.map(item =>
-        //             item.id === id ? { ...item, count: item.count + 1 } : item
-        //         )
-        //     );
-        // }
-    }
-    function countArtir(id) {
-        setSebet(prev =>
-            prev.map(item =>
-                item.id === id ? { ...item, count: item.count + 1 } : item
-            )
-        );
-    }
-    function countAzalt(id) {
-        setSebet(prev =>
-            prev.map(item =>
-                item.id === id && item.count > 1
-                    ? { ...item, count: item.count - 1 }
-                    : item
-            )
-        );
-    }
 
     return (
         <AllContext.Provider value={{
@@ -111,11 +83,8 @@ export function MyContext({ children }) {
             katalog,
             closeKat,
             openKat,
-            addToCart,
             sebet,
             setSebet,
-            countArtir,
-            countAzalt,
             catFilteredBook,
             setCatFilteredBook,
             kitabTap,

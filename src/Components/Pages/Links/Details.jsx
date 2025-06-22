@@ -11,7 +11,7 @@ function Details() {
 
     const { id } = useParams()
     const [kitab, setKitab] = useState(null)
-    const { wishLits, handleWish, sebet, addToCart } = useAllContext()
+    const { bookData, wishLits, handleWish, sebet, setSebet } = useAllContext()
     const wishVar = kitab && wishLits.some(ktb => kitab.id === ktb.id)
     const sebetdeVar = sebet.some(ktb => kitab.id == ktb.id)
 
@@ -21,6 +21,11 @@ function Details() {
             setKitab(data)
         })()
     }, [id])
+
+    function addToCart(id) {
+        const alKitab = bookData?.find(item => item.id === id)
+        { !sebetdeVar && alKitab.stokSayi > 0 && setSebet(prev => [...prev, { ...alKitab, "count": 1 }]) }
+    }
 
     useEffect(() => {
         document.title = 'Kitab haqqinda | Libraff'

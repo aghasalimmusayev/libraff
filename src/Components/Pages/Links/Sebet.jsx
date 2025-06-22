@@ -7,7 +7,7 @@ import { FaRegTrashCan } from "react-icons/fa6";
 
 function Sebet() {
 
-    const { sebet, countArtir, countAzalt, setSebet } = useAllContext()
+    const { sebet, setSebet } = useAllContext()
     const total = sebet?.reduce((cem, item) => {
         const qiymet = item.OriginalPrice > item.DiscountedPrice ? item.DiscountedPrice : item.OriginalPrice
         return cem + (qiymet * item.count)
@@ -17,6 +17,25 @@ function Sebet() {
     }
     function removeBook(id) {
         setSebet(sebet.filter(item => item.id !== id))
+    }
+    function countArtir(id) {
+        setSebet(prev =>
+            prev.map(item =>
+                item.count < item.stokSayi &&
+                    item.id === id ?
+                    { ...item, count: item.count + 1 } : item
+            )
+        );
+    }
+    function countAzalt(id) {
+        setSebet(prev =>
+            prev.map(item =>
+                item.id === id
+                    && item.count > 1
+                    ? { ...item, count: item.count - 1 }
+                    : item
+            )
+        );
     }
 
     return (

@@ -1,4 +1,3 @@
-import React from "react";
 import toast, { Toaster } from "react-hot-toast";
 
 export const showAddSuccess = () => {
@@ -29,13 +28,27 @@ export const showError = (message) => {
     });
 };
 
+export const showRegSuccess = () => {
+    toast.success('Qeydiyyatiniz ugurla tamamlandi!', {
+        duration: 4000,
+        position: 'top-center',
+    });
+}
+
+export const showRegFailed = (message) => {
+    toast.error(message || 'Bu email adress ile artiq qeydiyyat movcuddur!', {
+        duration: 5000,
+        position: 'top-center',
+    });
+}
+
 function CrudNotify() {
     return (
         <Toaster
             toastOptions={{
                 style: {
-                    background: '#363636',
-                    color: '#fff',
+                    background: '#fff',
+                    color: '#363636',
                 },
                 success: { iconTheme: { primary: '#4aed88', }, },
                 error: { iconTheme: { primary: '#ff4b4b', }, },
@@ -45,4 +58,3 @@ function CrudNotify() {
 }
 
 export default CrudNotify;
-// Toaster component

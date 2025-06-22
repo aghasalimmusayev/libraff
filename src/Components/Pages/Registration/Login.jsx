@@ -25,7 +25,7 @@ function Login() {
                 <button className='reg_btn'>Daxil ol</button>
                 <div className='go_to_signup'>
                     <span>Ve ya </span>
-                    <Link to={'/signUp'}>Hesab yarat</Link>
+                    <Link to={'/authentication/signUp'}>Hesab yarat</Link>
                 </div>
             </div>
         </div>

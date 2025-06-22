@@ -65,6 +65,24 @@
 .eye_icon:hover {color: #007bff;}
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {-webkit-appearance: none;}
+.gender{
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+}
+.male, .female{
+    display: flex;
+    align-items: center;
+    color: #333;
+    label, input {
+        cursor: pointer;
+        padding: 5px;
+    }
+}
 .reg_btn {
     padding: 14px 20px;
     background-color: #007bff;

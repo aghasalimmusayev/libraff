@@ -9,7 +9,7 @@ import { SlBasket } from "react-icons/sl";
 
 function Kitablar({ selectedCategory }) {
 
-    const { catFilteredBook, wishLits, handleWish, addToCart, sebet } = useAllContext()
+    const { bookData, catFilteredBook, wishLits, handleWish, sebet, setSebet } = useAllContext()
     const [currentPage, setCurrentPage] = useState(1)
     const [pageSize] = useState(12)
     const startIndex = (currentPage - 1) * pageSize  // başlanğıc index
@@ -28,6 +28,12 @@ function Kitablar({ selectedCategory }) {
             ? `${selectedCategory} Kitabları | Libraff`
             : 'Kitablar | Libraff'
     }, [selectedCategory])
+
+    function addToCart(id) {
+        const alKitab = bookData?.find(item => item.id === id)
+        const sebetdeVar = sebet.find(item => alKitab.id == item.id)
+        { !sebetdeVar && alKitab.stokSayi > 0 && setSebet(prev => [...prev, { ...alKitab, "count": 1 }]) }
+    }
 
     return (
         <>
@@ -50,7 +56,8 @@ function Kitablar({ selectedCategory }) {
                                 <div className="kitab_info">
                                     <h2 className='kitab_adi'>{item.Title}</h2>
                                     <p className='kitab_qiymeti'>{item.OriginalPrice} ₼</p>
-                                    <button onClick={() => addToCart(item.id)} className='add_to_cart'>
+                                    <p className='kitab_stoku'>Stok: {item.stokSayi} eded</p>
+                                    <button disabled={item.stokSayi <= 0} onClick={() => addToCart(item.id)} className='add_to_cart'>
                                         <SlBasket className='cart_icon' />
                                         <span>{sebetdeVar ? "Elave edildi" : "Sebete elave et"}</span>
                                     </button>
