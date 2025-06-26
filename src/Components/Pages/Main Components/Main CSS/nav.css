@@ -115,27 +115,61 @@ nav {
         display: none;
     }
 }
+.auth_modal {
+   position: absolute;
+   top: 100%;
+   right: 0;
+   padding: 15px;
+   min-width: 180px;
+   background-color: #fff;
+   font: 600 0.9rem "Roboto", sans-serif;
+   border-radius: 10px;
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+   border: 1px solid #f0f0f0;
+   z-index: 1000;
+}
+.login_box {
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+}
+.login_box h4 {
+   color: #333;
+   font-size: 1rem;
+   padding-bottom: 10px;
+   border-bottom: 1px solid #eee;
+}
 .auth_links {
-    position: absolute;
-    top: 100%;
-    right: 20px;
-    background-color: #fff;
-    font: 600 0.9rem "Roboto",sans-serif;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 #00000033;
-    overflow: hidden;
-    a {
-        padding: 10px;
-        color: #333;
-        white-space: nowrap;
-    }
-    a:hover{background-color: #eee;}
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
 }
-.right_links {
-    display: none;
+.auth_modal a {
+   padding: 10px;
+   color: #333;
+   text-decoration: none;
+   border: 1px solid #eee;
+   border-radius: 5px;
+   transition: background-color 0.2s ease;
+   display: block;
+   white-space: nowrap;
 }
+.auth_modal a:hover {
+   background-color: #f5f5f5;
+   color: #000;
+}
+.auth_modal button {
+   padding: 10px;
+   background-color: #ff4757;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font: 600 0.9rem "Roboto", sans-serif;
+   transition: background-color 0.2s ease;
+}
+.auth_modal button:hover {background-color: #ff3742;}
+.right_links {display: none;}
 .cart_fav {
     display: flex;
     flex-direction: column;
@@ -185,19 +219,14 @@ nav {
 }
 
 @media (min-width: 768px) {
-    .menu_toggle {
-        display: none;
-    }
-    .logo img {
-        width: 150px;
-    }
+    .menu_toggle {display: none;}
     .katalog_btn {
         display: block;
-        padding: 10px 25px;
+        padding: 7px 20px;
         border: none;
         border-radius: 20px;
         background-color: red;
-        font: 500 1.2rem "Roboto", sans-serif;
+        font: 500 1rem "Roboto", sans-serif;
         color: #eee;
         cursor: pointer;
         transition: 0.3s;
@@ -211,27 +240,23 @@ nav {
         width: fit-content;
     }
     .search_inp input {
-        padding: 10px 20px;
-        width: 200px;
+        padding: 8px 10px;
+        width: 140px;
         font-size: 1rem;
     }
     .auth_path {position: relative;}
     .auth_btn {
         border-radius: 20px;
-        padding: 7px 15px;
+        padding: 7px 10px;
         gap: 5px;
-        span {
-            display: initial;
-        }
     }
-    .auth_links {
-        top: 170%;
+    .auth_modal {
+        top: 160%;
         right: -20px;
-        a{
-            padding: 10px 15px;
-        }
+        min-width: 200px;
+        a{padding: 12px;}
+        button {padding: 12px;}
     }
-
     .cart_fav {display: none;}
     .right_links {
         display: flex;
@@ -242,4 +267,17 @@ nav {
             align-items: center;
         }
     }
+}
+@media(min-width:1070px){
+    .logo img {width: 150px;}
+    .katalog_btn {
+        padding: 10px 25px;
+        font: 500 1.2rem "Roboto", sans-serif;
+    }
+    .search_inp input {
+        padding: 10px 20px;
+        width: 200px;
+    }
+    .auth_btn span {display: initial;}
+
 }

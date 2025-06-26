@@ -17,39 +17,47 @@ import Scroll from './Components/Scroll.jsx'
 import Checkout from './Components/Pages/Links/Checkout.jsx';
 import Login from './Components/Pages/Registration/Login.jsx';
 import SignUp from './Components/Pages/Registration/SignUp.jsx';
+import { RegContext } from './Context/RegContext.jsx';
+import Profile, { PrivateRoute } from './Components/Pages/Registration/Profile.jsx'
 
 function App() {
 
   return (
     <MyContext>
-      <BrowserRouter>
-        <Scroll />
-        <Routes>
+      <RegContext>
+        <BrowserRouter>
+          <Scroll />
+          <Routes>
 
-          <Route path='/' element={<Layout />} >
-            <Route index element={<Main />} />
-            <Route path='details/:id' element={<Details />} />
-            <Route path='muellifler' element={<Muellifler />} />
-            <Route path='endirimler' element={<Endirimler />} />
-            <Route path='muellifler/muellifKitablari/:muellif' element={<MuellifKitablar />} />
-            <Route path='wishlist' element={<WishList />} />
-            <Route path='sebet' element={<Sebet />} />
-            <Route path='mainPage' element={<MainPage />} />
-            <Route path='kateqoriyalar' element={<MainPage />} />
-            <Route path='kateqoriyalar/:kateqoriya' element={<MainPage />} />
-            <Route path='Checkout' element={<Checkout />} />
-          </Route>
+            <Route path='/' element={<Layout />} >
+              <Route index element={<Main />} />
+              <Route path='details/:id' element={<Details />} />
+              <Route path='muellifler' element={<Muellifler />} />
+              <Route path='endirimler' element={<Endirimler />} />
+              <Route path='muellifler/muellifKitablari/:muellif' element={<MuellifKitablar />} />
+              <Route path='wishlist' element={<WishList />} />
+              <Route path='sebet' element={<Sebet />} />
+              <Route path='mainPage' element={<MainPage />} />
+              <Route path='kateqoriyalar' element={<MainPage />} />
+              <Route path='kateqoriyalar/:kateqoriya' element={<MainPage />} />
+              <Route path='Checkout' element={<Checkout />} />
+            </Route>
 
-          <Route path='/authentication' element={<RegLayout />}>
-            <Route path='login' element={<Login />} />
-            <Route path='signUp' element={<SignUp />} />
-          </Route>
+            <Route path='/authentication' element={<RegLayout />}>
+              <Route path='login' element={<Login />} />
+              <Route path='signUp' element={<SignUp />} />
+              <Route path='profile' element={
+                <PrivateRoute>
+                  <Profile />
+                </PrivateRoute>} />
+            </Route>
 
-          <Route path='*' element={<Error />} />
-          <Route path='/admin' element={<Admin />} />
+            <Route path='*' element={<Error />} />
+            <Route path='/admin' element={<Admin />} />
 
-        </Routes>
-      </BrowserRouter>
+          </Routes>
+        </BrowserRouter>
+      </RegContext>
     </MyContext>
   )
 }

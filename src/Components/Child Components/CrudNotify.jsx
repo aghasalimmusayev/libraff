@@ -35,6 +35,13 @@ export const showRegSuccess = () => {
     });
 }
 
+export const showLogSuccess = () => {
+    toast.success('Sehifenize daxil oldunuz', {
+        duration: 4000,
+        position: 'top-center',
+    });
+}
+
 export const showRegFailed = (message) => {
     toast.error(message || 'Bu email adress ile artiq qeydiyyat movcuddur!', {
         duration: 5000,

@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
 import './registration.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { IoEye } from "react-icons/io5";
 import { IoMdEyeOff } from "react-icons/io";
 import { nanoid } from 'nanoid';
 import CrudNotify, { showRegSuccess, showRegFailed } from '../../Child Components/CrudNotify';
-import { registerUser } from '../../../service/RegService';
+import { registerUser } from '../../../service/RegService'; useNavigate
 
 function SignUp() {
 
+    const navigaetToLogin = useNavigate()
     const [parolType, setParolType] = useState(true)
     const [tekrarParolType, setTekrarParolType] = useState(true)
     const [tekrarParol, setTekrarParol] = useState('')
@@ -57,6 +58,7 @@ function SignUp() {
                         gender: ""
                     })
                     setTekrarParol('')
+                    navigaetToLogin('/authentication/login')
                 }
                 else {
                     showRegFailed(result.message)
@@ -112,8 +114,11 @@ function SignUp() {
                 </div>
                 <button className='reg_btn' type='submit'>Qeydiyyatdan kec</button>
                 <div className='go_to_login'>
-                    <span>Hesabiniz artiq var?</span>
-                    <Link to={'/authentication/login'}>Daxil olun</Link>
+                    <div>
+                        <span>Hesabiniz artiq var?</span>
+                        <Link to={'/authentication/login'}>Daxil olun</Link>
+                    </div>
+                    <Link to={'/'}>Qeydiyyatsiz davam edin</Link>
                 </div>
             </form>
             <CrudNotify />

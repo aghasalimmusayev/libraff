@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link, useNavigate } from "react-router-dom"
 import Logo from "../../../assets/img/logo_libraff.png"
 import "./Main CSS/nav.css"
@@ -7,14 +7,22 @@ import { GoHeart } from "react-icons/go";
 import { IoBagHandleOutline } from "react-icons/io5";
 import { IoSearch } from "react-icons/io5";
 import { FaRegUserCircle } from "react-icons/fa";
+import { useAuthContext } from '../../../Context/RegContext'
 
 function Nav() {
 
+    const { userState, setUserState } = useAuthContext()
     const { setSearchText, wishLits, openKat, sebet, kitabTap, searchText } = useAllContext()
     const [navHandle, setNavhandle] = useState(false)
     const navigate = useNavigate()
     const [authBox, setAuthBox] = useState(false)
-
+    const modalRef = useRef()
+    useEffect(() => {
+        const user = JSON.parse(localStorage.getItem("user")) || null
+        if (user) {
+            setUserState(user)
+        }
+    }, [setUserState])
     function handleMenu() {
         setNavhandle(!navHandle)
     }
@@ -31,8 +39,28 @@ function Nav() {
         navigate('/mainPage')
         kitabTap()
     }
-    function authHandle() {
+    function authHandle(e) {
+        e.stopPropagation()
         setAuthBox(!authBox)
+    }
+
+    useEffect(() => {
+        function closeModal(e) {
+            if (modalRef.current && !modalRef.current.contains(e.target)) {
+                setAuthBox(false)
+            }
+        }
+        if (authBox) document.addEventListener('mousedown', closeModal)
+        return () => {
+            document.removeEventListener('mousedown', closeModal)
+        }
+    }, [authBox])
+
+    function logOut() {
+        setUserState(null)
+        localStorage.removeItem("user")
+        setAuthBox(false)
+        navigate('/authentication/login')
     }
 
     return (
@@ -66,14 +94,24 @@ function Nav() {
                             <IoSearch onClick={axtar} style={{ fontSize: "18px", cursor: "pointer" }} />
                         </div>
                     </div>
-                    <div className="auth_path">
+                    <div className="auth_path" ref={modalRef}>
                         <button className='auth_btn' onClick={authHandle}>
                             <FaRegUserCircle style={{ color: "red", fontSize: "18px" }} />
                             <span>Hesabim</span>
                         </button>
-                        {authBox && <div className="auth_links">
-                            <Link to={'/authentication/login'}>Daxil ol</Link>
-                            <Link to={'/authentication/signUp'}>Qeydiyyatdan kec</Link>
+                        {authBox && <div className="auth_modal" >
+                            {userState ?
+                                <div className='login_box'>
+                                    <h4>{userState.ad} {userState.soyad}</h4>
+                                    <Link to={'/authentication/profile'} onClick={() => setAuthBox(false)}>Profile</Link>
+                                    <button onClick={logOut}>LogOut</button>
+                                </div>
+                                :
+                                <div className='auth_links'>
+                                    <Link to={'/authentication/login'} onClick={() => setAuthBox(false)}>Daxil ol</Link>
+                                    <Link to={'/authentication/signUp'} onClick={() => setAuthBox(false)}>Qeydiyyatdan kec</Link>
+                                </div>
+                            }
                         </div>}
                     </div>
                     <div className='right_links'>

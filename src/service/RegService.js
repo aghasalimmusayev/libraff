@@ -24,4 +24,12 @@ async function registerUser(userData) {
     }
 }
 
-export { registerUser };
+async function loginUser(user) {
+    const res = await axiosInstance.get(`/users?email=${user.email}&parol=${user.parol}`);
+    if (!res.data.length) {
+        throw new Error("email or your password is invalid");
+    }
+    return res.data[0];
+}
+
+export { registerUser, loginUser };
