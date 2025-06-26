@@ -9,7 +9,7 @@ import { useAuthContext } from '../../../Context/RegContext'
 
 function Login() {
 
-    const { userState, setUserState } = useAuthContext()
+    const { setUserState } = useAuthContext()
     const [parolType, setParolType] = useState(true)
     function changeTypePassword() {
         setParolType(!parolType)
@@ -19,8 +19,6 @@ function Login() {
         email: "",
         parol: ""
     })
-    console.log(user);
-
     function getValueUser(e) {
         setUser({
             ...user, [e.target.name]: e.target.value
@@ -52,7 +50,10 @@ function Login() {
     return (
         <div className='auth_box'>
             <CrudNotify />
-            <div className="authentication">
+            <form className="authentication" onSubmit={(e) => {
+                e.preventDefault();
+                loginSubmit();
+            }}>
                 <h2 className='auth_head'>Daxil ol</h2>
                 <input
                     name='email'
@@ -71,12 +72,12 @@ function Login() {
                         ? <IoMdEyeOff onClick={changeTypePassword} className='eye_icon' />
                         : <IoEye onClick={changeTypePassword} className='eye_icon' />}
                 </div>
-                <button onClick={loginSubmit} className='reg_btn'>Daxil ol</button>
+                <button type='submit' className='reg_btn'>Daxil ol</button>
                 <div className='go_to_signup'>
                     <Link to={'/authentication/signUp'}>Hesab yarat</Link>
                     <Link to={'/'}>Qeydiyyatsiz davam edin</Link>
                 </div>
-            </div>
+            </form>
         </div>
     )
 }

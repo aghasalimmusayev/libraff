@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useAllContext } from '../../../Context/MyContext'
 import { Link } from 'react-router-dom'
-import { FaXmark } from "react-icons/fa6";
+import { FaXmark, FaChevronRight } from "react-icons/fa6";
 import './Main CSS/katalog.css'
 
 function Katalog() {
@@ -63,10 +63,22 @@ function Katalog() {
                         <FaXmark style={{ fontSize: "28px", cursor: "pointer" }} onClick={closeKat} />
                     </div>
                     <ul className='first_list'>
-                        <li onMouseOver={() => { showBooks() }}><Link to={'/mainPage'} onClick={closeKat}>Kitablar</Link></li>
-                        <li onMouseOver={() => { showDiscount() }}><Link to={'/endirimler'} onClick={closeKat}>Endirimler</Link></li>
-                        <li onMouseOver={() => { showAuthor() }}><Link to={'/muellifler'} onClick={closeKat}>Muellifler</Link></li>
-                        <li onMouseOver={() => { showKategory() }}><Link to={'/kateqoriyalar'} onClick={closeKat}>Kateqoriyalar</Link></li>
+                        <li onMouseOver={() => { showBooks() }}><Link to={'/mainPage'} onClick={closeKat}>
+                            <span>Kitablar</span>
+                            <FaChevronRight className="arrow_icon" />
+                        </Link></li>
+                        <li onMouseOver={() => { showDiscount() }}><Link to={'/endirimler'} onClick={closeKat}>
+                            <span>Endirimler</span>
+                            <FaChevronRight className="arrow_icon" />
+                        </Link></li>
+                        <li onMouseOver={() => { showAuthor() }}><Link to={'/muellifler'} onClick={closeKat}>
+                            <span>Muellifler</span>
+                            <FaChevronRight className="arrow_icon" />
+                        </Link></li>
+                        <li onMouseOver={() => { showKategory() }}><Link to={'/kateqoriyalar'} onClick={closeKat}>
+                            <span>Kateqoriyalar</span>
+                            <FaChevronRight className="arrow_icon" />
+                        </Link></li>
                     </ul>
                     <ul className='second_list' style={{ display: books?.length > 0 ? 'flex' : 'none' }}>
                         {books?.map(kitab => {
@@ -83,7 +95,10 @@ function Katalog() {
                             return <li key={index}><Link
                                 to={`/muellifler/muellifKitablari/${mllf}`}
                                 onMouseOver={() => { mllfBookShow(mllf) }}
-                                onClick={closeKat}>{mllf}</Link></li>
+                                onClick={closeKat}>
+                                <span>{mllf}</span>
+                                <FaChevronRight className="arrow_icon" />
+                            </Link></li>
                         })}
                     </ul>
                     <ul className='second_list' style={{ display: kategory.length > 0 ? 'flex' : 'none' }}>
@@ -91,7 +106,10 @@ function Katalog() {
                             return <li key={index}><Link
                                 to={`/kateqoriyalar/${cat}`}
                                 onMouseOver={() => { katBookShow(cat) }}
-                                onClick={closeKat}>{cat}</Link></li>
+                                onClick={closeKat}>
+                                <span>{cat}</span>
+                                <FaChevronRight className="arrow_icon" />
+                            </Link></li>
                         })}
                     </ul>
                     <ul className='third_list' style={{ display: mellifBooks.length > 0 ? 'flex' : 'none' }}>

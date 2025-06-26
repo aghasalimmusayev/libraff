@@ -41,15 +41,15 @@ function App() {
               <Route path='kateqoriyalar' element={<MainPage />} />
               <Route path='kateqoriyalar/:kateqoriya' element={<MainPage />} />
               <Route path='Checkout' element={<Checkout />} />
+              <Route path='profile' element={
+                <PrivateRoute>
+                  <Profile />
+                </PrivateRoute>} />
             </Route>
 
             <Route path='/authentication' element={<RegLayout />}>
               <Route path='login' element={<Login />} />
               <Route path='signUp' element={<SignUp />} />
-              <Route path='profile' element={
-                <PrivateRoute>
-                  <Profile />
-                </PrivateRoute>} />
             </Route>
 
             <Route path='*' element={<Error />} />

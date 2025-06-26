@@ -1,7 +1,7 @@
 import React from 'react'
 import { useAuthContext } from '../../../Context/RegContext'
+import { Navigate } from 'react-router-dom'
 import './profile.css'
-import { Navigate, useNavigate } from 'react-router-dom'
 
 function Profile() {
 
@@ -26,7 +26,6 @@ function Profile() {
                         </span>
                     </div>
                 </div>
-
                 <div className="profile_content">
                     <div className="info_card">
                         <div className="card_header">
@@ -55,7 +54,6 @@ function Profile() {
                             </div>
                         </div>
                     </div>
-
                     <div className="info_card">
                         <div className="card_header">
                             <h3>Hesab parametrləri</h3>
@@ -89,7 +87,6 @@ function Profile() {
 
 export function PrivateRoute({ children }) {
     const { userState } = useAuthContext()
-    const navigate = useNavigate()
     return (
         <>
             {

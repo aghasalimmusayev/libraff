@@ -60,7 +60,6 @@ function Nav() {
         setUserState(null)
         localStorage.removeItem("user")
         setAuthBox(false)
-        navigate('/authentication/login')
     }
 
     return (
@@ -97,13 +96,13 @@ function Nav() {
                     <div className="auth_path" ref={modalRef}>
                         <button className='auth_btn' onClick={authHandle}>
                             <FaRegUserCircle style={{ color: "red", fontSize: "18px" }} />
-                            <span>Hesabim</span>
+                            <span>{userState ? userState.ad : 'Hesabim'}</span>
                         </button>
                         {authBox && <div className="auth_modal" >
                             {userState ?
                                 <div className='login_box'>
                                     <h4>{userState.ad} {userState.soyad}</h4>
-                                    <Link to={'/authentication/profile'} onClick={() => setAuthBox(false)}>Profile</Link>
+                                    <Link to={'/profile'} onClick={() => setAuthBox(false)}>Profile</Link>
                                     <button onClick={logOut}>LogOut</button>
                                 </div>
                                 :

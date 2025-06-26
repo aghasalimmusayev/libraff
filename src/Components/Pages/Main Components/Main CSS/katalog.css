@@ -36,17 +36,26 @@
     transition: background-color 0.3s;
 }
 .first_list a{
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 15px;
+    box-sizing: border-box;
     width: 100%;
 }
+.arrow_icon{
+    font-size: 12px;
+    transition: .3s;
+    color: #999;
+}
 .first_list li:hover {background-color: #495057;}
+.first_list li:hover .arrow_icon,
+.second_list li:hover .arrow_icon {transform: rotate(90deg); /* 90 dərəcə çevir (aşağı) */}
 .first_list li:last-child {border-bottom: none;}
 /* Orta hissə - kitablar/müəlliflər */
 .second_list {
     list-style: none;
     margin: 0;
-    padding: 15px;
     width: 300px;
     background-color: #fff;
     border-right: 1px solid #eee;
@@ -65,17 +74,19 @@
     text-decoration: none;
     font-size: 14px;
     padding: 8px 12px;
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     width: 100%;
+    box-sizing: border-box;
 }
 .second_list a:hover {color: #007bff;}
 .third_list {
     list-style: none;
     margin: 0;
-    padding: 15px;
     width: 300px;
     background-color: #f8f9fa;
     border-radius: 0 8px 8px 0;
