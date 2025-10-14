@@ -22,20 +22,48 @@ export function MyContext({ children }) {
     })
 
     useEffect(() => {
-        (async () => {
+        const fetchData = async () => {
             try {
                 const data = await getData()
-                const unicData = data?.filter(
+                if (data && data.length > 0) {
+                    return data
+                }
+                return null
+            } catch (err) {
+                console.log("Xəta var: " + err)
+                return null
+            }
+        }
+
+        (async () => {
+            let data = await fetchData() // İlk cəhd
+            if (data) {
+                const unicData = data.filter(
                     (kitab, index, selfData) =>
                         index === selfData.findIndex(ktb => ktb.Title === kitab.Title)
                 )
                 setBookData(unicData)
                 setCatFilteredBook(unicData)
+                return
             }
-            catch (err) {
-                console.log("Xeta var: " + err)
-            }
-        })();
+            let count = 0
+            const myInterval = setInterval(async () => { // Hər 2 saniyə yoxla (maksimum 10 dəfə)
+                count++
+                data = await fetchData()
+                if (data) {
+                    clearInterval(myInterval)
+                    const unicData = data.filter(
+                        (kitab, index, selfData) =>
+                            index === selfData.findIndex(ktb => ktb.Title === kitab.Title)
+                    )
+                    setBookData(unicData)
+                    setCatFilteredBook(unicData)
+                } else if (count >= 10) {
+                    clearInterval(myInterval)
+                    console.log('10 cəhddən sonra data gəlmədi')
+                }
+            }, 2000)
+        })()
     }, [])
 
     function kitabTap() {

@@ -39,6 +39,12 @@ main {
   align-items: center;
   height: 90vh;
 }
+.loading_text{
+    margin: auto;
+    margin-bottom: 40px !important;
+    text-align: center;
+    color: #cc0000 !important;
+}
 .wishlist_box, .sebet_box{min-height: 80vh;}
 .clear_btn{
   margin-bottom: 30px;
