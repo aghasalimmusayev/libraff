@@ -1,8 +1,11 @@
 import { readFileSync } from "fs";
-import { join } from "path";
+import { join, dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 function getDb() {
-    const filePath = join(process.cwd(), "api", "data", "db.json");
+    const filePath = join(__dirname, "data", "db.json");
     return JSON.parse(readFileSync(filePath, "utf-8"));
 }
 

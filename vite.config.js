@@ -120,5 +120,19 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, process.cwd(), '')
     return {
         plugins: [react(), apiDevMiddleware(env.VITE_API_TOKEN)],
+        build: {
+            chunkSizeWarningLimit: 1000,
+            rollupOptions: {
+                output: {
+                    manualChunks: {
+                        'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+                        'vendor-mui': ['@mui/material', '@mui/icons-material', '@emotion/react', '@emotion/styled'],
+                        'vendor-antd': ['antd'],
+                        'vendor-swiper': ['swiper'],
+                        'vendor-misc': ['axios', 'styled-components', 'react-hot-toast', 'react-icons'],
+                    }
+                }
+            }
+        }
     }
 })
