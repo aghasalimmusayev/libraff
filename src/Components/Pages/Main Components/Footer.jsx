@@ -12,7 +12,7 @@ function Footer() {
         <div className="footer_bg">
             <div className='container'>
                 <div className="footer_content">
-                    <p>© 2025 Aga-Libraff.</p>
+                    <p>© {new Date().getFullYear()} Agasalim-Libraff (clone)</p>
                     <span onClick={goTop}>Yuxari qalx</span>
                 </div>
             </div>
