@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useAllContext } from '../../../Context/MyContext'
 import './Links CSS/checkout.css'
 import { Link } from 'react-router-dom'
+import noImage from '../../../assets/img/no-image.svg'
 import { FaRegTrashCan } from "react-icons/fa6";
 import { sellBooks } from '../../../service/service';
 
@@ -84,7 +85,7 @@ function Checkout() {
                                     <div className='order' key={item.id}>
                                         <div className='order_img'>
                                             <Link to={`/details/${item.id}`} target='_blank'>
-                                                <img src={item.sekil} alt={item.Title} />
+                                                <img src={item.sekil} alt={item.Title} onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = noImage; }} />
                                             </Link>
                                         </div>
                                         <div className="order_info">

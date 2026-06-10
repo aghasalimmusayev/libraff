@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useAllContext } from '../../../Context/MyContext'
 import { Link } from 'react-router-dom'
+import noImage from '../../../assets/img/no-image.svg'
 import { GoHeart } from "react-icons/go";
 
 function Endirimler() {
@@ -27,7 +28,7 @@ function Endirimler() {
                             <div className='kitab' key={kitab.id}>
                                 <div className='kitab_img'>
                                     <Link to={`/details/${kitab.id}`} target='_blank'>
-                                        <img src={kitab.sekil} alt={kitab.Title} />
+                                        <img src={kitab.sekil} alt={kitab.Title} onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = noImage; }} />
                                     </Link>
                                     <GoHeart style={{ color: 'red', fontSize: "35px" }} className='fav_icon' />
                                 </div>

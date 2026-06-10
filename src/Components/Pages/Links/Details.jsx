@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useAllContext } from '../../../Context/MyContext';
 import { useParams } from 'react-router-dom'
+import noImage from '../../../assets/img/no-image.svg'
 import { getKitabByID } from '../../../service/service'
 import { GoHeart } from "react-icons/go";
 import { GoHeartFill } from "react-icons/go";
@@ -37,7 +38,7 @@ function Details() {
                 {kitab && (
                     <div className='kitab_details'>
                         <div className="kitab_detail_img">
-                            <img src={kitab.sekil} alt={kitab.Title} />
+                            <img src={kitab.sekil} alt={kitab.Title} onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = noImage; }} />
                             {wishVar
                                 ? <GoHeartFill className='fav_icon' onClick={() => handleWish(kitab)} />
                                 : <GoHeart className='fav_icon' onClick={() => handleWish(kitab)} />

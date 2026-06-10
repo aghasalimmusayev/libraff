@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./kitablar.css"
 import { Link } from "react-router-dom"
+import noImage from '../../assets/img/no-image.svg'
 import { GoHeart } from "react-icons/go";
 import { GoHeartFill } from "react-icons/go";
 import { Pagination } from 'antd';
@@ -46,7 +47,7 @@ function Kitablar({ selectedCategory }) {
                             <div className='kitab' key={item.id}>
                                 <div className='kitab_img'>
                                     <Link to={`/details/${item.id}`} target='_blank'>
-                                        <img src={item.sekil} alt={item.Title} />
+                                        <img src={item.sekil} alt={item.Title} onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = noImage; }} />
                                     </Link>
                                     {wishVar
                                         ? <GoHeartFill className='fav_icon' onClick={() => handleWish(item)} />

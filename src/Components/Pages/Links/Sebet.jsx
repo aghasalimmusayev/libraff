@@ -1,6 +1,7 @@
 import React from 'react'
 import { useAllContext } from '../../../Context/MyContext'
 import { Link } from 'react-router-dom'
+import noImage from '../../../assets/img/no-image.svg'
 import { AiOutlineClear } from "react-icons/ai";
 import './Links CSS/sebet.css'
 import { FaRegTrashCan } from "react-icons/fa6";
@@ -49,7 +50,7 @@ function Sebet() {
                                 <div className='mehsul' key={item.id}>
                                     <div className='mehsul_img'>
                                         <Link to={`/details/${item.id}`} target='_blank'>
-                                            <img src={item.sekil} alt={item.Title} />
+                                            <img src={item.sekil} alt={item.Title} onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = noImage; }} />
                                         </Link>
                                     </div>
                                     <div className="mehsul_info">
